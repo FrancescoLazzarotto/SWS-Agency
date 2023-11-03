@@ -17,7 +17,7 @@ body {
     overflow: hidden;
     position: relative;
 }
-
+    
 img {
     width: 100%;
     height: auto;
@@ -40,58 +40,72 @@ img {
 
 /* Menu fisso */
 .menu-container {
-    background-color: transparent;
+    background-color: rgba(128, 128, 128, 0.285);
     border-top: 3px solid rgb(0, 130, 0);
-    
     border-bottom: 3px solid grey;
     border-radius: 25px;
-    padding-top: 5px;
-    padding-bottom: 25px;
+    padding: 10px 0;
     position: fixed;
     z-index: 1;
     top: 30px;
-    /* Regola il margine superiore desiderato */
     left: 50%;
     transform: translateX(-50%);
-    max-width: 80%;
-    height: 1em;
-    
-        
-    
+    max-width: 450px; /* Larghezza fissa del menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    /* Centra il testo del menu */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il menu */
+    align-items: center;
+    margin: 0;
+    flex: 1; /* Il menu occupa lo spazio rimanente */
 }
 
 .menu li {
     display: inline;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .menu a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    /* Grigio trasparente */
     font-weight: bold;
-    padding-left: 5px;
-    padding-right: 30px;
     transition: color 0.3s;
-    /* Aggiungi una transizione per ottenere un effetto graduale */
+    padding: 5px 10px;
 }
 
 .menu a:hover {
     color: #fff;
-    /* Bianco quando il mouse è sopra */
+}
+
+.instagram-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Aggiunge spazio tra il menu e il logo di Instagram */
+}
+
+.instagram-icon img {
+    width: 40px;
+    height: auto;
+}
+
+/* Assicurati che il menu rimanga visibile anche su schermi di dimensioni ridotte */
+@media screen and (max-width: 768px) {
+    .menu-container {
+        padding: 10px 0;
+    }
 }
 
 /* about us */ 
 .container-aboutus {
     text-align: center;
-    background: linear-gradient(to bottom, #009762e3,  #1b1a1a 40%);
+    
+        background: linear-gradient(180deg, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(19.13, 19.13, 19.13, 0) 100%);
     margin-top: 0;
     padding: 50px 0;
     /* Centra il testo */
@@ -103,8 +117,8 @@ img {
     color: #ededed;
     /* Colore del testo nero */
     font-size: 16px;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
     /* Dimensione del testo predefinita */
 }
 
@@ -149,7 +163,7 @@ img {
 
 .team-member img {
     max-width: 100%;
-    height: auto;
+    height: 300px;
     display: block;
 }
 
@@ -175,8 +189,9 @@ img {
 /* sezione experience */ 
 .container-experience {
     text-align: center;
-    ;
-    padding-bottom: 30px;
+
+    background-color: rgba(19.13, 19.13, 19.13, 0);
+   
 }
 
 .container-experience h2 {
@@ -188,7 +203,11 @@ img {
         padding: 0;
         margin: 0;
         text-transform: uppercase;
+        font-family: "Creato Display-Bold", Helvetica;
+font-weight: 700;
+color: #ffffff;
 }
+
 .container-experience h3 {
     color: #fff;
 
@@ -202,7 +221,17 @@ img {
         font-size: 14px;
         padding-top: 20px;
         padding-bottom: 20px;
-}.card-section {
+        font-family: "Montserrat-Bold", Helvetica;
+            font-weight: 400;
+           
+            font-size: 18px;
+           
+            letter-spacing: -1.2px;
+            line-height: normal;
+}
+
+
+.card-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +244,7 @@ img {
 .card {
     width: 600px;
     height: 200px;
-    margin: 10px;
+    margin: 20px;
     perspective: 1000px;
 }
 
@@ -266,7 +295,11 @@ img {
 
 .container-clients {
     text-align: center;
-    background: linear-gradient(to bottom, #1b1a1a 4%, #009762e3 50%,#1b1a1a 95%);
+    
+        background: linear-gradient(180deg,
+                rgba(19.13, 19.13, 19.13, 0) 0%,
+                rgb(0, 150.87, 96.56) 52.08%,
+                rgba(19.13, 19.13, 19.13, 0) 100%);
     padding-bottom: 30px;
 }
 
@@ -283,6 +316,7 @@ img {
 
 
 
+
 .container-clients p {
     text-align: center;
     color: #ededed;
@@ -294,7 +328,7 @@ img {
 
 .container-contacts {
     text-align: center;
-    background: linear-gradient(to bottom,  #1b1a1a 45% , #009762e3 100% );
+background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(19.13, 19.13, 19.13, 0) 100%);
     
 }
 .container-contacts p {
@@ -340,13 +374,14 @@ img {
 .input-group {
     margin: 10px 0;
     position: relative;
+    
 }
 
 .input-group input {
     width: 100%;
     padding: 8px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 8px;
     background-color: transparent;
     color: #fff;
@@ -356,7 +391,7 @@ img {
     height: 35px;
     padding: 8px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 8px;
     background-color: transparent;
     color: #1b1a1a;
@@ -366,7 +401,7 @@ img {
     height: 100px;
     padding: 8px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 14px;
     background-color: transparent;
     color: #fff;
@@ -421,7 +456,7 @@ img {
 
 /* footer */ 
 .footer-content {
-    background-color: #000000;
+    background-color: rgba(19.13, 19.13, 19.13, 0) 100%;
     color: #ededed;
     text-align: center;
     padding: 20px;
@@ -431,6 +466,7 @@ img {
     font-size: 14px;
     max-width: 1500px;
     margin: 0 auto;
+    border:none;
 }
 
 .left-content
@@ -470,11 +506,12 @@ img {
 
 
 /* Media query per responsive */
-@media (max-width: 768px) {
+@media  (max-width: 768px) {
     body { margin:0;
     padding: 0;}
 
     
+
     .menu-container {
             max-width: 100%;
             /* Occupa tutta la larghezza disponibile */
@@ -676,5 +713,20 @@ html {
     /* Abilita lo scorrimento animato su tutto il documento HTML */
 }
 
+
+
+#instagram-link {
+    margin-right: auto;
+    /* Sposta l'icona a destra */
+}
+
+#instagram-link img {
+    width: 24px;
+    /* Imposta la larghezza desiderata per l'immagine */
+    height: 24px;
+    /* Imposta l'altezza desiderata per l'immagine */
+    margin-right: 20px;
+    /* Aggiunge spazio tra l'ultima voce di menu e l'icona di Instagram */
+}
 
 

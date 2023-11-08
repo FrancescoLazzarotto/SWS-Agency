@@ -244,6 +244,7 @@ font-family: "Creato Display Bold";
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .card-row {
@@ -255,6 +256,7 @@ font-family: "Creato Display Bold";
     height: 200px;
     margin: 20px;
     perspective: 1000px;
+   
 }
 
 .card-inner {
@@ -262,6 +264,7 @@ font-family: "Creato Display Bold";
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.9s;
+  
 }
 
 .card:hover .card-inner {
@@ -274,6 +277,7 @@ font-family: "Creato Display Bold";
     object-fit: cover;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 20px;
 }
 
 .card-overlay {
@@ -282,7 +286,7 @@ font-family: "Creato Display Bold";
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(40, 39, 39, 0.408);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,6 +536,7 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
             /* Centra il menu orizzontalmente */
             margin: 0;
             padding: 0 0;
+            margin-left: 40px;
             /* Spaziatura sopra e sotto il menu */
             border: none;
             width: 100%;
@@ -645,6 +650,8 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     /* contatti mobile */ 
           .contact-form {
               max-width: 100%;
+             padding-right: 100px;
+             padding-top: 0;
           }
                   .container-contacts p {
                       text-align: center;
@@ -652,8 +659,9 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
                       color: #ededed;
                       /* Colore del testo nero */
                       font-size: 12px;
-                      padding-top: 20px;
+                     
                       padding-bottom: 20px;
+                      padding-right: 20px;
                       /* Dimensione del testo predefinita */
                   }
     
@@ -803,6 +811,8 @@ html {
       
       justify-content: center;
       padding: 0;
+      margin-left: 20px;
+      margin-top: 10px;
     }
   }
 

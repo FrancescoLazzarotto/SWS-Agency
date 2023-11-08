@@ -103,7 +103,7 @@ img {
 
 /* about us */ 
 .container-aboutus {
-    text-align: center;
+   
     
         background: linear-gradient(180deg, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(19.13, 19.13, 19.13, 0) 100%);
     margin-top: 0;
@@ -132,6 +132,7 @@ img {
 }
 .container-aboutus h2 {
     color: #fff;
+    text-align: center;
     /* Colore bianco */
     font-size: 60px;
     /* Dimensione più grande del testo */
@@ -728,5 +729,129 @@ html {
     margin-right: 20px;
     /* Aggiunge spazio tra l'ultima voce di menu e l'icona di Instagram */
 }
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 80%;
+  background: linear-gradient(to bottom, transparent -10%, rgba(0, 150.87, 96.56, 0.88) 130%);
+  opacity: 0;
+  transition: height 0.8s, opacity 0.8s;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  left: 0;
+}
+
+.image-overlay-text {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s  cubic-bezier(0.23, 1, 0.32, 1);
+  bottom: 10px; /* Posiziona il testo in basso */
+  left: 0;
+  transform: translateX(-50%); /* Posiziona il testo al centro orizzontalmente */
+}
+
+.image-wrapper:hover .image-overlay {
+  height: 33%;
+  opacity: 1;
+}
+
+.image-wrapper:hover .image-overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 240px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+  }
+
+  @media (max-width: 991px) {
+    .main-container {
+      
+      justify-content: center;
+      padding: 0;
+    }
+  }
+
+
+  .img {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+
+  @media (max-width: 991px) {
+    .image-overlay {
+      padding: 0 0px;
+    }
+  }
+
+ 
+
+  @media (max-width: 991px) {
+    .image-overlay-content {
+      margin-top: 20px;
+    }
+  }
+  
+
+  @media (max-width: 991px) {
+    .image-overlay-text {
+      margin-top: 40px;
+    }
+  }
+
+  .name {
+    color: #ffffff;
+    position: relative;
+    align-self: stretch;
+    font-weight: light;
+    font: 300 20px Helvetica Neue, sans-serif;
+  }
+
+  .occupation {
+    position: relative;
+    color: #ffffff;
+    align-self: stretch;
+    text-align: left;
+    padding-left: 23px;
+    margin-top: 11px;
+    font-weight: bold;
+    font: 700 9px Helvetica Neue, sans-serif;
+  }
+
+  .img-2,
+  .img-3,
+  .img-4,
+  .img-5 {
+    aspect-ratio: 0.46;
+    object-fit: contain;
+    object-position: center;
+    width   : 80%;
+    overflow: hidden;
+    flex: 1;
+  }

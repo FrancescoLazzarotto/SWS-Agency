@@ -74,7 +74,7 @@ img {
 .menu a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    font-family: "Creato Display Light";
+    font-family: "Creato Display Light" sans-serif;
     transition: color 0.3s;
     padding: 5px 10px;
 }
@@ -212,7 +212,7 @@ img {
         padding: 0;
         margin: 0;
         text-transform: uppercase;
-        font-family: "Creato Display-Bold";
+        font-family: "Creato Display-Bold" ;
 font-weight: 700;
 color: #ffffff;
 }
@@ -366,7 +366,7 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     color: #fff;
     /* Colore bianco */
     font-size: 30px;
-    font-family: "Creato Display Light";
+    font-family: "Creato Display Light" sans-serif;
     /* Dimensione più grande del testo */
     font-weight:lighter;
     /* Grassetto */
@@ -842,9 +842,9 @@ html {
     color: #ffffff;
     position: relative;
     align-self: stretch;
-    font-weight: light;
-    padding-right: 18px; 
-    font: 300 22px "Creato Display Light"
+    padding-right: 12px; 
+    font: 300 "Creato Display Light" sans-serif;
+    font-size: 22px;
   }
 
   .occupation {

@@ -1,5 +1,5 @@
 body {
-    background-color: #1b1a1a;
+    background-color: rgba(15, 15, 15, 1);
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -50,7 +50,7 @@ img {
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 550px;
+    max-width: 450px;
     width: 100%;
     /* Rende il menu largo al 100% */
     display: flex;
@@ -114,13 +114,6 @@ img {
 }
 
 /* Assicurati che il menu rimanga visibile anche su schermi di dimensioni ridotte */
-@media screen and (max-width: 768px) {
-    .menu-container {
-        padding: 10px 80px;
-        
-        background-color: transparent;
-    }
-}
 
 /* about us */ 
 .container-aboutus {
@@ -363,6 +356,7 @@ font-family: "Creato Display Bold";
                 rgb(0, 150.87, 96.56) 52.08%,
                 rgba(15, 15, 15, 1) 100%);
     padding-bottom: 30px;
+  
 }
 
 .container-clients h2 {
@@ -386,91 +380,75 @@ font-family: "Creato Display Bold";
     font-size: 14px;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-/* contatti */
-
-.container-contacts {
-    text-align: center;
-background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 100%);
     
 }
-.container-contacts p {
-    text-align: center;
-    /* Allinea il paragrafo a sinistra */
-    color: #ededed;
-    /* Colore del testo nero */
-    font-size: 18px;
-    font-family: 'Montserrat';
-    padding-top: 20px;
-   padding-bottom: 20px;
-    /* Dimensione del testo predefinita */
-}
+/* contatti */
 .container-contacts h2 {
     color: #fff;
-    /* Colore bianco */
-    font-size: 70px;
-    /* Dimensione più grande del testo */
-   font-family: "Creato Display Bold";
-    /* Grassetto */
+   
+    font-size: 50px;
+    font-family: "Creato Display Bold";
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
     text-transform: uppercase;
-
 }
 .container-contacts h3 {
     color: #fff;
-    /* Colore bianco */
+   
     font-size: 30px;
-    font-family: "Creato Display Light" sans-serif;
-    /* Dimensione più grande del testo */
-    font-weight:lighter;
-    /* Grassetto */
+    font-family: "Creato Display Bold";
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
     text-transform: uppercase;
-
 }
+.container-contacts {
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 100%);
+}
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact-form {
     background: transparent;
     padding: 20px;
-    text-align: center;
-    max-width: 500px;
+    text-align: left;
+    max-width: 800px;
     width: 90%;
     margin: 0 auto;
     color: #fff;
     font-family: 'Montserrat';
+    font-weight: bold;
 }
 
 .input-group {
     margin: 10px 0;
     position: relative;
-    
 }
 
-.input-group input {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    background-color: transparent;
-    color: #fff;
-}
-.input-group select {
-    width: 103.5%;
-    height: 35px;
-    padding: 8px;
-    margin: 5px 0;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    background-color: transparent;
-    color: #1b1a1a;
-}
+.input-group input,
+.input-group select,
 .input-group textarea {
     width: 100%;
-    height: 100px;
     padding: 8px;
     margin: 5px 0;
     border: 3px solid #ccc;
-    border-radius: 14px;
+    border-radius: 8px;
     background-color: transparent;
     color: #fff;
+}
+
+.input-group select {
+    width: calc(100% + 6px);
+}
+
+.input-group textarea {
+    height: 100px;
+    border-radius: 14px;
 }
 
 .input-group label {
@@ -479,12 +457,21 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     margin-top: 10px;
     font-weight: bold;
 }
+::placeholder {
+    font-weight: bold;
+}
 
+/* Selettore per placeholder in Edge e Internet Explorer */
+:-ms-input-placeholder {
+    font-weight: bold;
+}
 
-
+/* Selettore per placeholder in altri browser */
+::-ms-input-placeholder {
+    font-weight: bold;
+}
 .input-group textarea {
     resize: none;
-  
 }
 
 .input-group input[type="checkbox"] {
@@ -492,15 +479,6 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     vertical-align: middle;
 }
 
-.input-group input[type="submit"] {
-    background-color: #017a01;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-}
 .custom-button {
     background-color: #015b01;
     color: white;
@@ -512,7 +490,6 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     font-size: 14px;
     cursor: pointer;
 }
-
 
 
 
@@ -576,16 +553,17 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     body { margin:0;
     padding: 0;}
 
-    
-
+      
     .menu-container {
-            max-width: 100%;
+            max-width: 290px;
             /* Occupa tutta la larghezza disponibile */
             text-align: center;
             /* Centra il menu orizzontalmente */
             margin: 0;
             padding: 0 0;
-            margin-left: 30px;
+           
+            
+                background-color: transparent;
             /* Spaziatura sopra e sotto il menu */
             border: none;
             width: 100%;
@@ -665,8 +643,9 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
 }
 /* experience mobile */ 
   .card {
-      max-width: 300px;
+      max-width: 280px;
       max-height: 100px;
+
   }
 
   .card-section {
@@ -677,7 +656,7 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
       font-size: 8px;
   }
  .card-row {
-     max-width: 100%;
+     max-width: 90%;
      /* Larghezza massima delle card su schermi più piccoli */
  }
         .container-experience h2 {
@@ -699,8 +678,8 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
     /* contatti mobile */ 
           .contact-form {
               max-width: 100%;
-             padding-right: 100px;
-             padding-top: 0;
+            
+         
           }
                   .container-contacts p {
                       text-align: center;
@@ -713,7 +692,9 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
                       padding-right: 20px;
                       /* Dimensione del testo predefinita */
                   }
-    
+                  .container-contacts h2 {
+                    font-size: 40px;
+                  }
           .input-group input,
           .input-group select,
           .input-group textarea {
@@ -969,7 +950,21 @@ html {
     overflow: hidden;
     cursor: pointer;
     background: transparent;
+    position: relative;
     
+
+}
+.container-clients-cards1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+
 
 }
 
@@ -980,7 +975,20 @@ html {
     }
 }
 
+  .container-clients-cards1 {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+      
+      padding: 40px;
+  }
 
+  .container-clients-cards1 img {
+      scroll-snap-align: center;
+      cursor: pointer;
+  }
 .cardcontainer {
     display: flex;
     gap: 20px;
@@ -988,13 +996,15 @@ html {
     white-space: nowrap;
     
 }
+
+
 @keyframes slideLeft {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(-30%);
+        transform: translateX(-100%);
     }
 }
 
@@ -1054,7 +1064,7 @@ html {
         object-position: center;
         width: 100%;
     
-        filter: drop-shadow(0px 15px 15px #000);
+        
         overflow: hidden;
         align-self: flex-start;
         flex-grow: 1;
@@ -1138,5 +1148,49 @@ aspect-ratio: 0.81;
     display: flex;
 }
 
-
+.container-clients-cards1 img {
+    scroll-snap-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    /* Aggiungi una transizione per un effetto più fluido */
+}
+.container-clients-cards1 img:hover {
+    transform: scale(1.1);
+    /* Aumenta leggermente le dimensioni al passaggio del mouse */
+    opacity: 1;
+        /* Riduci leggermente l'opacità al passaggio del mouse */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   
+        /* Aggiungi un'ombra al passaggio del mouse */
+    
+}
  
+
+
+/* Media queries per schermi Apple */
+
+/* iPhone */
+@media only screen and (max-width: 414px) {
+    
+}
+
+/* iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .name {
+            font-size: 18px;
+            padding-right: 5px;
+        }
+    
+        .card {
+            margin: 30px;
+            width: 500px;
+            height: 170px;
+        }
+}

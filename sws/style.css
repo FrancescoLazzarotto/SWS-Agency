@@ -41,46 +41,61 @@ img {
 /* Menu fisso */
 .menu-container {
     background-color: rgba(128, 128, 128, 0.285);
-    border-top: 3px solid rgb(0, 130, 0);
-    border-bottom: 3px solid grey;
+    border-top: 2px solid rgba(0, 150.87, 96.56, 0.88);
+    border-bottom: 2px solid grey;
     border-radius: 25px;
     position: fixed;
-    padding-left: 35px;
+   padding: 0 30px;
     z-index: 1;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 450px; /* Larghezza fissa del menu */
+    max-width: 550px;
+    width: 100%;
+    /* Rende il menu largo al 100% */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* Centra il menu orizzontalmente */
     align-items: center;
+    margin: 6px;
 }
 
 .menu {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra orizzontalmente il menu */
+    justify-content: space-between;
     align-items: center;
     margin: 0;
-    flex: 1; /* Il menu occupa lo spazio rimanente */
+    flex: 1;
+    flex-wrap: wrap;
+    /* Per gestire il wrap degli elementi su schermi più piccoli */
 }
 
 .menu li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0;
+    /* Aumentato il margine per una migliore leggibilità */
 }
 
 .menu a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    font-family: "Creato Display Light" sans-serif;
     transition: color 0.3s;
     padding: 5px 10px;
 }
 
 .menu a:hover {
     color: #fff;
+}
+
+.menu-scrolled {
+    background-color: rgba(15, 15, 15, 1)!important;
+    /* Sfondo bianco quando scorri oltre il punto specifico */
+}
+
+.menu-scrolled a {
+    color: #fff!important;
+    /* Testo nero quando scorri oltre il punto specifico */
 }
 
 .logo-menu {
@@ -182,7 +197,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #009761  2%, rgba(0, 255, 0, -1));
+    background: linear-gradient(to top,rgba(0, 150.87, 96.56, 0.88) 2%, rgba(0, 255, 0, -1));
     color: white;
     text-align: center;
     padding: 10px;
@@ -286,7 +301,13 @@ font-family: "Creato Display Bold";
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(40, 39, 39, 0.408);
+    background: linear-gradient(to right,
+                rgb(0, 150.87, 96.56) 0%,
+                /* Inizia dal bordo sinistro con il primo colore */
+                rgba(15, 15, 15, 0.462) 100%
+               
+                /* Arriva al 60% orizzontalmente con il secondo colore */
+            );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,8 +318,36 @@ font-family: "Creato Display Bold";
 .card:hover .card-overlay {
     opacity: 1;
 }
+.card-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left,
+            rgb(0, 150.87, 96.56) 0%,
+            /* Inizia dal bordo sinistro con il primo colore */
+            rgba(15, 15, 15, 0.462) 100%
+            /* Arriva al 60% orizzontalmente con il secondo colore */
+        );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2.4s, background 2.4s;
+}
+
+.card:hover .card-overlay2 {
+    opacity: 1;
+}
 
 .card-overlay h2 {
+    color: #fff;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    /* Ruota il testo al contrario */
+}
+.card-overlay2 h2 {
     color: #fff;
     font-size: 24px;
     transform: rotateY(180deg);
@@ -910,3 +959,184 @@ html {
     url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.svg#Creato Display Medium")format("svg");
 }
+
+.container-clients-cards {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    
+
+}
+
+@media (max-width: 991px) {
+    .container-clients-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.cardcontainer {
+    display: flex;
+    gap: 20px;
+    animation: slideLeft 10s linear infinite ;
+    white-space: nowrap;
+    
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+
+
+
+.img-1 {
+    aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    filter: drop-shadow(0px 15px 15px #000);
+    overflow: hidden;
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-basis: 0%;
+    cursor: pointer;
+        /* Aggiunto il cursore per indicare l'interattività */
+        transition: opacity 0.5s;
+}
+
+@media (max-width: 991px) {
+    .img-1 {
+        max-width: 100%;
+    }
+}
+
+.img-2 {
+    aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+   
+    filter: drop-shadow(0px 15px 15px rgba(0, 186, 97, 0.25));
+    overflow: hidden;
+    margin-top: 82px;
+    flex-grow: 1;
+    flex-basis: 0%;
+    cursor: pointer;
+        /* Aggiunto il cursore per indicare l'interattività */
+        transition: opacity 0.5s;
+}
+
+@media (max-width: 991px) {
+    .img-2 {
+        max-width: 100%;
+        margin-top: 40px;
+        cursor: pointer;
+            /* Aggiunto il cursore per indicare l'interattività */
+            transition: opacity 0.5s;
+    }
+}
+
+.img-3 {
+    aspect-ratio: 0.81;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+    
+        filter: drop-shadow(0px 15px 15px #000);
+        overflow: hidden;
+        align-self: flex-start;
+        flex-grow: 1;
+        flex-basis: 0%;
+        cursor: pointer;
+            /* Aggiunto il cursore per indicare l'interattività */
+            transition: opacity 0.5s;
+}
+.img-4 {
+aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    
+    filter: drop-shadow(0px 15px 15px rgba(0, 186, 97, 0.25));
+    overflow: hidden;
+    margin-top: 82px;
+    flex-grow: 1;
+    flex-basis: 0%;
+    cursor: pointer;
+    align-self: flex-start;
+        /* Aggiunto il cursore per indicare l'interattività */
+        transition: opacity 0.5s;
+        opacity: 1;
+}
+
+.img-5 {
+aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+ ;
+    filter: drop-shadow(0px 15px 15px #000);
+    overflow: hidden;
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-basis: 0%;
+    cursor: pointer;
+        /* Aggiunto il cursore per indicare l'interattività */
+        transition: opacity 0.5s;
+}
+
+.img-6 {
+aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+   
+    filter: drop-shadow(0px 15px 15px rgba(0, 186, 97, 0.25));
+    overflow: hidden;
+    margin-top: 82px;
+    flex-grow: 1;
+    flex-basis: 0%;
+    cursor: pointer;
+        /* Aggiunto il cursore per indicare l'interattività */
+        transition: opacity 0.5s;
+}
+
+@media (max-width: 991px) {
+    .img-3 {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+
+ .container-clients-card-2 {
+    display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+ }
+
+ @media (max-width: 991px) {
+     .container-clients-card-2 {
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+ }
+.imagecontainer {
+    display: flex;
+}
+
+
+ 

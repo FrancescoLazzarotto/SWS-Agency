@@ -585,7 +585,7 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
             /* Centra il menu orizzontalmente */
             margin: 0;
             padding: 0 0;
-            
+            margin-left: 30px;
             /* Spaziatura sopra e sotto il menu */
             border: none;
             width: 100%;
@@ -598,7 +598,7 @@ background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15
             padding: 0;
             display: flex;
             /* Rendi il menu orizzontale */
-            justify-content: center;
+            justify-content: flex-start;
             /* Centra le voci di menu orizzontalmente */
         }
     

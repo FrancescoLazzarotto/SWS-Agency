@@ -40,7 +40,7 @@ img {
 
 /* Menu fisso */
 .menu-container {
-    background-color: rgba(128, 128, 128, 0.285);
+    background-color: rgba(255, 253, 253, 0.426);
     border-top: 2px solid rgba(0, 150.87, 96.56, 0.88);
     border-bottom: 2px solid grey;
     border-radius: 25px;
@@ -87,7 +87,7 @@ img {
 .menu a:hover {
     color: #fff;
 }
-
+ 
 .menu-scrolled {
     background-color: rgba(15, 15, 15, 1)!important;
     /* Sfondo bianco quando scorri oltre il punto specifico */
@@ -97,7 +97,7 @@ img {
     color: #fff!important;
     /* Testo nero quando scorri oltre il punto specifico */
 }
-
+ 
 .logo-menu {
     width: 40px;
 }
@@ -185,16 +185,14 @@ img {
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+  
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,rgba(0, 150.87, 96.56, 0.88) 2%, rgba(0, 255, 0, -1));
+    background: linear-gradient(to top, rgba(0, 255, 0, -1), rgba(0, 150.87, 96.56, 0.88) 2%);
     color: white;
     text-align: center;
     padding: 10px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.8s;
     
 }
@@ -208,6 +206,7 @@ img {
     text-align: center;
 
     background-color: rgba(15, 15, 15, 1);
+    margin-bottom: 40px;
    
 }
 
@@ -247,105 +246,71 @@ font-family: "Creato Display Bold";
             line-height: normal;
 }
 
+.after-services p {
+    text-align: center;
+    color: #ededed;
+    font-size: 14px;
+    padding-top: 200px;
+    padding-bottom: 20px;
+    font-family: "Montserrat";
+    font-weight: 400;
 
-.card-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    font-size: 18px;
+
+    letter-spacing: -1.2px;
+    line-height: normal;
 }
+  .card-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+  }
 
-.card-row {
-    display: flex;
-}
+  .card-column {
+      display: flex;
+      gap: 10px;
+  }
 
-.card {
+  .card-row {
+      display:flex;
+      gap: 10px;
+  }
+.card-left {
     width: 600px;
     height: 200px;
-    margin: 20px;
+    margin: 10px 10px 10px 0;
+    /* Spazio di 10px a destra e 10px sopra e sotto */
     perspective: 1000px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.card-right {
+    width: 600px;
+    height: 200px;
+    margin: 10px 0 10px 10px;
+    /* Spazio di 10px a sinistra e 10px sopra e sotto */
+    perspective: 1000px;
+    align-self: flex-end;
+    transform: translateY(200px);
    
 }
 
-.card-inner {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.9s;
-  
-}
 
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
 
-.card img {
+.card-left img,
+.card-right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     backface-visibility: hidden;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right,
-                rgb(0, 150.87, 96.56) 0%,
-                /* Inizia dal bordo sinistro con il primo colore */
-                rgba(15, 15, 15, 0.462) 100%
-               
-                /* Arriva al 60% orizzontalmente con il secondo colore */
-            );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 2.4s, background 2.4s;
-}
 
-.card:hover .card-overlay {
-    opacity: 1;
-}
-.card-overlay2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to left,
-            rgb(0, 150.87, 96.56) 0%,
-            /* Inizia dal bordo sinistro con il primo colore */
-            rgba(15, 15, 15, 0.462) 100%
-            /* Arriva al 60% orizzontalmente con il secondo colore */
-        );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 2.4s, background 2.4s;
-}
-
-.card:hover .card-overlay2 {
-    opacity: 1;
-}
-
-.card-overlay h2 {
-    color: #fff;
-    font-size: 24px;
-    transform: rotateY(180deg);
-    /* Ruota il testo al contrario */
-}
-.card-overlay2 h2 {
-    color: #fff;
-    font-size: 24px;
-    transform: rotateY(180deg);
-    /* Ruota il testo al contrario */
-}
 /*sottosezione experience, clients */
 
 .container-clients {
@@ -381,11 +346,12 @@ font-family: "Creato Display Bold";
     padding-top: 20px;
     padding-bottom: 20px;
     
+    
 }
 /* contatti */
 .container-contacts h2 {
     color: #fff;
-   
+   text-align: center;
     font-size: 50px;
     font-family: "Creato Display Bold";
     font-weight: lighter;
@@ -395,7 +361,7 @@ font-family: "Creato Display Bold";
 }
 .container-contacts h3 {
     color: #fff;
-   
+   text-align: center;
     font-size: 30px;
     font-family: "Creato Display Bold";
     font-weight: lighter;
@@ -416,7 +382,7 @@ font-family: "Creato Display Bold";
 .contact-form {
     background: transparent;
     padding: 20px;
-    text-align: left;
+    
     max-width: 800px;
     width: 90%;
     margin: 0 auto;
@@ -436,7 +402,7 @@ font-family: "Creato Display Bold";
     width: 100%;
     padding: 8px;
     margin: 5px 0;
-    border: 3px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     background-color: transparent;
     color: #fff;
@@ -791,7 +757,8 @@ html {
 .image-overlay {
   position: absolute;
   width: 80%;
-  background: linear-gradient(to bottom, transparent -10%, rgba(0, 150.87, 96.56, 0.88) 130%);
+  
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 150.87, 96.56, 0.88) 100%);
   opacity: 0;
   transition: height 0.8s ease-in-out, opacity 0.8s ease-in-out;
   border-radius: 0 0 20px 20px;
@@ -892,7 +859,7 @@ html {
     color: #ffffff;
     align-self: stretch;
     text-align: left;
-    padding-left: 24px;
+    padding-left: 27px;
     margin-bottom: 12px;
     margin-top: 6px;
     font-weight: bold;
@@ -992,21 +959,13 @@ html {
 .cardcontainer {
     display: flex;
     gap: 20px;
-    animation: slideLeft 10s linear infinite ;
+    
     white-space: nowrap;
     
 }
 
 
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100%);
-    }
 
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 
 
@@ -1022,8 +981,7 @@ html {
     flex-grow: 1;
     flex-basis: 0%;
     cursor: pointer;
-        /* Aggiunto il cursore per indicare l'interattività */
-        transition: opacity 0.5s;
+       
 }
 
 @media (max-width: 991px) {
@@ -1090,6 +1048,33 @@ aspect-ratio: 0.81;
         transition: opacity 0.5s;
         opacity: 1;
 }
+ 
+.container-clients-cards img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.81;
+    object-fit: contain;
+    object-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    filter: drop-shadow(0px 15px 15px #000);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    /* Ridotto il tempo della transizione */
+}
+
+.container-clients-cards img:nth-child(2),
+.container-clients-cards img:nth-child(4) {
+    margin-top: 82px;
+}
+
+.container-clients-cards img.rotated {
+    transform: rotateY(180deg) scale(0.8);
+    transition: transform 0.8s ease;
+    
+    /* Specificato solo per la rotazione */
+}
+
+
 
 .img-5 {
 aspect-ratio: 0.81;
@@ -1181,16 +1166,114 @@ aspect-ratio: 0.81;
 
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) {
 
     .name {
             font-size: 18px;
             padding-right: 5px;
         }
     
-        .card {
+        .card-left {
             margin: 30px;
-            width: 500px;
-            height: 170px;
+            width: 400px;
+            height: 500px;
         }
+                 .card-right {
+                    
+                     width: 400px;
+                     height: 500px;
+                 }
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:
+
+        rgba(15, 15, 15, 0.462)
+        /* Arriva al 60% orizzontalmente con il secondo colore */
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2.4s, background 2.4s;
+}
+
+.card:hover .card-overlay {
+    opacity: 0;
+}
+
+.card-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: linear-gradient(to left,
+            rgb(0, 150.87, 96.56) 0%,
+            /* Inizia dal bordo sinistro con il primo colore */
+            rgba(15, 15, 15, 0.462) 100%
+            /* Arriva al 60% orizzontalmente con il secondo colore */
+        );
+    display: NONE;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2.4s, background 2.4s;
+
+}
+
+.card:hover .card-overlay2 {
+    opacity: 0;
+}
+
+.card-overlay h2 {
+    color: #fff;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    /* Ruota il testo al contrario */
+}
+
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.card:hover .card-inner::before {
+    opacity: 1;
+    /* Ora è visibile durante la transizione */
+}
+.container-clients-cards img.rotated[data-alt] {
+    transform: rotateY(180deg);
+}
+
+.card-inner::before,
+.card-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    opacity: 0;
+    /* Non visibile */
+    transition: opacity 1.9s;
+    /* Transizione dell'opacità */
 }

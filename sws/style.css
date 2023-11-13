@@ -6,9 +6,13 @@ body {
     display:block;
     justify-content: center;
     align-items: flex-start;
+    box-sizing: border-box;
+    
+    
    
     
 }
+
 
 /* Immagine di sfondo home, prima parte della pagina */
 .image-container {
@@ -122,9 +126,64 @@ img {
         background: linear-gradient(180deg, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 50%);
     margin-top: 0;
     padding: 10px 0;
+    z-index: 1;
+    box-sizing: border-box;
+    overflow: hidden;
+   
+   
     /* Centra il testo */
 }
+.immagini-sfondo-aboutus {
+     position:absolute;
+        /* Aggiungi questa riga per posizionare il testo sopra le immagini */
+        
+}
+.immagini-sfondo-aboutus img {
+    width: 800px;
+        /* Imposta la larghezza delle immagini */
+        height: auto;
+        /* Altezza proporzionale alla larghezza */
+      display: block;
+    transform: translate(-15%, -46%);
+        /* Aggiunge spaziatura tra le immagini, se necessario */
+       
+}
+.immagini-sfondo-aboutus-2 {
+position: absolute;
+margin: 0;
+padding: 0;
+    /* Aggiungi questa riga per posizionare il testo sopra le immagini */
+   
+   
+}
+.immagini-sfondo-aboutus-2 img {
+    width:800px;
+    /* Imposta la larghezza delle immagini */
+    height: auto;
+    display: block;
+    /* Altezza proporzionale alla larghezza */
+    position: absolute;
+   transform: translateX(80%);
+   top: -300px;
+  
+   
+    /* Aggiunge spaziatura tra le immagini, se necessario */
 
+}
+.paragrafo-team {
+    text-align: center;
+        /* Allinea il paragrafo a sinistra */
+        color: #ededed;
+        font-family: 'montserrat';
+        /* Colore del testo nero */
+        font-size: 16px;
+       padding-top: 65px;
+       z-index: 3;
+}
+.container-aboutus p, h2 {
+    z-index: 3;
+    
+}
 .container-aboutus p {
     text-align: center;
     /* Allinea il paragrafo a sinistra */
@@ -134,6 +193,7 @@ img {
     font-size: 16px;
     padding-left: 20%;
     padding-right: 20%;
+    margin-bottom: 80px;
     /* Dimensione del testo predefinita */
 }
 
@@ -155,6 +215,7 @@ img {
     font-weight: bold;
     /* Grassetto */
     text-transform: uppercase;
+    padding-bottom: 40px;
     
 }
 
@@ -209,7 +270,22 @@ img {
     margin-bottom: 40px;
    
 }
+.immagini-sfondo-experience {
+    position: absolute;
+    /* Aggiungi questa riga per posizionare il testo sopra le immagini */
 
+}
+
+.immagini-sfondo-experience img {
+    width: 700px;
+    /* Imposta la larghezza delle immagini */
+    height: auto;
+    /* Altezza proporzionale alla larghezza */
+    display: block;
+    transform: translate(-3%, -38%);
+    /* Aggiunge spaziatura tra le immagini, se necessario */
+
+}
 .container-experience h2 {
     color: #fff;
        
@@ -227,7 +303,7 @@ color: #ffffff;
 .container-experience h3 {
     color: #fff;
 font-family: "Creato Display Bold";
-    font-size: 40px;
+    font-size: 50px;
     font-weight: lighter;
     text-transform: uppercase;
 }
@@ -237,13 +313,12 @@ font-family: "Creato Display Bold";
         font-size: 14px;
         padding-top: 20px;
         padding-bottom: 20px;
+        padding-left: 20%;
+        padding-right: 20%;
         font-family: "Montserrat";
-            font-weight: 400;
-           
-            font-size: 18px;
-           
             letter-spacing: -1.2px;
             line-height: normal;
+                z-index: 3;
 }
 
 .after-services p {

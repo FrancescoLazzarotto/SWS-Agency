@@ -7,8 +7,7 @@
         <meta name="description" content="SWS Agency" />
         <meta name="keywords" content="parole chiave, SEO, ottimizzazione" />
         <meta name="author" content="Francesco Lazzarotto" />
-        <link href="https://db.onlinewebfonts.com/c/520a4a8159f8f7df16eec7ac6d5054e6?family=CreatoDisplay-Bold"
-            rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/520a4a8159f8f7df16eec7ac6d5054e6?family=CreatoDisplay-Bold" rel="stylesheet">
         <title> SWS Agency </title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -63,6 +62,12 @@
     <div id="aboutus" class="container-aboutus">
         <h2>
             about us </h2>
+           
+            <div class="immagini-sfondo-aboutus"> 
+                <img src="immagini/OUR TEAM.png" loading="lazy" alt="">
+
+            </div>
+
         
     <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim vent mollit anim id est laborum."</p>
@@ -70,7 +75,6 @@
    
         
   
-    <p> "Lorem ipsum doloreui officia deserunt mollit anim id est laborum."</p>
 <div class="main-container">
   <div class="image-wrapper">
     <img loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&"class="img" />
@@ -127,6 +131,16 @@
   </div>
  
 </div>
+<!-- 
+<div class="immagini-sfondo-aboutus-2">
+    <img src="immagini/HISTORY.png" loading="lazy" alt="">
+
+</div>
+-->
+
+<p class="paragrafo-team"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim vent mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim vent mollit anim id est laborum."</p>
 <div class="center-container">
         <div class="rectangle">
     
@@ -136,13 +150,18 @@
 </div> 
 </div> 
 
-
+ 
 <div class="container-experience" id="experience">
     <h2> experience </h2>
+    <div class="immagini-sfondo-experience">
+        <img src="immagini/EXPERIENCE.png" loading="lazy" alt="">
+    
+    </div>
        
-<p> dolor sit amet, consectetur adipiscing elit. Nunc a lobortis felis. Aliquam feugiat nec odio nec
-gravida. Ut
-ac viverra est, a aliquam nulla. Quisque ut nisl scelerisque, imperdiet mauris eu,Donec placerat scelerisque erat. Proin porttitor ex et enim vehicula sagittis.</p>
+<p class="paragrafo-team"> dolor sit amet, consectetur adipiscing elit. Nunc a lobortis felis. Aliquam feugiat nec odio nec
+gravida. Ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+aliqua. Ut enim ad minim vent mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque erat. Proin porttitor ex et enim vehicula sagittis.</p>
 
     <h3> Services </h3>
    
@@ -221,12 +240,11 @@ ac viverra est, a aliquam nulla. Quisque ut nisl scelerisque, imperdiet mauris e
                     // Verifica se l'immagine è ruotata
                     const isRuotata = immagine.classList.contains("rotated");
 
-                    // Durata della tua transizione CSS in millisecondi
+                    // Durata de    lla tua transizione CSS in millisecondi
                     const durataTransizione = 800; // Modifica questo valore in base alla tua transizione CSS
 
                     // Se è ruotata, torna all'immagine originale, altrimenti passa all'immagine alternativa
                     immagine.src = isRuotata ? srcOriginale : srcAlternativo;
-
                     // Aggiungi o rimuovi la classe di rotazione
                     immagine.classList.toggle("rotated");
 
@@ -234,7 +252,7 @@ ac viverra est, a aliquam nulla. Quisque ut nisl scelerisque, imperdiet mauris e
                     setTimeout(() => {
                         // Se l'immagine è tornata alla sua forma originale, consenti il riclicco
                         if (!isRuotata) {
-                            immagine.addEventListener("click", function restoreOriginal() {
+                                immagine.addEventListener("click", function restoreOriginal() {
                                 immagine.src = srcOriginale;
                                 immagine.removeEventListener("click", restoreOriginal);
                             });

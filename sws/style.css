@@ -12,6 +12,7 @@ body {
 html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -78,9 +79,12 @@ img {
     margin: 0;
     flex: 1;
     flex-wrap: wrap;
+    
     /* Per gestire il wrap degli elementi su schermi più piccoli */
 }
-
+.menu-scrolled {
+    transition: background-color 1.5s ease !important;
+}
 .menu li {
     margin: 0;
     /* Aumentato il margine per una migliore leggibilità */
@@ -306,7 +310,7 @@ top: 20px;
         padding: 0;
         margin-top: 20px;
         text-transform: uppercase;
-        font-family: "Creato Display-Bold" ;
+        font-family: "CreatoDisplay-Bold" ;
 font-weight: 700;
 color: #ffffff;
 }
@@ -613,7 +617,20 @@ form {
     cursor: pointer;
 }
 
+.privacy-cookies-links {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.privacy-cookies-links a {
+    text-decoration: none;
+    color:#2d2d2d;
+    text-transform: uppercase;
+    font-family: 'CreatoDisplay-Bold';
+}
 
+.privacy-cookies-links a:hover {
+color: #ededed;
+}
 
 
 
@@ -960,12 +977,9 @@ html {
 }
 .image-wrapper:hover .image-overlay-text {
   opacity: 1;
-  transform: translateY(180%);
+  transform: translateY(0);
 }
 
-.container-clients-cards img.rotated[data-alt] {
-    transform: rotateY(180deg) scaleX(-1);
-}
 
 
 .main-container {
@@ -1472,9 +1486,7 @@ aspect-ratio: 0.81;
 /* PRIVACY */
 
 /* titolo privacy */ 
-h1, h2 {
-    line-height: 1.3;
-}
+
 .title-privacy  {
     font-size: 2.25rem;
     text-align: center;
@@ -1482,36 +1494,284 @@ h1, h2 {
 }
 
 /*body e sfondo privacy */
+.privacy-cookies-menu {
+    background: transparent;
+    
+    text-align: center;
+    
+    position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(255, 253, 253, 0.329);
+            border-top: 3px solid rgba(0, 150.87, 96.56, 0.88);
+            border-bottom: 2px solid grey;
+            border-radius: 25px;
+            
+           
+            
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 200px;
+            width: 100%;
+            /* Rende il menu largo al 100% */
+            display: flex;
+            justify-content: center;
+            /* Centra il menu orizzontalmente */
+            align-items: center;
+            margin: 8px;
+            
+}
+.privacy-cookies-menu a {
+    text-decoration: none;
+    text-transform:uppercase;
+    color: rgba(255, 255, 255, 0.386);
+    transition: color 0.3s;
+    padding: 14px 15px;
+}
 
+.privacy-cookies-menu a:hover {
+    color: #fff;
+}
+.privacy-cookies-menu img {
+    max-width: 10%;
+    height: auto;
+    display: block;
+       
+        margin: auto;
+}
 .cookie-policy {
     background-color: #000;
         color: #ededed;
 }
 .title-cookie {
-    margin-top: 150px;
+    
 font-size : 2.2em;
 text-align: center;
+text-transform: uppercase;
 }
 
 .container-general-privacy {
-    
-    font-weight: bolder;
-    padding-left: 12%;
-    padding-right: 12%;
+    font-family: 'Creato Display-Light';
+    margin-top: 180px;
+    padding-left: 10%;
+    padding-right: 10%;
     font-size: 110%;
+    line-height: 1.3;
+}
+
+.container-general-privacy p {
+    padding-left: 10px;
 }
 
 .container-general-privacy h2 {
-    font-size: 2em;
+    font-size: 2.3em;
+    text-transform: uppercase;
 }
 
 .first-paragraph { 
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+
+.second-paragraph h2 {
+    color: rgba(0, 150.87, 96.56, 0.88);
+}
+
+.scaletta-paragraph {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    color: #ededed;
+}
+
+.scaletta-paragraph button {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    color: #ededed;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid transparent;
+    /* Imposta il bordo a transparent per tutte le direzioni */
+    border-top: 1px solid rgb(0, 150.87, 96.56);
+    font-family: 'CreatoDisplay-Light';
+    font-size: 18px;
+    padding-left: 20px;
+    transition: background-color 0.3s ease;
+        /* Aggiunta della transizione */
+    /* Aggiunge il bordo superiore con il colore desiderato */
+}
+.scaletta-paragraph button.active {
+    font-family: 'CreatoDisplay-Bold';
+}
+
+ .scaletta-paragraph .hidden {
+    max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  
+}
+.scaletta-paragraph .hidden.active {
+    max-height: 2000px;
+    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+    /* Regola questo valore in base all'altezza massima possibile del paragrafo */
+}
+  .scaletta-paragraph button:active,
+
+  .scaletta-paragraph button:hover {
+      background-color: rgba(0, 150.87, 96.56, 0.2);
+      /* Cambia il colore quando cliccato o in focus */
+  }
+
+  .scaletta-paragraph button.active {
+
+      font-weight: bold !important;
+      background-color: rgba(0, 150.87, 96.56, 0.2);
+      /* Aggiungi il colore di sfondo anche quando è attivo */
+  }
+.arrow {
+   
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #00ba60e4 transparent transparent transparent;
+    /* Colore verde per la freccia */
+    transition: transform 0.3s ease;
+    /* Aggiungi una transizione per un effetto più fluido */
+}
+
+.active .arrow {
+    transform: rotate(180deg);
+    /* Ruota la freccia quando il paragrafo è aperto */
+}
+.third-paragraph a {
+    text-decoration: none;
+    color: rgb(0, 150.87, 96.56);
+}
+.third-paragraph { 
+    margin-bottom: 120px;
+}
+
+.fourth-paragraph {
+    margin-bottom: 120px;
+}
+.fourth-paragraph ul {
+    list-style-type: none;
+  
+}
+.fourth-paragraph h2 
+{
+    color: rgb(0, 150.87, 96.56);
+}
+
+.fourth-paragraph ul li::before {
+    content: '\f061';
+    font-family: 'FontAwesome';
+    color: #007b5e;  
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+   
+}
+.fourth-paragraph a {
+    text-decoration: none;
+    color: #ededed;
+}
+.fourth-paragraph li {
+    padding: 5px;
+}
+.fifth-paragraph {
+    margin-bottom: 120px;
+}
+.fifth-paragraph  a {
+    text-decoration: none;
+    color: rgb(0, 150.87, 96.56);
+    
+}
+.fifth-paragraph h2 {
+    color: rgb(0, 150.87, 96.56);
+}
+.sixth-paragraph {
+    margin-bottom: 20px;
+}
+.sixth-paragraph h2 {
+    color: rgb(0, 150.87, 96.56);
+}
+.sixth-paragraph h3 {
+    font-size: 30px;
+
+}
+.scaletta-paragraph-2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #ededed;
+}
+
+.scaletta-paragraph-2 button {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    color: #ededed;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid transparent;
+    /* Imposta il bordo a transparent per tutte le direzioni */
+    border-top: 1px solid rgb(0, 150.87, 96.56);
+    font-family: 'CreatoDisplay-Light';
+    font-size: 18px;
+    padding-left: 20px;
+    /* Aggiunge il bordo superiore con il colore desiderato */
+}
+.scaletta-paragraph-2 p {
+    padding-left: 35px;
 }
 
 
 
+.scaletta-paragraph-2 .hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
 
+}
+
+.scaletta-paragraph-2 .hidden.active {
+    max-height: 2000px;
+    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+    /* Regola questo valore in base all'altezza massima possibile del paragrafo */
+}
+  .scaletta-paragraph-2 button:active,
+
+  .scaletta-paragraph-2 button:hover {
+      background-color: rgba(0, 150.87, 96.56, 0.2);
+      /* Cambia il colore quando cliccato o in focus */
+  }
+
+  .scaletta-paragraph-2 button.active {
+
+      font-weight: bold !important;
+      background-color: rgba(0, 150.87, 96.56, 0.2);
+      /* Aggiungi il colore di sfondo anche quando è attivo */
+  }
+.definition {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+      
+        
+    
+      
+
+        
 
 
 

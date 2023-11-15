@@ -67,7 +67,7 @@ img {
     /* Centra il menu orizzontalmente */
     align-items: center;
     margin: 6px;
-    z-index: 4;
+    z-index: 40;
 }
 
 .menu {
@@ -157,7 +157,7 @@ img {
         height: auto;
         /* Altezza proporzionale alla larghezza */
       display: block;
-    transform: translate(-15%, -46%);
+    transform: translate(-15%, -47%);
     
     position: absolute;
         /* Aggiunge spaziatura tra le immagini, se necessario */
@@ -187,6 +187,7 @@ top: 20px;
         /* Colore del testo nero */
         font-size: 16px;
        padding-top: 65px;
+       margin-bottom: 40px !important;
        z-index: 3;
 }
 .container-aboutus p, h2 {
@@ -321,13 +322,14 @@ font-family: "Creato Display-Bold";
     font-size: 50px;
     font-weight: lighter;
     text-transform: uppercase;
+    margin-bottom: 22px;
 }
 .container-experience p {
     text-align: center;
         color: #ededed; 
         font-size: 16px;
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 17px;
         padding-left: 20%;
         padding-right: 20%;
         font-family: "Montserrat";
@@ -341,7 +343,7 @@ font-family: "Creato Display-Bold";
     text-align: center;
     color: #ededed;
     font-size: 14px;
-    padding-top: 200px;
+    padding-top: 242px;
     padding-bottom: 20px;
     font-family: "Montserrat";
     font-weight: 400;
@@ -411,7 +413,7 @@ font-family: "Creato Display-Bold";
                 rgba(15, 15, 15, 1) 0%,
                 rgb(0, 150.87, 96.56) 52.08%,
                 rgba(15, 15, 15, 1) 100%);
-    padding-bottom: 30px;
+    
     overflow: hidden;
   
 }
@@ -427,7 +429,7 @@ font-family: "Creato Display-Bold";
     height: auto;
     z-index: 1;
     right: -175px;
-    top: -130px;
+    top: -136px;
 
 
 }
@@ -451,8 +453,8 @@ font-family: "Creato Display-Bold";
     color: #ededed;
     font-family: 'Montserrat';
     font-size: 16px;
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 0;
+    padding-bottom: 90px;
     padding-left: 20%;
     padding-right: 20%;
     position: relative;
@@ -465,7 +467,7 @@ font-family: "Creato Display-Bold";
     color: #ededed;
     font-family: 'Montserrat';
     font-size: 16px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 100px;
     padding-left: 20%;
     padding-right: 20%;
@@ -479,7 +481,7 @@ font-family: "Creato Display-Bold";
     font-size: 60px;
     font-family: "Creato Display-Bold";
     
-    padding-bottom: 20px;
+    padding-bottom: 0;
     margin: 0;
     text-transform: uppercase;
 }
@@ -498,10 +500,10 @@ font-family: "Creato Display-Bold";
 .container-contacts h3 {
     color: #fff;
    text-align: center;
-    font-size: 30px;
+font-size: 60px;
     font-family: "Creato Display-Bold";
-    font-weight: bold;
-    padding-bottom: 40px;
+    font-weight: lighter;
+    padding-bottom: 10px;
     margin: 0;
     text-transform: uppercase;
 }
@@ -525,8 +527,8 @@ font-family: "Creato Display-Bold";
     width: 750px;
     height: auto;
     z-index: 1;
-    right: -100px;
-    transform: translateY(-15%);
+    right: -95px;
+    transform: translateY(-25%);
 
 
 }
@@ -606,15 +608,18 @@ form {
 }
 
 .custom-button {
-    background-color: #015b01;
+    background-color: #000;
+    border:#017a01;
     color: white;
     border: none;
-    width: 80px;
+    width: 100px;
     height: auto;
-    border-radius: 12px;
-    padding: 8px 16px;
+    border-radius: 22px;
+    margin-top: 10px;
+    padding: 12px 16px;
     font-size: 14px;
     cursor: pointer;
+    height: 48.88px;
 }
 
 .privacy-cookies-links {
@@ -626,9 +631,9 @@ form {
 }
 .privacy-cookies-links a {
     text-decoration: none;
-    color:#6c6c6c;
+    color:#c1c0c0;
     text-transform: uppercase;
-    font-family: 'CreatoDisplay-Bold';
+    font-family: 'CreatoDisplay-Light';
   
 }
 
@@ -1148,7 +1153,7 @@ html {
     height: auto;
     /* Altezza proporzionale alla larghezza */
     display: block;
-    transform: translate(-5%, -27%);
+    transform: translate(-5%, -43%);
     z-index: 1;
     position: absolute;
     /* Aggiunge spaziatura tra le immagini, se necessario */
@@ -1208,15 +1213,14 @@ html {
 
 .img-2 {
     aspect-ratio: 0.81;
-    object-fit: contain;
+    object-fit:fill;
     object-position: center;
     width: 100%;
    -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
-border-radius: 20% 20% 20% 20%;
-    filter: drop-shadow(0px 105px 15px rgba(0, 186, 97, 0.25));
-    
-    margin-top: 82px;
+border-radius: 8% ; 
+
+   margin-top: 62px;
     flex-grow: 1;
     flex-basis: 0%;
     cursor: pointer;
@@ -1805,30 +1809,84 @@ text-transform: uppercase;
     margin-bottom: 40px;
 }
 
+.container-slider-buttons {
+    /* 
+    background-color: #000; */
+    width: 150px;
+    height: 50px;
+    /*
+    border-top: 2px solid rgba(255, 255, 255, 0.88);
+    border-bottom: 2px solid grey;
+    border-radius: 25px;
+    */
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    /* Aggiunto per centrare orizzontalmente */
+}
+.swiper-button-next {
+    --swiper-navigation-color: #ededed;
+    /* Cambia il colore di navigazione al tuo colore desiderato */
+    --swiper-theme-color: #ffffff;
+    /* Cambia il colore del tema al tuo colore desiderato */
+    /* Altre regole di stile se necessario */
+   
+}
+.swiper-button-prev {
+    --swiper-navigation-color: #ededed;
+    /* Cambia il colore di navigazione al tuo colore desiderato */
+    --swiper-theme-color: #ffffff;
+    /* Cambia il colore del tema al tuo colore desiderato */
+    /* Altre regole di stile se necessario */
+}
+.slider-buttons {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    /* o qualsiasi altra modalità di allineamento che preferisci */
+    align-items: center;
+    padding: 20px;
+    /* Aggiunto padding interno se necessario */
+    width: 100%;
+    /* Modificato per adattarsi al 100% della larghezza del contenitore */
+}
 
- .custom-next-button,
- .custom-prev-button {
-     font-size: 24px;
-     color: white;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+:root {
+    --swiper-navigation-size: 10px;
+    /* Imposta il valore desiderato */
+}
+ .swiper-button-next,
+ .swiper-button-prev {
+     position: relative;
+     
+     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
      z-index: 10;
      cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 20px !important;
+     height: auto !important; 
+     color: var(--swiper-navigation-color, var(--swiper-theme-color))
  }
 
- .custom-next-button {
-     right: 0;
- }
-
- .custom-prev-button {
-     left: 0;
+ .swiper-button-next.swiper-button-disabled,
+ .swiper-button-prev.swiper-button-disabled {
+     opacity: .35;
+     cursor: auto;
+     pointer-events: none
  }
  .slider-wrapper {
     position: relative;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 15px;
+    
  }
-        
+   
+ 
  
 
   .card {
@@ -1863,3 +1921,76 @@ text-transform: uppercase;
 
 
 
+.footer {
+    background: #000;
+    padding: 30px 10px;
+    font-family: 'CreatoDisplay-Light';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 0% 0%;
+    padding: 0.4% 0%;
+    color: gray;
+    font-size: 0.8em;
+}
+.footer .row1 {
+    width: 100%;
+    margin: 0% 0%;
+    padding: 0.4% 0%;
+    padding-bottom: 20px;
+    color: gray;
+    font-size: 0.8em;
+}
+.footer .row a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+.footer .row1 a {
+    text-decoration: none;
+    color: gray;
+    transition: 0.5s;
+}
+.footer .row a:hover {
+    color: #fff;
+}
+.footer .row1 a:hover {
+    color: #fff;
+}
+.footer .row ul {
+    width: 100%;
+}
+.row .li-without-border {
+    border: 0px solid transparent !important;
+}
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    padding-right: 20px;
+    border-right: 2px solid gray;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}

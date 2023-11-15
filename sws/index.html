@@ -19,6 +19,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="immagini/sws.svg" type="image/x-icon">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
         <style> 
        
         </style>
@@ -180,7 +185,7 @@
     
     </div>
        
-<p class="paragrafo-team"> dolor sit amet, consectetur adipiscing elit. Nunc a lobortis felis. Aliquam feugiat nec odio nec
+<p class="paragrafo-team1"> dolor sit amet, consectetur adipiscing elit. Nunc a lobortis felis. Aliquam feugiat nec odio nec
 gravida. Ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 aliqua. Ut enim ad minim vent mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque erat. Proin porttitor ex et enim vehicula sagittis.</p>
@@ -230,64 +235,70 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
         aliqua. Ut enim ad minim vent mollit anim id est laborum, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna
         aliqua. Ut enim ad minim vent mollit anim id est laborum"</p> <!-- 
-    <div class="slider-wrapper">
-        <div class="container-clients-cards" id="imageContainer">
-            <div class="cardcontainer">
-                <img loading="lazy" src="immagini/retro1.jpg" class="img-1 image-wrapper" alt="Image 1"
-                    data-alt="immagini/retro1.jpg" />
-                <img loading="lazy" src="immagini/retro.png" class="img-2 image-wrapper" alt="Image 2"
-                    data-alt="immagini/retro.png" />
-                <img loading="lazy" src="immagini/retro2.png" class="img-3 image-wrapper" alt="Image 3"
-                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
-                <img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                    class="img-4 image-wrapper" alt="Image 4"
-                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
-                <img loading="lazy" src="https://via.placeholder.com/800x600" class="img-5 image-wrapper" alt="Image 5" />
-                <img loading="lazy" src="https://via.placeholder.com/800x600" class="img-6 image-wrapper" alt="Image 6" />
-            </div>
-        </div>
-    </div>
-
-        
-    
-    <div class="button-container">
-        <button id="prevButton">Previous</button>
-        <button id="nextButton">Next</button>
-    </div>
+   
     --> <div class="slider-wrapper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 
                 <div class="swiper-slide">
-                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_1.png" class="img-2 image-wrapper" alt="Image 2"
-                        data-alt="immagini/retro.png" />
+                    <div class="card" onclick="flipCard(this)">
+                        <!-- Fronte della carta -->
+                        <div class="card-front">
+                            <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                        </div>
+                        <!-- Retro della carta -->
+                        <div class="card-back">
+                            <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper"
+                                alt="Image 2 - Back" />
+                        </div>
+                    </div>
+                </div>
+                 <div class="swiper-slide">
+            <div class="card"  onclick="flipCard(this)">
+                <!-- Fronte della carta -->
+                <div class="card-front" >
+                    <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-2 image-wrapper" alt="Image 2" />
+                </div>
+                <!-- Retro della carta -->
+                <div class="card-back">
+                    <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-2 image-wrapper"
+                        alt="Image 2 - Back" />
+                </div>
+            </div>
+        </div>
+                <div class="swiper-slide">
+                    <div class="card" onclick="flipCard(this)">
+                        <!-- Fronte della carta -->
+                        <div class="card-front">
+                            <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                        </div>
+                        <!-- Retro della carta -->
+                        <div class="card-back">
+                            <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper"
+                                alt="Image 2 - Back" />
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_2.png" class="img-3 image-wrapper" alt="Image 3"
-                        data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                        class="img-4 image-wrapper" alt="Image 4"
-                        data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_3.png" class="img-5 image-wrapper"
+                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_3.png" class="img-2 image-wrapper"
                         alt="Image 5" />
                 </div>
                 <div class="swiper-slide">
-                    <img loading="lazy" src="immagini/retro1.jpg" class="img-6 image-wrapper"
+                    <img loading="lazy" src="immagini/retro1.jpg" class="img-2 image-wrapper"
                         alt="Image 6" />
                 </div>
             </div>
-             
-        <div class="swiper-button-next custom-next-button">asda</div>
-        <div class="swiper-button-prev custom-prev-button"></div> 
+        <div class="container-slider-buttons">
+            <div class="slider-buttons">
+                <div class="swiper-button-prev custom-prev-button"></div>
+                <div class="swiper-button-next custom-next-button"></div>
+            </div>
+        </div>
+
         </div>
     </div>
-
+    
+   
     <div class="immagini-sfondo-companies">
         <img src="immagini/COMPANIES.png" loading="lazy" alt="">
     
@@ -305,7 +316,7 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
             <div class="card"  onclick="flipCard(this)">
                 <!-- Fronte della carta -->
                 <div class="card-front" >
-                    <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                    <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-2 image-wrapper" alt="Image 2" />
                 </div>
                 <!-- Retro della carta -->
                 <div class="card-back">
@@ -342,7 +353,7 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
                 <div class="card" onclick="flipCard(this)">
                     <!-- Fronte della carta -->
                     <div class="card-front">
-                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&" class="img-2 image-wrapper" alt="Image 2" />
+                        <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_3.png" class="img-2 image-wrapper" alt="Image 2" />
                     </div>
                     <!-- Retro della carta -->
                     <div class="card-back">
@@ -358,15 +369,18 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
             </div>
             
             <div class="swiper-slide">
-                <img loading="lazy" src="immagini/retro2.png" class="img-2 image-wrapper"
+                <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_3.png" class="img-2 image-wrapper"
                     alt="Image 6" />
             </div>
            
             
         </div>
-        <!-- Pulsanti di navigazione -->
-        <div class="swiper-button-next custom-next-button"></div>
-        <div class="swiper-button-prev custom-prev-button"></div>
+        <div class="container-slider-buttons"> 
+        <div class="slider-buttons">
+            <div class="swiper-button-prev custom-prev-button" id="btn"></div>
+            <div class="swiper-button-next custom-next-button"></div>
+        </div>
+    </div>
     </div>
     
 </div>
@@ -379,7 +393,7 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
                 spaceBetween: 20,
                 loop: true, 
                 flipEffect: {
-                    slideShadows: false,
+                    slideShadows: true,
                 },
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -450,12 +464,6 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
 
 
 
-    <div class="privacy-cookies-links">
-        <a href="privacy.html"> Privacy policy </a>
-        <a href="cookie.html"> Cookie Policy </a>
-    
-    
-    </div>
 </div>
 
         
@@ -464,24 +472,33 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
     </main>
     
     </body>
-    <footer>
-    <div class="footer-content">
-        <div class="left-content">
-            <p>SWS Agency è un'iniziativa di Teamecommerce s.r.l.</p>
-            <p>Email: <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a></p>
-            <p>Tel. 035 4491296</p>
-            <p>C.F. - P.IVA 03948390160</p>
-            <p>Via Roma n.50/R, 24060 Credaro (BG)</p>
-            <p> Developed by <a href="https://www.linkedin.com/in/francesco-lazzarotto-a09aa51ba/">Lazzarotto Francesco </a></p>
-            
-            
-        </div>
-        <div class="right-content">
-            
-            
-            
-        </div>
+    <!--FONT AWESOME-->
+   
+        
+    
+        <footer>
+            <div class="footer">
+               
+    
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="cookie.html">Cookie Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="li-without-border"><a href="https://www.teamecommerce.com" target="_blank">Teamecommerce</a></li>
+                        
+                    </ul>
+                </div>
+    <div class="row1">
+        C.F. - P.IVA 03948390160 • R.E.A. BG - 422426 • capitale sociale € 10.000 i. v. Via Roma n.50/R, 24060 Credaro (BG) <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a>
     </div>
-</footer>
+                <div class="row"> 
+                    
+                    Teamecommerce Copyright  - All rights reserved || Developed By: <a href="https://www.linkedin.com/in/francesco-lazzarotto-a09aa51ba/">Lazzarotto Francesco</a> 
+                </div>
+                
+            </div>
+        </footer>
+
 
     </html>

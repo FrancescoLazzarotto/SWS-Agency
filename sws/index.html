@@ -18,20 +18,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="immagini/sws.svg" type="image/x-icon">
-        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <style> 
+       
+        </style>
     </head>
 <script>
     window.addEventListener('scroll', function () {
         var menu = document.getElementById('menu');
         var scrollPosition = window.scrollY;
 
-        if (scrollPosition > 750) {
+        if (scrollPosition > 680) {
             menu.classList.add('menu-scrolled');
         } else {
             menu.classList.remove('menu-scrolled');
         }
     });
+   
+        function rotateCard(card) {
+                var cardInner = card.querySelector('.card-inner');
+                cardInner.classList.toggle('flipped');
+            }
+
 </script>
+
+          
+       
+
+
+    
+
     <body>
     <main>
         
@@ -213,69 +229,65 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
         magna
         aliqua. Ut enim ad minim vent mollit anim id est laborum, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna
-        aliqua. Ut enim ad minim vent mollit anim id est laborum"</p>
-<div class="container-clients-cards" id="imageContainer">
-    <div class="cardcontainer">
-        <img loading="lazy"
-            src="immagini/retro1.jpg"
-            class="img-1" alt="Image 1" sbcgs
-            data-alt="immagini/retro1.jpg"
-            class="image-wrapper" />
-        <img loading="lazy"
-            src="immagini/retro.png"
-            class="img-1" alt="Image 1"
-            data-alt="immagini/retro.png"
-            class="image-wrapper" />
-        <img loading="lazy"
-            src="immagini/retro2.png"
-            class="img-1" alt="Image 1"
-            data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-            class="image-wrapper" />
-        <img loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-            class="img-1" alt="Image 1"
-            data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-            class="image-wrapper" />
-
-
-
+        aliqua. Ut enim ad minim vent mollit anim id est laborum"</p> <!-- 
+    <div class="slider-wrapper">
+        <div class="container-clients-cards" id="imageContainer">
+            <div class="cardcontainer">
+                <img loading="lazy" src="immagini/retro1.jpg" class="img-1 image-wrapper" alt="Image 1"
+                    data-alt="immagini/retro1.jpg" />
+                <img loading="lazy" src="immagini/retro.png" class="img-2 image-wrapper" alt="Image 2"
+                    data-alt="immagini/retro.png" />
+                <img loading="lazy" src="immagini/retro2.png" class="img-3 image-wrapper" alt="Image 3"
+                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
+                    class="img-4 image-wrapper" alt="Image 4"
+                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
+                <img loading="lazy" src="https://via.placeholder.com/800x600" class="img-5 image-wrapper" alt="Image 5" />
+                <img loading="lazy" src="https://via.placeholder.com/800x600" class="img-6 image-wrapper" alt="Image 6" />
+            </div>
+        </div>
     </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-            const immagini = document.querySelectorAll(".container-clients-cards img");
 
-            immagini.forEach((immagine) => {
-                immagine.addEventListener("click", function () {
-                    const srcOriginale = immagine.src;
-                    const srcAlternativo = immagine.dataset.alt;
-
-                    // Verifica se l'immagine è ruotata
-                    const isRuotata = immagine.classList.contains("rotated");
-
-                    // Durata de    lla tua transizione CSS in millisecondi
-                    const durataTransizione = 800; // Modifica questo valore in base alla tua transizione CSS
-
-                    // Se è ruotata, torna all'immagine originale, altrimenti passa all'immagine alternativa
-                    immagine.src = isRuotata ? srcOriginale : srcAlternativo;
-                    // Aggiungi o rimuovi la classe di rotazione
-                    immagine.classList.toggle("rotated");
-
-                    // Imposta un timeout per sincronizzare il tempo di JavaScript con la transizione CSS
-                    setTimeout(() => {
-                        // Se l'immagine è tornata alla sua forma originale, consenti il riclicco
-                        if (!isRuotata) {
-                                immagine.addEventListener("click", function restoreOriginal() {
-                                immagine.src = srcOriginale;
-                                immagine.removeEventListener("click", restoreOriginal);
-                            });
-                        }
-                    }, durataTransizione);
-                });
-            });
-        });
-</script>
         
+    
+    <div class="button-container">
+        <button id="prevButton">Previous</button>
+        <button id="nextButton">Next</button>
     </div>
+    --> <div class="slider-wrapper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_1.png" class="img-2 image-wrapper" alt="Image 2"
+                        data-alt="immagini/retro.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy" src="IMMAGINI/FRONTE_NOVAMONTELLO_2.png" class="img-3 image-wrapper" alt="Image 3"
+                        data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
+                        class="img-4 image-wrapper" alt="Image 4"
+                        data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy" src="immagini/FRONTE_NOVAMONTELLO_3.png" class="img-5 image-wrapper"
+                        alt="Image 5" />
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy" src="immagini/retro1.jpg" class="img-6 image-wrapper"
+                        alt="Image 6" />
+                </div>
+            </div>
+             
+        <div class="swiper-button-next custom-next-button">asda</div>
+        <div class="swiper-button-prev custom-prev-button"></div> 
+        </div>
+    </div>
+
     <div class="immagini-sfondo-companies">
         <img src="immagini/COMPANIES.png" loading="lazy" alt="">
     
@@ -285,41 +297,114 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
         aliqua. Ut enim ad minim vent mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna
         aliqua. Ut enim ad minim vent mollit anim id est laborum."</p>
+<div class="slider-wrapper">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
 
-<div class="container-clients-cards" id="imageContainer">
-    <div class="cardcontainer">
-        <img loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-            class="img-1" alt="Image 1"
-            data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-            class="image-wrapper" /> 
-            <img loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                class="img-1" alt="Image 1"
-                data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                class="image-wrapper" />
+        <div class="swiper-slide">
+            <div class="card"  onclick="flipCard(this)">
+                <!-- Fronte della carta -->
+                <div class="card-front" >
+                    <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                </div>
+                <!-- Retro della carta -->
+                <div class="card-back">
+                    <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper"
+                        alt="Image 2 - Back" />
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card" onclick="flipCard(this)">
+                <!-- Fronte della carta -->
+                <div class="card-front">
+                    <img loading="lazy" src="immagini/FRONTE_LV_2.png" class="img-2 image-wrapper" alt="Image 2" />
+                </div>
+                <!-- Retro della carta -->
+                <div class="card-back">
+                    <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-2 image-wrapper" alt="Image 2 - Back" />
+                </div>
+            </div>
+        </div>
+            <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                    <!-- Fronte della carta -->
+                    <div class="card-front">
+                        <img loading="lazy" src="immagini/FRONTE_LV_3.png" class="img-3 image-wrapper" alt="Image 2" />
+                    </div>
+                    <!-- Retro della carta -->
+                    <div class="card-back">
+                        <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                    <!-- Fronte della carta -->
+                    <div class="card-front">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&" class="img-2 image-wrapper" alt="Image 2" />
+                    </div>
+                    <!-- Retro della carta -->
+                    <div class="card-back">
+                        <img loading="lazy" src="immagini/retro.png" class="img-2 image-wrapper" alt="Image 2 - Back" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                    class="img-1" alt="Image 1"
-                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                    class="image-wrapper" />
-                    <img loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                        class="img-1" alt="Image 1" data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" class="image-wrapper" />
-      
-
-                          
+                    class="img-5 image-wrapper" alt="Image 4"
+                    data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&" />
+            </div>
+            
+            <div class="swiper-slide">
+                <img loading="lazy" src="immagini/retro2.png" class="img-2 image-wrapper"
+                    alt="Image 6" />
+            </div>
+           
+            
+        </div>
+        <!-- Pulsanti di navigazione -->
+        <div class="swiper-button-next custom-next-button"></div>
+        <div class="swiper-button-prev custom-prev-button"></div>
     </div>
-
-
-
     
 </div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+       document.addEventListener('DOMContentLoaded', function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loop: true, 
+                flipEffect: {
+                    slideShadows: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        // Rimuovi la classe flipped da tutte le carte prima di aggiungerla alla corrente
+                        document.querySelectorAll('.swiper-slide').forEach(function (slide) {
+                            slide.classList.remove('swiper-slide-flipped');
+                        });
+
+                        // Aggiungi la classe flipped alla carta corrente
+                        this.slides[this.activeIndex].classList.add('swiper-slide-flipped');
+                    },
+                },
+            });
+        });
+        function flipCard(card) {
+                card.classList.toggle("flipped");
+            }
+    </script>
+
+
 </div>
-
-
-
-
 <div class="container-contacts" id="contact">
 
 <div class="sfondo-dx-2">
@@ -383,14 +468,18 @@ do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat scelerisque er
     <div class="footer-content">
         <div class="left-content">
             <p>SWS Agency è un'iniziativa di Teamecommerce s.r.l.</p>
-            <p>Via Roma n.50/R, 24060 Credaro (BG)</p>
+            <p>Email: <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a></p>
+            <p>Tel. 035 4491296</p>
             <p>C.F. - P.IVA 03948390160</p>
+            <p>Via Roma n.50/R, 24060 Credaro (BG)</p>
+            <p> Developed by <a href="https://www.linkedin.com/in/francesco-lazzarotto-a09aa51ba/">Lazzarotto Francesco </a></p>
+            
             
         </div>
         <div class="right-content">
-            <p>Tel. 035 4491296</p>
-            <p>Email: <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a></p>
-            <p> Developed by <a href="">Lazzarotto Francesco </a></p>
+            
+            
+            
         </div>
     </div>
 </footer>

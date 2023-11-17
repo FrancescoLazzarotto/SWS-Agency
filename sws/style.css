@@ -38,6 +38,7 @@
         url('sws/font/CreatoDisplay-Light.ttf') format('truetype');
 
 }
+
 @font-face {
     font-family: 'Creato Display-Medium';
     src: url('sws/font/CreatoDisplay-Medium.woff2') format('woff2'),
@@ -45,6 +46,7 @@
         url('sws/font/CreatoDisplay-Medium.ttf') format('truetype');
 
 }
+
 @font-face {
     font-family: 'Creato Display-Bold';
     src: url('sws/font/CreatoDisplay-Bold.woff2') format('woff2'),
@@ -52,6 +54,7 @@
         url('sws/font/CreatoDisplay-Bold.ttf') format('truetype');
 
 }
+
 @font-face {
     font-family: 'Creato Display-Thin';
     src: url('sws/font/CreatoDisplay-Thin.woff2') format('woff2'),
@@ -92,16 +95,19 @@ html {
 }
 
 p {
-    font-family:'Montserrat', Times, serif;
+    font-family: 'Montserrat', Times, serif;
 }
+
 h2 {
     font-family: 'Creato Display';
     font-style: normal !important;
 }
+
 h3 {
     font-family: 'Creato Display';
     font-style: normal !important;
 }
+
 /* sfondo home/landing con logo */
 
 .image-container {
@@ -189,10 +195,12 @@ img {
     color: #fff !important;
 
 }
+
 .scroll-link {
     cursor: pointer;
     transition: all 0.4s;
 }
+
 .logo-menu {
     width: 40px;
 }
@@ -282,6 +290,10 @@ h2 {
 }
 
 /* team - about us */
+.main-container-mobile {
+    display:none;
+
+}
 
 .image-wrapper {
     position: relative;
@@ -360,9 +372,9 @@ h2 {
     color: #ffffff;
     position: relative;
     align-self: stretch;
-    padding-left:0;
+    padding-left: 0;
     padding-top: 1vh;
-     font-family: "Roboto"; 
+    font-family: "Roboto";
     font-size: 1.3vw;
 }
 
@@ -513,7 +525,7 @@ h2 {
     padding-left: 20%;
     padding-right: 20%;
     font-family: "Montserrat";
-    letter-spacing: -1.2px;
+  
     line-height: normal;
     z-index: 3;
     position: relative;
@@ -527,13 +539,15 @@ h2 {
     padding-bottom: 20px;
     font-family: "Montserrat";
     font-weight: 400;
-    letter-spacing: -1.2px;
+    
     line-height: normal;
 }
 
 
 /* card servizi */
-
+.card-section-mobile {
+    display:none;
+}
 .card-section {
     display: flex;
     justify-content: center;
@@ -555,7 +569,6 @@ h2 {
     width: 600px;
     height: 200px;
     margin: 10px 10px 10px 0;
-    /* Spazio di 10px a destra e 10px sopra e sotto */
     perspective: 1000px;
     padding: 0;
     vertical-align: middle;
@@ -565,7 +578,6 @@ h2 {
     width: 600px;
     height: 200px;
     margin: 10px 0 10px 10px;
-    /* Spazio di 10px a sinistra e 10px sopra e sotto */
     perspective: 1000px;
     align-self: flex-end;
     transform: translateY(200px);
@@ -654,12 +666,13 @@ h2 {
     color: #ededed;
     font-family: "Montserrat";
     font-size: 16px;
-    padding-top: 10px;
+    padding-top: 29px;
     padding-bottom: 100px;
     padding-left: 20%;
     padding-right: 20%;
     position: relative;
     z-index: 3;
+    
 }
 
 /* slider & cards clienti */
@@ -1506,22 +1519,21 @@ form {
     body {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
     }
 
 
     .menu-container {
-        max-width: 290px;
+        max-width: 300em;
         /* Occupa tutta la larghezza disponibile */
         text-align: center;
         /* Centra il menu orizzontalmente */
         margin: 0;
         padding: 0 0;
-
-
         background-color: transparent;
         /* Spaziatura sopra e sotto il menu */
         border: none;
-        width: 100%;
+        width: 80%;
         top: 10px;
         /* Rimuovi il bordo */
     }
@@ -1531,7 +1543,7 @@ form {
         padding: 0;
         display: flex;
         /* Rendi il menu orizzontale */
-        justify-content: flex-start;
+        
         /* Centra le voci di menu orizzontalmente */
     }
 
@@ -1547,7 +1559,7 @@ form {
         padding: 1px 10px;
         /* Spaziatura sopra e sotto e intorno al testo del menu */
         transition: color 0.3s;
-        font-size: 10px;
+        font-size: 6px;
         /* Dimensione del testo del menu */
     }
 
@@ -1569,48 +1581,118 @@ form {
     }
 
     .container-aboutus p {
-        font-size: 12px;
+        font-size: 0.9em;
+        padding-bottom: 2vh;
 
         /* Riduci la dimensione del testo su dispositivi mobili */
     }
 
     .container-aboutus a {
-        font-size: 18px;
+        font-size: px;
         /* Riduci la dimensione del testo su dispositivi mobili */
     }
 
     .container-aboutus h2 {
 
-        font-size: 35px;
+        font-size: 2em;
+        
 
 
     }
+        
+    
+        .immagini-sfondo-aboutus img {
+            max-width: 100vw;
+            
+            height: auto;
+            display: flex;
+            transform: translate(11vw, -21vh);
+            position: absolute;
+    
+        }
+       /*
+   .main-container-mobile {
+       display: flex;
+       justify-content: center;
+   }
 
-    .team-member img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+   .column {
+       display: flex;
+       flex-direction: column;
+       margin-right: 20px;
+       
+   }
 
-    .team-section {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1200px;
-        padding: 20px;
-        flex-wrap: wrap;
-    }
+   .image-wrapper-mobile {
+       position: relative;
+       width: 60%;
+       overflow: hidden;
+       margin-bottom: 20px;
+      
+   }
 
+   .image-overlay-mobile {
+       position: absolute;
+       width: 80%;
+      
+   }
+
+
+   .name {
+padding-left: 0;
+    padding-top: 4vh;
+    font-family: "Roboto";
+    font-size: 1.3vw;
+   }
+   .occupation {
+
+   }
+.main-container {
+   
+            display: none;
+        } */
+
+
+.main-container {
+   padding: 0; 
+}
     /* experience mobile */
+.sfondo-dx {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.img-sfondo-dx {
+    position: absolute;
+    max-width: 100vw;
+    height: auto;
+    z-index: 1;
+    right: 70px;
+    top: 15vh;
 
 
-    .card-section {
-        display: block;
-    }
+}
+.main-container {
+    padding-bottom: 0;
+}
 
-    .card-overlay h2 {
-        font-size: 8px;
-    }
-
+.paragrafo-team {
+    
+        font-size: 0.5em;
+        padding-top: 8vh;
+       
+}
+.rectangle {
+    height: 20vw;
+    padding-top: 0;
+    margin-top: 5vh;
+    padding-bottom: 0;
+}
+.center-container {
+    align-items: normal;
+    height: 20vh;
+}
     .container-experience h2 {
         font-size: 35px;
 
@@ -1626,8 +1708,135 @@ form {
 
     }
 
+.immagini-sfondo-experience {
+    position: absolute;
+
+    /* Aggiungi questa riga per posizionare il testo sopra le immagini */
+
+}
+
+.immagini-sfondo-experience img {
+    max-width: 100vw;
+    height: auto;
+    display: block;
+    position: relative;
+    transform: translate(2vh, -3vh);
+    z-index: 1;
+    /* Aggiunge spaziatura tra le immagini, se necessario */
+
+}
+.container-experience .paragrafo-team1 {
+    margin-top: 2vh;
+}
+.container-experience p {
+    font-size: 0.9em;
+    padding-top: 5vh;
+}
+.card-section {
+    display: none;
+}
+.card-section-mobile {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 15vh;
+    place-content: center;
+}
+.container-clients h2 {
+    font-size: 2em;
+}
+.card-section-mobile img {
+   
+    max-width: 300px;
+    max-height: 400px;
+    /* Imposta la larghezza massima desiderata per l'immagine */
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 5vh;
+}
+.container-experience .copy-preclients {
+    margin-top: 40vh;
+}
+
+.container-clients p {
+    font-size: 0.9em; 
+    
+}
+.container-clients .copy-preclients  {
+    font-size: 0.9em;
+}
+
+.sfondo-dx-1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.img-sfondo-dx-1 {
+    max-width: 100vw;
+    position: absolute;
+ 
+    height: auto;
+    z-index: 1;
+    right: 15vh;
+    top: 15vw
 
 
+}
+
+
+/* slider */ 
+.swiper-slide img {
+    width: 100%;
+    max-width: 400vw;
+    /* Per visualizzare solo due slide per schermata */
+}
+
+.swiper-container {
+    max-width: 100%;
+    slidesPerView: 2; 
+
+    /* Imposta la larghezza al 100% su schermi più piccoli */
+}
+
+.slider-wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.img-2,
+.img-3,
+.img-4,
+.img-5 {
+    max-width: 400vw;
+    width: 100%;
+}
+
+.immagini-sfondo-companies {
+    position: absolute;
+    height: 100px;
+}
+
+.immagini-sfondo-companies img {
+    max-width: 300vw;
+    height: auto;
+    width: 90vw;
+    transform: translate(17%, -13%);
+    z-index: 1;
+    position: absolute;
+
+
+}
+
+.img-sfondo-dx-2 {
+    max-width: 300vw;
+    width: 90vw;
+    right: 23vw;
+    bottom: -47vw;
+}
     /* contatti mobile */
     .contact-form {
         max-width: 100%;
@@ -1640,7 +1849,7 @@ form {
         /* Allinea il paragrafo a sinistra */
         color: #ededed;
         /* Colore del testo nero */
-        font-size: 12px;
+        font-size: 0.6em;
 
         padding-bottom: 20px;
         padding-right: 20px;
@@ -1648,9 +1857,15 @@ form {
     }
 
     .container-contacts h2 {
-        font-size: 40px;
+        font-size: 1.5em;
     }
-
+    .container-contacts h3 {
+        padding-top: 0;
+        font-size: 1em;
+    }
+form {
+    padding-top: 0;
+}
     .input-group input,
     .input-group select,
     .input-group textarea {
@@ -1662,75 +1877,33 @@ form {
     }
 
     /* footer mobile */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .left-content,
-    .right-content {
-        text-align: center;
-        padding: 0;
-    }
+        .footer {
+            text-align: left;
+            padding: 5%;
+            font-size: 0.9em;
+        }
+    
+        .footer .row,
+        .footer .row1 {
+            text-align: left;
+        }
+    
+        .footer .row ul li {
+            display: inline-flex;
+            margin: 10px 0px;
+            text-align: center;
+            border: none;
+            font-size: 0.9em;
+            padding-right: 0;
+        }
+        .footer ul {
+            padding-right: 10%;
+        }
+    
+        .footer .row a i {
+            margin: 0% 3%;
+        }
+.disp-mob {
+    display: none;
 }
-
-@media (max-width: 991px) {
-    .main-container {
-
-        justify-content: center;
-        padding: 0;
-        margin-left: 20px;
-        margin-top: 10px;
     }
-}
-
-
-.img {
-    position: relative;
-    height: 80%;
-    width: 80%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-
-@media (max-width: 991px) {
-    .image-overlay {
-        padding: 0 0px;
-    }
-}
-
-
-
-@media (max-width: 991px) {
-    .image-overlay-content {
-        margin-top: 20px;
-    }
-}
-
-
-@media (max-width: 991px) {
-    .image-overlay-text {
-        margin-top: 40px;
-    }
-}
-
-
-
-@media only screen and (max-device-width: 1080px) and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-
-    .name {
-        font-size: 12px;
-        padding-right: 1000px;
-    }
-
-}
-
-/* Media queries per schermi Apple */
-
-/* iPhone */
-@media only screen and (max-width: 414px) {}
-
-/* iPad */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}

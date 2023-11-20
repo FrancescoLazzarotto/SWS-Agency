@@ -33,11 +33,14 @@
   <script>
 
     // funzione cambio di proprietà css al menu con lo scorrimento // 
-    window.addEventListener("scroll", function () {
+   window.addEventListener("scroll", function () {
       var menu = document.getElementById("menu");
       var scrollPosition = window.scrollY;
 
-      if (scrollPosition > 680) {
+      // Usa l'API di Match Media per determinare le dimensioni della viewport
+      var isLargeViewport = window.matchMedia("(min-width: 1200px)").matches;
+
+      if (scrollPosition > (isLargeViewport ? 680 : 480)) { // Modifica i valori in base alle dimensioni dello schermo
         menu.classList.add("menu-scrolled");
       } else {
         menu.classList.remove("menu-scrolled");
@@ -45,37 +48,47 @@
     });
   // funzione scorrimento slider attraverso la libreria Swiper.js 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var mySwiper = new Swiper(".swiper-container", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loop: true,
-            flipEffect: {
-                slideShadows: true,
-            },
-            navigation: { // bottoni per lo scorrimento 
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            on: {   // funzione flip delle card - fronte e retro 
-                slideChangeTransitionStart: function () {
-                    // Rimuovi la classe flipped da tutte le carte prima di aggiungerla alla corrente
-                    document
-                        .querySelectorAll(".swiper-slide")
-                        .forEach(function (slide) {
-                            slide.classList.remove("swiper-slide-flipped");
-                        });
+   document.addEventListener("DOMContentLoaded", function () {
+      var mySwiper = new Swiper(".swiper-container", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        flipEffect: {
+          slideShadows: true,
+        },
+        navigation: { // bottoni per lo scorrimento 
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {   // funzione flip delle card - fronte e retro 
+          slideChangeTransitionStart: function () {
+            // Rimuovi la classe flipped da tutte le carte prima di aggiungerla alla corrente
+            document
+              .querySelectorAll(".swiper-slide")
+              .forEach(function (slide) {
+                slide.classList.remove("swiper-slide-flipped");
+              });
 
-                    // Aggiungi la classe flipped alla carta corrente
-                    this.slides[this.activeIndex].classList.add(
-                        "swiper-slide-flipped"
-                    );
-                },
-            },
-        });
-    }); // funzione flip card - fronte e retro
+            // Aggiungi la classe flipped alla carta corrente
+            this.slides[this.activeIndex].classList.add(
+              "swiper-slide-flipped"
+            );
+          },
+        },
+        breakpoints: { // breakpoint per modificare il numero di slide per schermata in base alla larghezza dello schermo
+          1024: { 
+            slidesPerView: 4,
+          },
+          768: { 
+            slidesPerView: 3,
+          },
+        },
+      });
+    });
+
+    // funzione flip card - fronte e retro
     function flipCard(card) {
-        card.classList.toggle("flipped");
+      card.classList.toggle("flipped");
     }
 </script>
 
@@ -421,10 +434,10 @@
           </div>
         </section>
         <div class="card-section-mobile">
-          <div class="card-1"><img src="immagini/experienceanalisi.jpg" alt="Servizio 1" /></div>
-          <div class="card-2"><img src="immagini/experienceseo.jpg" alt="Servizio 1" /></div>
-          <div class="card-3"><img src="immagini/experiencemarketing.jpg" alt="Servizio 1" /></div>
-          <div class="card-4"><img src="immagini/experiencecoding.jpg" alt="Servizio 1" /></div>
+          <div class="card-1"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
+          <div class="card-2"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
+          <div class="card-3"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
+          <div class="card-4"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
         </div>
         <div class="after-services">
           <p>

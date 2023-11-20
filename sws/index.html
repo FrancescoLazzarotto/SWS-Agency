@@ -50,7 +50,7 @@
 
    document.addEventListener("DOMContentLoaded", function () {
       var mySwiper = new Swiper(".swiper-container", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
         flipEffect: {
@@ -258,7 +258,13 @@
             </div>
           </div>
         </div>
-<!--
+
+
+
+
+
+
+        <!-- Sezione team Mobile -->
 <div class="main-container-mobile">
   <div class="column">
     <div class="image-wrapper-mobile">
@@ -278,7 +284,7 @@
           <div class="vertical-bar"></div>
           <div class="occupation">GRAPHIC DESIGNER</div> </div> </div>
     </div>
-  
+  <div class="image-wrapper-mobile">
   <img loading="lazy" srcset="
                         https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
                         https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
@@ -293,10 +299,11 @@
     <div class="image-overlay-text">
       <div class="name">ELON MUSK</div>
       <div class="vertical-bar"></div>
-      <div class="occupation">GRAPHIC DESIGNER</div>
+      <div class="occupation">GRAPHIC DESIGNER</div> </div>
     </div>
   </div>
-  </div>
+  
+   
   <div class="image-wrapper-mobile">
   <img loading="lazy" srcset="
                         https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
@@ -317,7 +324,8 @@
   </div>
   </div>
   </div>
-  <div class="column">
+  
+  <div class="column-right">
     <div class="image-wrapper-mobile">
       
       <img loading="lazy" srcset="
@@ -338,7 +346,7 @@
         </div>
       </div>
       </div>
-    </div>
+    
     <div class="image-wrapper-mobile">
       
       <img loading="lazy" srcset="
@@ -361,9 +369,7 @@
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
+
 -->
 
         <div class="sfondo-dx">
@@ -464,17 +470,16 @@
           labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
           est laborum"
         </p>
-        <!-- 
-   
-    -->
+        
         <div class="slider-wrapper">
           <div class="swiper-container">
             <div class="swiper-wrapper">
+
               <div class="swiper-slide">
                 <div class="card" onclick="flipCard(this)">
                   <div class="card-front">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/FRONTE_LV_1.png"
                       class="img-3 image-wrapper"
                       alt="Image 2"
@@ -483,7 +488,7 @@
 
                   <div class="card-back">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/RETRO_GENERIC_COMPANIES.png"
                       class="img-3 image-wrapper"
                       alt="Image 2 - Back"
@@ -495,7 +500,7 @@
                 <div class="card" onclick="flipCard(this)">
                   <div class="card-front">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/FRONTE_LV_1.png"
                       class="img-2 image-wrapper"
                       alt="Image 2"
@@ -504,7 +509,7 @@
 
                   <div class="card-back">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/RETRO_GENERIC_COMPANIES.png"
                       class="img-2 image-wrapper"
                       alt="Image 2 - Back"
@@ -516,7 +521,7 @@
                 <div class="card" onclick="flipCard(this)">
                   <div class="card-front">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/FRONTE_LV_1.png"
                       class="img-3 image-wrapper"
                       alt="Image 2"
@@ -525,7 +530,7 @@
 
                   <div class="card-back">
                     <img
-                      loading="lazy"
+                      
                       src="immagini/RETRO_GENERIC_COMPANIES.png"
                       class="img-3 image-wrapper"
                       alt="Image 2 - Back"
@@ -534,20 +539,26 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <img
-                  loading="lazy"
-                  src="immagini/FRONTE_NOVAMONTELLO_3.png"
-                  class="img-2 image-wrapper"
-                  alt="Image 5"
-                />
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img  src="immagini/FRONTE_LV_1.png" class="img-2 image-wrapper" alt="Image 2" />
+                  </div>
+              
+                  <div class="card-back">
+                    <img  src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-2 image-wrapper" alt="Image 2 - Back" />
+                  </div>
+                </div>
               </div>
               <div class="swiper-slide">
-                <img
-                  loading="lazy"
-                  src="immagini/retro1.jpg"
-                  class="img-2 image-wrapper"
-                  alt="Image 6"
-                />
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                  </div>
+              
+                  <div class="card-back">
+                    <img  src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                  </div>
+                </div>
               </div>
             </div>
             <div class="container-slider-buttons">
@@ -646,35 +657,25 @@
                       alt="Image 2"
                     />
                   </div>
-
-                  <div class="card-back">
-                    <img
-                      loading="lazy"
-                      src="immagini/retro.png"
-                      class="img-2 image-wrapper"
-                      alt="Image 2 - Back"
-                    />
-                  </div>
+                          <div class="card-back">
+                      <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                    </div>
+                 
                 </div>
               </div>
-              <div class="swiper-slide">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d9e9c3-0165-49ca-970f-4502b93313ab?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                  class="img-5 image-wrapper"
-                  alt="Image 4"
-                  data-alt="https://cdn.builder.io/api/v1/image/assets/TEMP/8ab14a4a-4f00-4591-a58c-565515c1dcd1?apiKey=eb9e7ea2b857492b8e30c4074559af07&"
-                />
-              </div>
+              
 
-              <div class="swiper-slide">
-                <img
-                  loading="lazy"
-                  src="immagini/FRONTE_NOVAMONTELLO_3.png"
-                  class="img-2 image-wrapper"
-                  alt="Image 6"
-                />
+            <div class="swiper-slide">
+              <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                  <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                </div>
+            
+                <div class="card-back">
+                  <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                </div>
               </div>
+            </div>
             </div>
             <div class="container-slider-buttons">
               <div class="slider-buttons">
@@ -688,7 +689,7 @@
           </div>
         </div>
       </div>
-
+    
       <div class="container-contacts" id="contact">
         <div class="sfondo-dx-2">
           <img

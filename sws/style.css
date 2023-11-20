@@ -778,6 +778,7 @@ h2 {
 .card.flipped {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    will-change: transform;
 }
 
 .card-front {
@@ -792,6 +793,7 @@ h2 {
     left: 0;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    will-change: transform;
     backface-visibility: hidden;
     position: absolute;
 }

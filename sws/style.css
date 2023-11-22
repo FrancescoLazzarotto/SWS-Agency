@@ -110,7 +110,9 @@ h3 {
 }
 
 /* sfondo home/landing con logo */
-
+.image-container-mobile {
+    display:none;
+}
 .image-container {
     margin-bottom: 0;
     width: 100%;
@@ -950,6 +952,9 @@ h2 {
     margin: 0;
     text-transform: uppercase;
 }
+.cont-mobile {
+    display:none;
+}
 
 .contact-form {
     text-align: center;
@@ -980,7 +985,7 @@ h2 {
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: linear-gradient(to top, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 100%);
+   
 }
 
 /* form contatti */
@@ -1066,25 +1071,90 @@ width: 100%;
 .input-group option {
     background-color: #000;
 }
+.input-group1 {
+    display: inline-flex;
+    align-items: end;
+    padding: 1vw;
+}
+.input-group1 label {
+    line-height: 30px;
+    padding-right: 1vw;
+}
 .input-group label {
         line-height: 30px;
     margin-bottom: 0;
 }
 .input-group input[type="checkbox"] {
-    width: 50%;
+    width: 100%;
     margin-right: 10px;
     vertical-align: middle;
     
 }
+.checkbox-wrapper-23 *,
+.checkbox-wrapper-23 *:after,
+.checkbox-wrapper-23 *:before {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-23 input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-wrapper-23 input:checked+label svg path {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-23 input:focus+label {
+    transform: scale(1.03);
+}
+
+.checkbox-wrapper-23 input+label {
+    display: inline-block;
+    border: 1px solid rgba(0, 150.87, 96.56, 0.88);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.checkbox-wrapper-23 input+label:active {
+    transform: scale(1.05);
+    border-radius: 12px;
+}
+
+.checkbox-wrapper-23 input+label svg {
+    pointer-events: none;
+    padding: 5%;
+    width: 20px;
+}
+
+.checkbox-wrapper-23 input+label svg path {
+    fill: none;
+    stroke:rgba(0, 150.87, 96.56, 0.88) ;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 101;
+    transition: all 250ms cubic-bezier(1, 0, .37, .91);
+}
 .contact-form a {
     text-decoration: none;
-    color: rgba(15, 15, 15, 1);
+    color: rgba(0, 150.87, 96.56, 0.88);
 }
 .custom-button {
     background-color: #000;
-    border: #017a01;
+    
     color: white;
-    border: none;
+    border-top: 2px solid rgba(0, 150.87, 96.56, 0.88);
+    border-right: 2px solid rgba(0, 150.87, 96.56, 0.88);
+    border-left: 2px solid rgba(0, 150.87, 96.56, 0.88);
+    border-right-width: 0px;
+    border-left-width: 0px;
+        border-bottom: 2px solid grey;
+        border-radius: 25px;
     width: 100px;
     height: auto;
     border-radius: 22px;
@@ -1172,22 +1242,7 @@ width: 100%;
     margin: 0% 1%;
 }
 
-@media (max-width:720px) {
-    .footer {
-        text-align: left;
-        padding: 5%;
-    }
 
-    .footer .row ul li {
-        display: block;
-        margin: 10px 0px;
-        text-align: left;
-    }
-
-    .footer .row a i {
-        margin: 0% 3%;
-    }
-}
 
 
 
@@ -1610,7 +1665,35 @@ landscape iPhone */
         padding: 0;
        
     }
+.image-container{
+    display:none;
+}
+.image-container-mobile {
+    display: block;
+    height: 100vh;
+ 
+    /* Per assicurarsi che l'immagine che esce dai bordi sia nascosta */
+}
 
+.image-container-mobile img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+   
+}
+.logo-container-mobile  {
+
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+}
+.logo-container-mobile img {
+    object-fit: fill;
+   
+
+}
 .navbar {
     background-color: black;
     position: fixed;
@@ -1861,6 +1944,7 @@ landscape iPhone */
 }
 .container-clients .copy-preclients  {
     font-size: 0.9em;
+    padding-top: 8vh;
 }
 
 .sfondo-dx-1 {
@@ -1924,7 +2008,7 @@ landscape iPhone */
     max-width: 300vw;
     width: 90vw;
     right: 23vw;
-    bottom: -47vw;
+    bottom: -41vw;
 }
     /* contatti mobile */
     .contact-form {
@@ -1932,17 +2016,19 @@ landscape iPhone */
 
 
     }
-
+    .cont-desktop {
+        display: none;
+    }
+.cont-mobile {
+    display: block;
+}
     .container-contacts p {
         text-align: center;
-        /* Allinea il paragrafo a sinistra */
         color: #ededed;
-        /* Colore del testo nero */
-        font-size: 0.6em;
-
+        font-size: 0.9em;
         padding-bottom: 20px;
-        padding-right: 20px;
-        /* Dimensione del testo predefinita */
+        
+        
     }
 
     .container-contacts h2 {
@@ -1967,14 +2053,16 @@ form {
 
     /* footer mobile */
         .footer {
-            text-align: left;
+            font-family: 'CreatoDisplay-Light';
+            text-align: center;
             padding: 5%;
             font-size: 0.9em;
+            color: #fff;
         }
     
         .footer .row,
         .footer .row1 {
-            text-align: left;
+            text-align: center;
         }
     
         .footer .row ul li {
@@ -1985,9 +2073,7 @@ form {
             font-size: 0.9em;
             padding-right: 0;
         }
-        .footer ul {
-            padding-right: 10%;
-        }
+
     
         .footer .row a i {
             margin: 0% 3%;
@@ -2096,5 +2182,139 @@ form {
 
 /* small tablets, kindle etc landscape phones */
 @media screen and (min-width: 481px) and (max-width:641px){
+    .immagini-sfondo-aboutus img {
+        width: 110vw;
+        transform: translate(-15%, -35vh);
+    }
+    .container-aboutus p {
+        margin-bottom: 0;
+    }
+    .main-container {
+            gap: 10px;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            margin-top: 10vh;
+        }
+    
+        .main-container img {
+            width: 100%;
+        }
+    
+    
+        .center-container {
+            height: 30vh;
+        }
+    
+        
+        .immagini-sfondo-experience img {
+            width: 100vw;
+            transform: translate(-5vw, -17vh);
+        }
+    
+        .img-sfondo-dx {
+            top: 8.5vh;
+            width: 120vw;
+        }
+    
+        .img-sfondo-dx-1 {
+            top: -5vh;
+            width: 120vw;
+        }
+    
+        .immagini-sfondo-companies {
+            transform: translateY(2vh);
+        }
+        .container-aboutus .paragrafo-team {
+            margin: -1vh auto;
+        }
+        .container-clients .copy-preclients {
+            padding-bottom: 10vh;
+        }
+       .immagini-sfondo-companies img {
+        width: 110vw;
+        top: 5vh;
+       } 
+       .container-clients p {
+        padding-bottom: 6vh;
+       }
+       .container-clients h2 {
+        padding-bottom: 0;
+       }
+.img-sfondo-dx-2 {
+    width: 120vw;
+    right: -13vw;
+    bottom: -43vh;
+}
+
+ .footer {
+     text-align: left;
+     padding: 5%;
+     font-size: 0.9em;
+ }
+
+ .footer .row,
+ .footer .row1 {
+     text-align: left;
+ }
+
+ .footer .row ul li {
+     display: inline-flex;
+     margin: 10px 0px;
+     text-align: center;
+     border: none;
+     font-size: 0.9em;
+     
+ }
+
+
+
+ .footer .row a i {
+     margin: 0% 3%;
+ }
+
+}
+
+
+/* responsive cookie & policy */
+@media  screen and (max-width:461px) {
+    .container-general-privacy  p {
+        padding-left: 10vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    .img-sfondo-dx-privacy-2 img {
+        width: 130vw;
+        top: -35vh;
+        right: -44vw;
+    }
+    .container-general-privacy h1 {
+        font-size: 1.0em;
+    }
+         .container-general-privacy h2 {
+             font-size: 1.4em;
+         }
+         .first-paragraph {
+            margin-top: 3vh;
+                margin-bottom: 8vh;
+         }
+         .scalleta-paragraph {
+            margin-top: 8vh;
+         }
+         .third-paragraph {
+            margin-bottom: 8vh;
+         }
+         .fourth-paragraph {
+            margin-bottom: 8vh;
+         }
+         .fifth-paragraph {
+            margin-bottom: 8vh;
+
+         }
+
+                  .img-sfondo-dx-privacy img {
+                      width: 130vw;
+                      top: -31vh;
+                      right: -44vw;
+                  }
 
 }

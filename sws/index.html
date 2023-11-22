@@ -42,7 +42,7 @@
       // Usa l'API di Match Media per determinare le dimensioni della viewport
       var isLargeViewport = window.matchMedia("(min-width: 1200px)").matches;
 
-      if (scrollPosition > (isLargeViewport ? 680 : 480)) { // Modifica i valori in base alle dimensioni dello schermo
+      if (scrollPosition > (isLargeViewport ? 680 : 480)) { 
         menu.classList.add("menu-scrolled");
       } else {
         menu.classList.remove("menu-scrolled");
@@ -81,6 +81,9 @@
           1024: { 
             slidesPerView: 4,
           },
+          540: {
+            slidesPerView: 2,
+          },
           768: { 
             slidesPerView: 3,
           },
@@ -110,6 +113,12 @@
           </ul>
         </nav>
       </header>
+      <div class="image-container-mobile"> 
+        <img src="immagini/landing-mobile.jpg"> 
+        <div class="logo-container-mobile">
+          <img src="immagini/sws.svg" alt="Logo" class="logo" />
+        </div>
+      </div>
       <div class="image-container" id="sws">
         <img
           srcset="
@@ -686,8 +695,11 @@
 
         <div class="contact-form">
           <h2>CONTACTS</h2>
-
-          <p>@sws_agency | swsagency@info.it | +39 3935413415</p>
+          <div class="cont-desktop"> 
+          <p>@sws_agency | swsagency@info.it | +39 3935413415</p> </div>
+          <div class="cont-mobile">
+            <p>@sws_agency | swsagency@info.it <br>  +39 3935413415</p>
+          </div>
           <h3>WORK WITH US!</h3>
           <form>
             <div class="form-columns">
@@ -726,8 +738,15 @@
               ></textarea>
             </div>
             <div class="input-group1">
-              <label for="policy">Ho letto la <a href="privacy.html" target="_blank">Policy </a></label>
-              <input type="checkbox" id="policy" required />
+              <label for="policy">Ho letto la <a href="privacy.html" target="_blank">policy </a></label>
+              <div class="checkbox-wrapper-23">
+                <input type="checkbox" id="check-23" />
+                <label for="check-23" style="--size: 20px">
+                  <svg viewBox="0,0,50,50">
+                    <path d="M5 30 L 20 45 L 45 5"></path>
+                  </svg>
+                </label>
+              </div>
             </div>
             <div class="input-group">
               <button type="submit" class="custom-button">INVIA</button>
@@ -754,7 +773,7 @@
       </div>
       <div class="row1">
         C.F. - P.IVA 03948390160 • R.E.A. BG - 422426 • capitale sociale €
-        10.000 i. v. Via Roma n.50/R, 24060 Credaro (BG)
+        10.000 i. v. || Via Roma n.50/R, 24060 Credaro (BG)
         <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a>
       </div>
       <div class="row">

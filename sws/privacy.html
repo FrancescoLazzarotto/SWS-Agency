@@ -66,6 +66,9 @@
         });
     }
 
+      function toggleArrow(element) {
+            element.classList.toggle("rotated");
+        }
 
 
 
@@ -86,9 +89,14 @@
             <div class="container-general-privacy">
                 
                     
-                
+                <div class="img-sfondo-dx-privacy">
+                    <img src="immagini/PRIVACY.png" alt="Privacy">
+                </div>
+                <div class="title-cookie">
+                    <h1>Privacy Policy </h1>
+                </div>
                 <section class="first-paragraph">
-                    <h2> I - Privacy policy</h2>
+                    <h2> I - Policy</h2>
                     <ol>
                         <li>In questa sezione sono contenute le informazioni relative alle modalità di gestione di swsagency.it in
                             riferimento al trattamento dei dati degli utenti di swsagency.it.</li>
@@ -233,7 +241,7 @@
                         raccolte in maniera automatizzata durante le visite degli utenti. Le informazioni raccolte potrebbero essere le
                         seguenti:
                         <ul>
-                            <li class="bullet-arrow" style="text-align: left;">indirizzo internet protocol (IP);</li>
+                            <li class="bullet-arrow" style="text-align: left;"> indirizzo internet protocol (IP);</li>
                             <li class="bullet-arrow" style="text-align: left;">tipo di browser e parametri del dispositivo usato per
                                 connettersi al sito;</li>
                             <li class="bullet-arrow" style="text-align: left;">nome dell’internet service provider (ISP);</li>
@@ -395,7 +403,7 @@
                 </ol>
                 <section class="scaletta-paragraph">
 
-                    <button onclick="mostraParagrafo('paragrafo1-privacy')">
+                    <button onclick="mostraParagrafo('paragrafo1-privacy') ; toggleArrow(this)" class="arrow-button">
                     
                         Commenti </button>
                     <div id="paragrafo1-privacy" class="hidden">
@@ -410,7 +418,7 @@
                     profilo è visibile al pubblico nel contesto del tuo commento. Queste informazioni non sono visibili agli utenti del
                     sito.</p>
                 </div>
-                <button onclick="mostraParagrafo('paragrafo2-privacy')">
+                <button onclick="mostraParagrafo('paragrafo2-privacy') ; toggleArrow(this)" class="arrow-button">
                 
                     Media </button>
                 <div id="paragrafo2-privacy" class="hidden">
@@ -421,7 +429,7 @@
                     qualsiasi dato sulla posizione dalle immagini sul sito web con un semplice programma di grafica (es. Photoshop).</p>
                 </div>
 
-                <button onclick="mostraParagrafo('paragrafo3-privacy')">
+                <button onclick="mostraParagrafo('paragrafo3-privacy'); toggleArrow(this)" class="arrow-button" >
                 Moduli di contatto, richiesta preventivi, feedback, iscrizione newsletter
                     </button>
                 <div id="paragrafo3-privacy" class="hidden">
@@ -433,7 +441,7 @@
                     periodica) i dati raccolti non verranno utilizzati per finalità di marketing. Nessuno dei dati raccolti viene ceduto
                     a terzi per finalità di marketing.</p>
                 </div>
-                <button onclick="mostraParagrafo('paragrafo4-privacy')">
+                <button onclick="mostraParagrafo('paragrafo4-privacy') ; toggleArrow(this)" class="arrow-button">
                     Cookie interni
                 </button>
                 <div id="paragrafo4-privacy" class="hidden">
@@ -447,7 +455,7 @@
                     pubblichi un articolo, un cookie aggiuntivo verrà salvato nel tuo browser. Questo cookie non include dati personali
                     e indica semplicemente l’ID (identificativo univoco) del post dell’articolo appena modificato.</p>
                </div>
-                <button onclick="mostraParagrafo('paragrafo5-privacy')">
+                <button onclick="mostraParagrafo('paragrafo5-privacy') ; toggleArrow(this)" class="arrow-button">
                     Contenuto incorporato da altri siti web 
                 </button>
                 <div id="paragrafo5-privacy" class="hidden">
@@ -571,7 +579,7 @@
     
             <div class="row">
                 <ul>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.html#contact">Contact us</a></li>
                     <li><a href="cookie.html">Cookie Policy</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li class="li-without-border"><a href="https://www.teamecommerce.com" target="_blank">Teamecommerce</a>

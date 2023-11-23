@@ -79,6 +79,15 @@
     function flipCard(card) {
       card.classList.toggle("flipped");
     }
+     document.querySelectorAll(".card").forEach(function (card) {
+    card.addEventListener("click", function () {
+      flipCard(card);
+    });
+    card.addEventListener("touchstart", function () {
+      flipCard(card);
+    });
+  });
+
 
     
     function mostraParagrafo(idParagrafo) {

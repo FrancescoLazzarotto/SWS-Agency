@@ -1,2490 +1,741 @@
-/* font */
-
-
-@font-face {
-    font-family: 'Creato Display-Bold';
-    src: url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.eot");
-    src: url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.eot?#iefix") format("embedded-opentype"),
-        url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.woff2") format("woff2"),
-        url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.woff") format("woff"),
-        url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.ttf") format("truetype"),
-        url("https://db.onlinewebfonts.com/t/520a4a8159f8f7df16eec7ac6d5054e6.svg#CreatoDisplay-Bold") format("svg");
-}
-
-@font-face {
-    font-family: 'Creato Display Light';
-    src: url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.eot");
-    src: url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.eot?#iefix") format("embedded-opentype"),
-        url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.woff2") format("woff2"),
-        url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.woff") format("woff"),
-        url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.ttf") format("truetype"),
-        url("https://db.onlinewebfonts.com/t/566b0ca2b6f600a9cb8f70e36e092a62.svg#Creato Display Light") format("svg");
-}
-
-@font-face {
-    font-family: 'Creato Display Medium';
-    src: url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.eot");
-    src: url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.eot?#iefix") format("embedded-opentype"),
-        url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.woff2") format("woff2"),
-        url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.woff") format("woff"),
-        url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.ttf") format("truetype"),
-        url("https://db.onlinewebfonts.com/t/bc7fc86126f99d4ea3f39f1b0deba156.svg#Creato Display Medium") format("svg");
-}
-
-@font-face {
-    font-family: 'Creato Display-Light';
-    src: url('sws/font/CreatoDisplay-Light.woff2') format('woff2'),
-        url('sws/font/CreatoDisplay-Light.woff') format('woff'),
-        url('sws/font/CreatoDisplay-Light.ttf') format('truetype');
-
-}
-
-@font-face {
-    font-family: 'Creato Display-Medium';
-    src: url('sws/font/CreatoDisplay-Medium.woff2') format('woff2'),
-        url('sws/font/CreatoDisplay-Medium.woff') format('woff'),
-        url('sws/font/CreatoDisplay-Medium.ttf') format('truetype');
-
-}
-
-@font-face {
-    font-family: 'Creato Display-Bold';
-    src: url('sws/font/CreatoDisplay-Bold.woff2') format('woff2'),
-        url('sws/font/CreatoDisplay-Bold.woff') format('woff'),
-        url('sws/font/CreatoDisplay-Bold.ttf') format('truetype');
-
-}
-
-@font-face {
-    font-family: 'Creato Display-Thin';
-    src: url('sws/font/CreatoDisplay-Thin.woff2') format('woff2'),
-        url('sws/font/CreatoDisplay-Thin.woff') format('woff'),
-        url('sws/font/CreatoDisplay-Thin.ttf') format('truetype');
-
-}
-
-
-
-
-
-
-/* css generali */
-
-
-
-body {
-    background-color: rgba(15, 15, 15, 1);
-    margin: 0;
-    padding: 0;
-    font-family: "Creato Display Medium";
-    display: block;
-    justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box;
-
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-p {
-    font-family: 'Montserrat', Times, serif;
-}
-
-h2 {
-    font-family: 'Creato Display';
-    font-style: normal !important;
-}
-
-h3 {
-    font-family: 'Creato Display';
-    font-style: normal !important;
-}
-
-/* sfondo home/landing con logo */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-header a {
-    text-decoration: none;
-}
-.toggle-container {
-    display: flex;
-    position: fixed; 
-    justify-content: flex-end;
-    align-items: center;
-    background-color: transparent;
-    color: #fff;
-}
- .gg-instagram {
-     box-sizing: border-box;
-     position: relative;
-     display: block;
-     transform: scale(var(--ggs, 1));
-     border: 2px solid transparent;
-     box-shadow: 0 0 0 2px;
-     border-radius: 4px;
-     width: 20px;
-     height: 20px;
-     transition: cubic-bezier(0.4s);
- }
-
- .gg-instagram::after,
- .gg-instagram::before {
-     content: "";
-     display: block;
-     box-sizing: border-box;
-     position: absolute;
- }
-
- .gg-instagram::after {
-     border: 2px solid;
-     left: 3px;
-     width: 10px;
-     height: 10px;
-     border-radius: 100%;
-     top: 3px;
- }
-
- .gg-instagram::before {
-     border-radius: 3px;
-     width: 2px;
-     height: 2px;
-     background: currentColor;
-     right: 1px;
-     top: 1px;
- }
- .gg-instagram:hover {
-     opacity: 0.8;
-     color:rgba(0, 150.87, 96.56, 0.88);
- }
-.image-container-mobile {
-    display:none;
-}
-.image-container {
-    margin-bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.logo-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.logo {
-    max-width: 100%;
-    height: auto;
-}
-.toggle-container {
-    display:none;
-}
-/* menu mobile */ 
-.menu-toggle-ig a {
-    text-decoration: none;
-    color: #fff;
-}
-.menu-toggle-ig {
-    position: fixed;
-    z-index: 1000;
-    top: 23px;
-    bottom: -1px;
-    right: 25px;
-}
-.menu-toggle {
-    font-size: 21px;
-    cursor: pointer;
-    display: none;
-    color: #fff;
-}
-
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3333339a;
-    color: #fff;
-    z-index: 1000;
-    overflow-y: auto;
-   
-}
-
-
-
-.menu-list {
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5em;
-    
-}
-
-.menu-list li {
-    padding: 17px;
-    text-align: center;
-    border-bottom: 1px solid #555;
-}
-
-.menu-list li:last-child {
-    border-bottom: none;
-}
-
-.menu-list a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.content {
-    padding: 20px;
-}
-/* Menu fisso */
-.menu-toggle-ig-desktop {
-    position: fixed;
-    z-index: 1000;
-    top: 5.8vh;
-    bottom: -1px;
-    right: 25px;
-}
-.menu-toggle-ig-desktop a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu-container {
-    background-color: rgba(255, 253, 253, 0.426);
-    border-top: 2px solid rgba(0, 150.87, 96.56, 0.88);
-    border-bottom: 2px solid grey;
-    border-radius: 25px;
-    position: fixed;
-    padding: 0 30px;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 450px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6px;
-    z-index: 40;
-}
-
-
-
-.menu {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    flex: 1;
-    flex-wrap: wrap;
-}
-
-.menu-scrolled {
-    transition: background-color 1.5s ease !important;
-}
-
-.menu li {
-    margin: 0;
-
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
-    transition: color 0.3s;
-    padding: 5px 10px;
-}
-
-.menu a:hover {
-    color: #fff;
-}
-
-.menu-scrolled {
-    background-color: rgba(15, 15, 15, 1) !important;
-
-}
-
-.menu-scrolled a {
-    color: #fff !important;
-
-}
-
-.scroll-link {
-    cursor: pointer;
-    transition: all 0.4s;
-}
-
-.logo-menu {
-    width: 40px;
-}
-
-
-
-/* instagram icon high dx */
-
-
-.instagram-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.instagram-icon img {
-    width: 40px;
-    height: auto;
-}
-
-
-
-
-
-/* sezione about us */
-.container-aboutus {
-    font-family: 'Montserrat';
-    background: linear-gradient(180deg, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 50%);
-    margin-top: 0;
-    padding: 10px 0;
-    z-index: 1;
-    box-sizing: border-box;
-    overflow: hidden;
-
-}
-
-.immagini-sfondo-aboutus {
-    position: absolute;
-    height: 100px;
-
-}
-
-.immagini-sfondo-aboutus img {
-    width: 800px;
-    height: auto;
-    display: block;
-    transform: translate(-15%, -47%);
-    position: absolute;
-
-}
-
-
-
-
-.container-aboutus p,
-h2 {
-    z-index: 3;
-
-}
-
-.container-aboutus p {
-    text-align: center;
-    color: #ededed;
-    font-size: 16px;
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-bottom: 80px;
-    position: relative;
-    z-index: 3;
-}
-
-.container-aboutus strong {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.container-aboutus h2 {
-    color: #fff;
-    font-family: 'Creato Display-Bold';
-    text-align: center;
-    font-size: 70px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-bottom: 40px;
-
-}
-
-/* team - about us */
-.main-container-mobile {
-    display:none;
-
-}
-
-.image-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.image-overlay {
-    position: absolute;
-    width: 80%;
-
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 150.87, 96.56, 0.88) 100%);
-    opacity: 0;
-    transition: height 0.8s ease-in-out, opacity 0.8s ease-in-out;
-    border-radius: 0 0 20px 20px;
-    bottom: 0;
-    left: 0;
-}
-
-.image-overlay-text {
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    width: calc(100% - 20px);
-    background: transparent;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-in-out, transform 1.0s ease-in-out, cubic-bezier(0.23, 1, 0.32, 1);
-    transform: translateX(-50%);
-    /* Posiziona il testo al centro orizzontalmente */
-}
-
-.image-wrapper:hover .image-overlay {
-    height: 33%;
-    opacity: 1;
-}
-
-.image-overlay-text .vertical-bar {
-    position: absolute;
-    background-color: #000;
-    width: 2.5px;
-    border-radius: 8px;
-    height: 40px;
-    left: 12%;
-    transform: translateX(-32%);
-    bottom: 62%;
-    transform: translateY(62%);
-}
-
-.image-wrapper:hover .image-overlay-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-
-.main-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 2px;
-    padding-left: 160px;
-    padding-right: 140px;
-    padding-bottom: 20px;
-    padding-top: 50px;
-    z-index: 3;
-}
-.main-container img {
-    width: 80%;
-}
-.name {
-    color: #ffffff;
-    position: relative;
-    align-self: stretch;
-    padding-left: 0;
-    padding-top: 1vh;
-    font-family: "Roboto";
-    font-size: 1.3vw;
-}
-
-.occupation {
-    position: relative;
-    color: #ffffff;
-    align-self: stretch;
-    text-align: left;
-    font-size: 0.5vw;
-    padding-left: 2.15vw;
-    margin-bottom: 2vh;
-    margin-top: 0.7vh;
-    font-weight: bold;
-    font-family: "Creato Display-Bold";
-}
-
-/* spazio per immagine */
-.center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50vh;
-}
-
-.rectangle {
-    width: 60%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 3px solid #017a01;
-
-}
-
-
-
-.middle {
-    border-color: #017a01;
-    flex: 1;
-    background-color: #3f3f3f;
-}
-
-.bottom-gray {
-    flex: 1;
-    background-color: #3f3f3f;
-    border-radius: 0 0 20px 20px;
-}
-
-
-/* immagini scritte su sfondo - dx */
-.sfondo-dx {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.img-sfondo-dx {
-    position: absolute;
-    width: 800px;
-    height: auto;
-    z-index: 1;
-    right: -150px;
-    top: 20px;
-
-
-}
-
-.paragrafo-team {
-    text-align: center;
-    color: #ededed;
-    font-family: "Montserrat";
-    font-size: 16px;
-    padding-top: 65px;
-    margin-bottom: 40px !important;
-    z-index: 3;
-}
-
-
-
-
-
-/* sezione experience */
-
-
-/* immagine scritta di sfondo experience */
-
-.immagini-sfondo-experience {
-    position: absolute;
-
-    /* Aggiungi questa riga per posizionare il testo sopra le immagini */
-
-}
-
-.immagini-sfondo-experience img {
-    width: 700px;
-    /* Imposta la larghezza delle immagini */
-    height: auto;
-    /* Altezza proporzionale alla larghezza */
-    display: block;
-    position: relative;
-    transform: translate(-1.8%, -40%);
-    z-index: 1;
-    /* Aggiunge spaziatura tra le immagini, se necessario */
-
-}
-
-.container-experience {
-    text-align: center;
-    position: relative;
-    background-color: rgba(15, 15, 15, 1);
-    margin-bottom: 40px;
-    z-index: 0;
-
-}
-
-.container-experience h2 {
-    color: #fff;
-
-    font-size: 70px;
-
-    font-weight: bold;
-    padding: 0;
-    margin-top: 20px;
-    text-transform: uppercase;
-    font-family: "Creato Display-Bold";
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.container-experience h3 {
-    color: #fff;
-    font-family: 'Roboto';
-    font-size: 50px;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-    font-style: normal;
-}
-
-.container-experience p {
-    text-align: center;
-    color: #ededed;
-    font-size: 16px;
-    padding-top: 20px;
-    padding-bottom: 17px;
-    padding-left: 20%;
-    padding-right: 20%;
-    font-family: "Montserrat";
-    line-height: normal;
-    z-index: 3;
-    position: relative;
-}
-
-.after-services p {
-    text-align: center;
-    color: #ededed;
-    font-size: 16px;
-    padding-bottom: 20px;
-    font-family: "Montserrat";
-    font-weight: 400;
-    line-height: normal;
-}
-
-
-/* card servizi */
-.card-section-mobile {
-    display:none;
-}
-.card-section {
-    display: flex;
-    justify-content: space-between;
-    margin: 4vw 15vw;
-    flex-wrap: wrap;
-}
-.card-section img {
-    max-width: 100%;
-    width: 40vw;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-
-}
-.card-1-desktop,
-.card-2-desktop,
-.card-3-desktop,
-.card-4-desktop {
-    width: calc(50% - 10px);
-        margin-bottom: 20px;
-        box-sizing: border-box;
-}
-.card-3-desktop{
-    margin-top: -22vw;
-}
-.card-2-desktop {
-    margin-top: 33%;
-    margin-left: -10vw;
-    
-}
-
-
-
-/*sottosezione experience, sezione clients */
-
-
-/* sfondo dx immagine-scritta */
-
-.sfondo-dx-1 {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.img-sfondo-dx-1 {
-    position: absolute;
-    width: 800px;
-    height: auto;
-    z-index: 1;
-    right: -175px;
-    top: -136px;
-
-
-}
-
-.container-clients {
-    text-align: center;
-
-    background: linear-gradient(180deg,
-            rgba(15, 15, 15, 1) 0%,
-            rgb(0, 150.87, 96.56) 52.08%,
-            rgba(15, 15, 15, 1) 100%);
-
-    overflow: hidden;
-
-}
-
-.container-clients h2 {
-    color: #fff;
-    font-size: 50px;
-    font-family: "Roboto";
-    font-weight: 300;
-    padding-bottom: 40px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-
-
-.container-clients p {
-    text-align: center;
-    color: #ededed;
-    font-family: "Montserrat";
-    font-size: 16px;
-    padding-top: 2vh;
-    padding-bottom: 90px;
-    padding-left: 20%;
-    padding-right: 20%;
-    position: relative;
-    z-index: 3;
-
-
-}
-
-.container-clients .copy-preclients {
-    text-align: center;
-    color: #ededed;
-    font-family: "Montserrat";
-    font-size: 16px;
-    padding-top: 29px;
-    padding-bottom: 100px;
-    padding-left: 20%;
-    padding-right: 20%;
-    position: relative;
-    z-index: 3;
-    
-}
-
-/* slider & cards clienti */
-.container-slider-buttons {
-    background-color: #000; 
-    width: 150px;
-    height: 50px;  
-    border: 2px solid rgba(255, 255, 255, 0.88);
-    border-radius: 25px;
-    margin-top: 5vw;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    /* Aggiunto per centrare orizzontalmente */
-}
-
-.swiper-button-next {
-    --swiper-navigation-color: #ededed;
-    /* Cambia il colore di navigazione al tuo colore desiderato */
-    --swiper-theme-color: #ffffff;
-    /* Cambia il colore del tema al tuo colore desiderato */
-    /* Altre regole di stile se necessario */
-
-}
-
-.swiper-button-prev {
-    --swiper-navigation-color: #ededed;
-    /* Cambia il colore di navigazione al tuo colore desiderato */
-    --swiper-theme-color: #ffffff;
-    /* Cambia il colore del tema al tuo colore desiderato */
-    /* Altre regole di stile se necessario */
-}
-
-.slider-buttons {
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    /* o qualsiasi altra modalità di allineamento che preferisci */
-    align-items: center;
-    padding: 20px;
-    /* Aggiunto padding interno se necessario */
-    width: 100%;
-    /* Modificato per adattarsi al 100% della larghezza del contenitore */
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-    font-size: var(--swiper-navigation-size);
-    --swiper-navigation-size: 22px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    position: relative;
-
-    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    
-    color: var(--swiper-navigation-color, var(--swiper-theme-color))
-}
-
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
-    opacity: .35;
-    cursor: auto;
-    pointer-events: none
-}
-
-.slider-wrapper {
-    position: relative;
-    padding-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 15px;
-  overflow: hidden;
-     width: 100%;
-     margin-bottom: 2.5vw;
-     z-index: 30;
-
-
-}
-.swiper-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.card {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    cursor: pointer;
-}
-
-.card.flipped {
-    transform: rotateY(180deg);
-    will-change: transform;
-}
-
-.card-front {
-    width: 100%;
-        height: 100%;       
-        backface-visibility: hidden;
-}
-.card-back {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    will-change: transform;
-    backface-visibility: hidden;
-    position: absolute;
-}
-
-
-
-.img-2,
-.img-3,
-.img-4,
-.img-5 {
-    aspect-ratio: 0.46;
-    object-fit: contain;
-    object-position: center;
-    width: 80%;
-    overflow: hidden;
-    flex: 1;
-    cursor: pointer;
-    z-index: 50;
-}
-
-
-
-.immagini-sfondo-companies {
-    position: absolute;
-    height: 100px;
-}
-
-.immagini-sfondo-companies img {
-    width: 800px;
-    height: auto;
-    display: block;
-    transform: translate(-5%, -43%);
-    z-index: 1;
-    position: absolute;
-
-
-}
-
-
-
-.img-1,
-.img-2,
-.img-3,
-.img-4,
-.img-5,
-.img-6 {
-    width: calc(100% / 4);
-    box-sizing: border-box;
-}
-
-
-.img-1 {
-    aspect-ratio: 0.81;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    border-radius: 15px;
-    filter: drop-shadow(0px 15px 15px #000);
-    overflow: hidden;
-    align-self: flex-start;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-
-}
-
-
-
-.img-2 {
-    aspect-ratio: 0.81;
-    object-fit: fill;
-    object-position: center;
-    width: 100%;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 8%;
-   top: 3vw;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-
-
-
-.img-3 {
-    aspect-ratio: 0.81;
-    object-fit: fill;
-    object-position: center;
-    width: 100%;
-    -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        border-radius: 8%;
-    overflow: hidden;
-    align-self: flex-start;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-
-.img-4 {
-    aspect-ratio: 0.81;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    filter: drop-shadow(0px 15px 15px rgba(0, 186, 97, 0.25));
-    overflow: hidden;
-    margin-top: 82px;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-    align-self: flex-start;
-    transition: opacity 0.5s;
-    opacity: 1;
-}
-
-
-
-.img-5 {
-    aspect-ratio: 0.81;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    filter: drop-shadow(0px 15px 15px #000);
-    overflow: hidden;
-    align-self: flex-start;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-
-.img-6 {
-    aspect-ratio: 0.81;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    filter: drop-shadow(0px 15px 15px rgba(0, 186, 97, 0.25));
-    overflow: hidden;
-    margin-top: 82px;
-    flex-grow: 1;
-    flex-basis: 0%;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-
-
-
-
-/* sezione contatti */
-
-/* immagine scritta sfondo contacts */
-.sfondo-dx-2 {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.img-sfondo-dx-2 {
-    position: absolute;
-    width: 50vw;
-    max-width: 100%;
-    height: auto;
-    z-index: 1;
-    right: -5vw;
-    bottom: -22vw;
-}
-
-.container-contacts h2 {
-    color: #fff;
-    text-align: center;
-    font-size: 70px;
-    font-family: "Creato Display-Bold";
-    padding-bottom: 10px;
-    margin: 0;
-    text-transform: uppercase;
-}
-.cont-mobile {
-    display:none;
-}
-
-.contact-form {
-    text-align: center;
-    color: #ededed;
-    font-family: "Montserrat";
-    font-size: 16px;
-    padding: 10px;
-    padding-left: 20%;
-    padding-right: 20%;
-    position: relative;
-    z-index: 3;
-}
-
-.container-contacts h3 {
-    color: #fff;
-    text-align: center;
-    font-size: 50px;
-    font-family: "Roboto";
-    font-weight: lighter;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.container-contacts {
-    text-align: center;
-    margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-   
-}
-
-/* form contatti */
-
-form {
-    position: relative;
-    z-index: 2;
-}
-
-.form-columns {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-form {
-    background: transparent;
-    padding: 20px;
-
-    max-width: 800px;
-    width: 90%;
-    margin: 0 auto;
-    color: #fff;
-    font-family: "Montserrat";
-
-}
-
-.input-group {
-    margin: 10px 10px;
-    position: relative;
-}
-
-.input-group input
- {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-   border-radius : 8px;
-    border: 1px solid #fff;
-   
-    background-color: transparent;
-    color: #fff;
-}
-
-.input-group textarea, select {
-width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #fff;
-
-    background-color: transparent;
-    color: #fff;
-}
-
-.input-group textarea {
-    height: 100px;
-    border-radius: 14px;
-}
-
-.input-group label {
-    display: block;
-    text-align: left;
-    margin-top: 10px;
-    
-}
-
-::placeholder {
-    font-weight: lighter;
-    color: #fff;
-}
-
-
-:-ms-input-placeholder {
-    font-weight: bold;
-}
-
-::-ms-input-placeholder {
-    font-weight: bold;
-}
-
-.input-group textarea {
-    resize: none;
-}
-.input-group option {
-    background-color: #000;
-}
-.input-group1 {
-    display: inline-flex;
-    align-items: end;
-    padding: 1vw;
-}
-.input-group1 label {
-    line-height: 30px;
-    padding-right: 1vw;
-}
-.input-group label {
-        line-height: 30px;
-    margin-bottom: 0;
-}
-.input-group input[type="checkbox"] {
-    width: 100%;
-    margin-right: 10px;
-    vertical-align: middle;
-    
-}
-.checkbox-wrapper-23 *,
-.checkbox-wrapper-23 *:after,
-.checkbox-wrapper-23 *:before {
-    box-sizing: border-box;
-}
-
-.checkbox-wrapper-23 input {
-    position: absolute;
-    opacity: 0;
-}
-
-.checkbox-wrapper-23 input:checked+label svg path {
-    stroke-dashoffset: 0;
-}
-
-.checkbox-wrapper-23 input:focus+label {
-    transform: scale(1.03);
-}
-
-.checkbox-wrapper-23 input+label {
-    display: inline-block;
-    border: 1px solid rgba(0, 150.87, 96.56, 0.88);
-    width: var(--size);
-    height: var(--size);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all .2s ease;
-}
-
-.checkbox-wrapper-23 input+label:active {
-    transform: scale(1.05);
-    border-radius: 12px;
-}
-
-.checkbox-wrapper-23 input+label svg {
-    pointer-events: none;
-    padding: 5%;
-    width: 20px;
-}
-
-.checkbox-wrapper-23 input+label svg path {
-    fill: none;
-    stroke:rgba(0, 150.87, 96.56, 0.88) ;
-    stroke-width: 8px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 100;
-    stroke-dashoffset: 101;
-    transition: all 250ms cubic-bezier(1, 0, .37, .91);
-}
-.contact-form a {
-    text-decoration: none;
-    color: rgba(0, 150.87, 96.56, 0.88);
-}
-.custom-button {
-    background-color: #000;
-    
-    color: white;
-    border-top: 2px solid rgba(0, 150.87, 96.56, 0.88);
-    border-right: 2px solid rgba(0, 150.87, 96.56, 0.88);
-    border-left: 2px solid rgba(0, 150.87, 96.56, 0.88);
-    border-right-width: 0px;
-    border-left-width: 0px;
-        border-bottom: 2px solid grey;
-        border-radius: 25px;
-    width: 100px;
-    height: auto;
-    border-radius: 22px;
-    margin-top: 10px;
-    padding: 12px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    height: 48.88px;
-    transition: background-color 0.8s;
-}
-
-.input-group button:hover {
-    background: linear-gradient(to right, rgba(0, 150.87, 96.56, 0.88) 0%, rgba(15, 15, 15, 1) 100%);;
-    border: 2px solid #000;
-    color: #fff;
-}
-
-
-
-
-/* footer */
-
-.footer {
-    background: #000;
-    padding: 30px 10px;
-    font-family: "CreatoDisplay-Light";
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.footer .row {
-    width: 100%;
-    margin: 0% 0%;
-    padding: 0.4% 0%;
-    color: gray;
-    font-size: 0.8em;
-}
-
-.footer .row1 {
-    width: 100%;
-    margin: 0% 0%;
-    padding: 0.4% 0%;
-    padding-bottom: 20px;
-    color: gray;
-    font-size: 0.8em;
-}
-
-.footer .row a {
-    text-decoration: none;
-    color: gray;
-    transition: 0.5s;
-}
-
-.footer .row1 a {
-    text-decoration: none;
-    color: gray;
-    transition: 0.5s;
-}
-
-.footer .row a:hover {
-    color: #fff;
-}
-
-.footer .row1 a:hover {
-    color: #fff;
-}
-
-.footer .row ul {
-    width: 100%;
-}
-
-.row .li-without-border {
-    border: 0px solid transparent !important;
-}
-
-.footer .row ul li {
-    display: inline-block;
-    margin: 0px 10px;
-    padding-right: 20px;
-    border-right: 2px solid gray;
-}
-
-.footer .row a i {
-    font-size: 2em;
-    margin: 0% 1%;
-}
-
-
-
-
-
-
-
-
-
-/* PAGINA POLICY PRIVACY-COOKIES */
-
-/*titolo e immagine di sfondo */
-
-.img-sfondo-dx-privacy {
-position: relative;
-margin:0;
-padding: 0;
-z-index: 1;
-}
-.img-sfondo-dx-privacy img {
-position: absolute;
-    width: 900px;
-    height: auto;
-    z-index: 1;
-    right: -20vw;
-    top: -26vw;
-}
-.img-sfondo-dx-privacy-2 {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-}
-
-.img-sfondo-dx-privacy-2 img {
-    position: absolute;
-    width: 1000px;
-    height: auto;
-    z-index: 1;
-    right: -27vw;
-    top: -29vw;
-}
-
-
-/*body e sfondo privacy-cookies */
-.privacy-cookies-menu {
-    background: transparent;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(255, 253, 253, 0.329);
-    border-top: 3px solid rgba(0, 150.87, 96.56, 0.88);
-    border-bottom: 2px solid grey;
-    border-radius: 25px;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 8px;
-
-}
-.privacy-cookies-menu {
-    /* ... altri stili ... */
-    transition: background-color 0.3s;
-}
-
-.privacy-cookies-menu:hover {
-    background-color: rgba(255, 253, 253, 0.529);
-}
-
-.privacy-cookies-menu {
-    /* ... altri stili ... */
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.privacy-cookies-menu:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.privacy-cookies-menu a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.386);
-    transition: color 0.3s;
-    padding: 0.7vw;
-    font-family: 'Roboto';
-}
-
-.privacy-cookies-menu a:hover {
-    color: #fff;
-}
-
-.privacy-cookies-menu img {
-    max-width: 10%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.cookie-policy {
-    background-color: #000;
-    color: #ededed;
-}
-
-.title-cookie {
-    z-index: 10;
-    position: relative;
-    font-size: 2.2em;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Roboto';
-}
-
-.container-general-privacy {
-    font-family: 'Creato Display-Light';
-    margin-top: 180px;
-    padding-left: 10%;
-    padding-right: 10%;
-    font-size: 110%;
-    line-height: 1.3;
-}
-
-.container-general-privacy ul {
-    list-style-type: none;
-}
-.container-general-privacy h3 {
-    font-weight: bold;
-}
-
-.container-general-privacy li {
-    padding-top: 10px;
-}
-
-.container-general-privacy p {
-    padding-left: 10px;
-    font-family: 'Creato Display-Light'
-}
-
-.container-general-privacy h2 {
-    font-size: 2.3em;
-    text-transform: uppercase;
-    z-index: 10;
-}
-
-.container-general-privacy h3 {
-    font-size: 1.6em;
-}
-.container-general-privacy a {
-    text-decoration: none;
-    color:rgba(0, 150.87, 96.56, 0.88);
-}
-.first-paragraph {
-    margin-bottom: 100px;
-}
-
-.first-paragraph h2 {
-    color: rgba(0, 150.87, 96.56, 0.88);
-}
-
-.sixth-paragraph a {
-    text-decoration: none;
-    color: rgba(0, 150.87, 96.56, 0.88);
-
-}
-
-.second-paragraph h2 {
-    color: rgba(0, 150.87, 96.56, 0.88);
-}
-
-/* scaletta dinamica privacy - cookies */
-.scaletta-paragraph {
-    margin: 100px 0;
-    display: flex;
-    flex-direction: column;
-    color: #ededed;
-}
-
-.scaletta-paragraph button {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    color: #ededed;
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-top: 1px solid rgb(0, 150.87, 96.56);
-    font-family: 'Creato Display-Light';
-    font-size: 18px;
-    padding-left: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.scaletta-paragraph button.active {
-    font-family: 'Creato Display-Bold';
-}
-
-.scaletta-paragraph .hidden {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
-}
-
-.scaletta-paragraph .hidden.active {
-    max-height: 2000px;
-    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-        /* Regola questo valore in base all'altezza massima possibile del paragrafo */
-}
-
-.scaletta-paragraph button:active,
-
-.scaletta-paragraph button:hover {
-    background-color: rgba(0, 150.87, 96.56, 0.2);
-    /* Cambia il colore quando cliccato o in focus */
-}
-
-.scaletta-paragraph button.active {
-
-    font-weight: bold !important;
-    background-color: rgba(0, 150.87, 96.56, 0.2);
-    /* Aggiungi il colore di sfondo anche quando è attivo */
-}
-
-.bullet-arrow::before {
-    content: "❯";
-    margin-right: 0.7vw;
-    color: rgba(0, 150.87, 96.56, 0.88);
-    transition: transform 0.3s ease-in-out;
-}
-
-
-   .scaletta-paragraph button::before {
-       content: "❯";
-       margin-right: 1vw;
-       color: rgba(0, 150.87, 96.56, 0.88);
-        transition: transform 0.5s ease;
-
-  
-   }
-        .scaletta-paragraph button.rotated::before {
-            transform: rotate(90deg);
-           
-        }
-
-                .scaletta-paragraph-2 button::before {
-                    content: "❯";
-                    margin-right: 1vw;
-                    color: rgba(0, 150.87, 96.56, 0.88);
-                    transition: transform 0.5s ease;
-        
-        
-                }
-        
-                .scaletta-paragraph-2 button.rotated::before {
-                    transform: rotate(90deg);
-        
-                }
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="SWS Agency" />
+    <meta name="keywords" content="parole chiave, SEO, ottimizzazione" />
+    <meta name="author" content="Francesco Lazzarotto" />
+    <link href="https://db.onlinewebfonts.com/c/520a4a8159f8f7df16eec7ac6d5054e6?family=CreatoDisplay-Bold"
+        rel="stylesheet" />
+    <title>SWS Agency</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="license" content="https://www.dafont.com/creato-display.font" />
+    <meta property="og:title" content="SWS Agency" />
+    <meta property="og:description" content="SPORT WEB SOLUTION" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="immagini/sws.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
+    <!--GOOGLE FONTS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creato+Display:wght@300&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
+  </head>
+  <script src="script.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
  
 
-
-.third-paragraph h2 {
-    color: rgba(0, 150.87, 96.56, 0.88);
-}
-
-.third-paragraph a {
-    text-decoration: none;
-    color: rgb(0, 150.87, 96.56);
-}
-
-.third-paragraph {
-    margin-bottom: 120px;
-}
-
-.fourth-paragraph {
-    margin-bottom: 120px;
-}
-
-.fourth-paragraph a {
-    text-decoration: none;
-    color: rgb(0, 150.87, 96.56);
-}
-
-.fourth-paragraph ul {
-    list-style-type: none;
-
-}
-
-.fourth-paragraph h2 {
-    color: rgb(0, 150.87, 96.56);
-}
-
-
-
-.fourth-paragraph a {
-    text-decoration: none;
-    color: #ededed;
-}
-
-.fourth-paragraph li {
-    padding: 5px;
-}
-
-.fifth-paragraph {
-    margin-bottom: 120px;
-}
-
-.fifth-paragraph a {
-    text-decoration: none;
-    color: rgb(0, 150.87, 96.56);
-
-}
-
-.fifth-paragraph h2 {
-    color: rgb(0, 150.87, 96.56);
-}
-
-.sixth-paragraph {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.sixth-paragraph h2 {
-    color: rgb(0, 150.87, 96.56);
-}
-
-.sixth-paragraph h3 {
-    font-size: 30px;
-
-}
-
-/* scaletta-2 dinamica privacy - cookies */
-.scaletta-paragraph-2 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    color: #ededed;
-}
-
-.scaletta-paragraph-2 button {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    color: #ededed;
-    width: 100%;
-    text-align: left;
-    background-color: transparent;
-    border: 1px solid transparent;
-    /* Imposta il bordo a transparent per tutte le direzioni */
-    border-top: 1px solid rgb(0, 150.87, 96.56);
-    font-family: 'Creato Display-Light';
-    font-size: 18px;
-    padding-left: 20px;
-    /* Aggiunge il bordo superiore con il colore desiderato */
-}
-
-.scaletta-paragraph-2 p {
-    padding-left: 35px;
-}
-
-
-
-.scaletta-paragraph-2 .hidden {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-}
-
-.scaletta-paragraph-2 .hidden.active {
-    max-height: 2000px;
-    transition: max-height 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-        /* Regola questo valore in base all'altezza massima possibile del paragrafo */
-}
-
-.scaletta-paragraph-2 button:active,
-
-.scaletta-paragraph-2 button:hover {
-    background-color: rgba(0, 150.87, 96.56, 0.2);
-    /* Cambia il colore quando cliccato o in focus */
-}
-
-.scaletta-paragraph-2 button.active {
-
-    font-weight: bold !important;
-    background-color: rgba(0, 150.87, 96.56, 0.2);
-    /* Aggiungi il colore di sfondo anche quando è attivo */
-}
-
-.definition {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-
-
-
-
-
-
-/* Media query per responsive */
-/* mobile smartphones,
-Android phones,
-landscape iPhone */
-@media (min-width: 768px) {
-    .container {
-        display:none;
-    }
-}
-@media (max-width: 481px) {
-    html {
-        overflow-x: hidden;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-       
-    }
+  <body>
+    <main>
+      <header>
+        <div class="toggle-container"> 
+        <div class="menu-toggle" id="mobile-menu-toggle">&#9776; </div>
+        <div class="menu-toggle-ig"> <a href="https://www.instagram.com/agency_sws/" target="_blank"> <i class="gg-instagram"></i> </a>
+        </div> </div>
+        <nav class="mobile-menu">
+         
+          <ul class="menu-list">
           
-         .toggle-container {
-             display: block;
-             z-index: 1000;
-         }
-.image-container{
-    display:none;
-}
-.image-container-mobile {
-    display: block;
-    height: 100vh;
-}
+            <li><a href="#aboutus">ABOUT</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle-ig-desktop"> <a href="https://www.instagram.com/agency_sws/" target="_blank" class="link-hover"> <i
+              class="gg-instagram"></i> </a>
+        <nav class="menu-container" id="menu">
+          <ul class="menu">
+            <li>
+              <a href="#sws"
+                ><img src="immagini/sws.svg" class="logo-menu"
+              /></a>
+            </li>
+            <li><a href="#aboutus" class="scroll-link">ABOUT</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="image-container-mobile"> 
+        <img src="immagini/landing-mobile.jpg"> 
+        <div class="logo-container-mobile">
+          <img src="immagini/sws.svg" alt="Logo" class="logo" />
+        </div>
+      </div>
+      <div class="image-container" id="sws">
+        <img
+          srcset="
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+            https://cdn.builder.io/api/v1/image/assets/TEMP/3caac50b-aff1-438a-823d-3bb415866c3d?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+          "
+          class="image"
+        />
 
-.image-container-mobile img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+        <div class="logo-container">
+          <img src="immagini/sws.svg" alt="Logo" class="logo" />
+        </div>
+      </div>
+
+      <div id="aboutus" class="container-aboutus">
+        <h2>about us</h2>
+
+        <div class="immagini-sfondo-aboutus">
+          <img src="immagini/OUR TEAM.png" loading="lazy" alt="" />
+        </div>
+
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim vent mollit anim id est laborum."
+        </p>
+
+        <div class="main-container">
+          <div class="image-wrapper">
+            <img
+              loading="lazy"
+              srcset="
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+              "
+              class="img"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-text">
+                <div class="name">ELON MUSK</div>
+                <div class="vertical-bar"></div>
+                <div class="occupation">GRAPHIC DESIGNER</div>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              loading="lazy"
+              srcset="
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+              "
+              class="img"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-text">
+                <div class="name">ELON MUSK</div>
+                <div class="vertical-bar"></div>
+                <div class="occupation">GRAPHIC DESIGNER</div>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              loading="lazy"
+              srcset="
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+              "
+              class="img"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-text">
+                <div class="name">ELON MUSK</div>
+                <div class="vertical-bar"></div>
+                <div class="occupation">GRAPHIC DESIGNER</div>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              loading="lazy"
+              srcset="
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+              "
+              class="img"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-text">
+                <div class="name">ELON MUSK</div>
+                <div class="vertical-bar"></div>
+                <div class="occupation">GRAPHIC DESIGNER</div>
+              </div>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              loading="lazy"
+              srcset="
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+              "
+              class="img"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-text">
+                <div class="name">ELON MUSK</div>
+                <div class="vertical-bar"></div>
+                <div class="occupation">GRAPHIC DESIGNER</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- Sezione team Mobile -->
+<div class="main-container-mobile">
+  <div class="column">
+    <div class="image-wrapper-mobile">
+      <img loading="lazy" srcset="
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                      https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+                    " class="img" />
+      <div class="image-overlay-mobile">
+        <div class="image-overlay-text-mobile">
+          <div class="name">ELON MUSK</div>
+          <div class="vertical-bar"></div>
+          <div class="occupation">GRAPHIC DESIGNER</div> </div> </div>
+    </div>
+  <div class="image-wrapper-mobile-mobile">
+  <img loading="lazy" srcset="
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+                      " class="img" />
+  <div class="image-overlay-mobile">
+    <div class="image-overlay-text-mobile">
+      <div class="name">ELON MUSK</div>
+      <div class="vertical-bar"></div>
+      <div class="occupation">GRAPHIC DESIGNER</div> </div>
+    </div>
+  </div>
+  
    
-}
-.logo-container-mobile  {
-
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        
-}
-.logo-container-mobile img {
-    object-fit: fill;
-   
-
-}
-.navbar {
-    background-color: black;
-    position: fixed;
-}   .menu-container {
-        display:none; }
-        /* menu mobile  */
-        .menu-toggle-ig-desktop {
-            display:none;
-        }
-                 .menu-toggle {
-                     display: block;
-                     position: fixed;
-                     top: 20px;
-                     left: 20px;
-                     z-index: 1100;
-                 }
-        
-                 .mobile-menu {
-                    max-height: 100%;
-                     padding-top: 7vh ;
-                     
-                    
-                 }
-        
-                 .menu-list {
-                     display: flex;
-                     flex-direction: column;
-                 }
-        
-                 .menu-list li {
-                     border-bottom: none;
-                 }
-       
-
-
-
-    /* about us mobile */
-    .container-aboutus {
-        padding-top: 5px;
-        margin-top: 0;
-        width: 100vw;
-    }
-
-    .container-aboutus strong {
-        font-size: 20px;
-    }
-
-    .container-aboutus p {
-        font-size: 0.9em;
-        margin-bottom: 0;
-     
-    }
-
-
-
-    .container-aboutus h2 {
-
-        font-size: 2em;
-        margin-top: 7vw;
-        
-
-
-    }
-        
-    .immagini-sfondo-aboutus {
-        width: 100%;
-        position: absolute;
-        overflow: hidden;
-    }
-        .immagini-sfondo-aboutus img {
-            width: 90vw;
-            
-            height: auto;
-            top: 10vw;
-            right:-24vw;
-            overflow-x: hidden;
-            
-    
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    
-        .main-container-mobile {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    
+  <div class="image-wrapper-mobile">
+  <img loading="lazy" srcset="
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                        https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+                      " class="img" />
+  <div class="image-overlay-mobile">
+    <div class="image-overlay-text-mobile">
+      <div class="name">ELON MUSK</div>
+      <div class="vertical-bar"></div>
+      <div class="occupation">GRAPHIC DESIGNER</div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="column-right">
+    <div class="image-wrapper-mobile">
       
-
-.main-container {
-   display:none; 
-}
-.main-container-mobile {
-    display: flex;
-    justify-content: space-around;
-    padding: 5%;
-}
-.column  {
-    width: 48%;
-    padding: 2%;
-    box-sizing: border-box;
-}
-
-.column-right {
-    width: 48%;
-    padding: 2%;
+      <img loading="lazy" srcset="
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+                          " class="img" />
+      <div class="image-overlay-mobile">
+        <div class="image-overlay-text-mobile">
+          <div class="name">ELON MUSK</div>
+          <div class="vertical-bar"></div>
+          <div class="occupation">GRAPHIC DESIGNER</div>
+        </div>
+      </div>
+      </div>
     
-    margin-top: 50%;
-    
-    box-sizing: border-box;
-}
-.main-container-mobile img {
-    display: block;
-    margin: 10% auto;
-    width: 100%;
-    height: auto;
-}
-    /* experience mobile */
-.sfondo-dx {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-.image-wrapper-mobile {
-    position: relative;
-    overflow: hidden;
-}
-.image-wrapper-mobile::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 0, 0);
-    /* Inizialmente trasparente */
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: background-color 0.3s ease;
-    /* Transizione fluida del colore della tendina */
-}
-.image-wrapper-mobile:active::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 0, 0.8);
-    /* Colore della tendina verde */
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.image-overlay-text-mobile {
-    color: white;
-    text-align: center;
-}
-
-.vertical-bar {
-    width: 2px;
-    height: 20px;
-    /* Altezza della barra a sinistra delle scritte */
-    background-color: white;
-    /* Colore della barra */
-    margin: 0 10px;
-    /* Margine tra la barra e il testo */ }
-
-.img-sfondo-dx {
-    position: absolute;
-    max-width: 100vw;
-    height: auto;
-    z-index: 1;
-    right: 70px;
-    top: 15vh;
-
-
-}
-.main-container {
-    padding-bottom: 0;
-}
-
-.paragrafo-team {
-    
-        font-size: 0.5em;
-        padding-top: 8vh;
-       
-}
-.rectangle {
-    height: 20vw;
-    padding-top: 0;
-    margin-top: 5vh;
-    padding-bottom: 0;
-}
-.center-container {
-    align-items: normal;
-    height: 20vh;
-}
-    .container-experience h2 {
-        font-size: 35px;
-
-    }
-
-    .container-experience h3 {
-        font-size: 25px;
-        margin-top: 2vh;
-
-    }
-
-    .container-experience p {
-        font-size: 12px;
-
-    }
-
-.immagini-sfondo-experience {
-    position: absolute;
-
-    /* Aggiungi questa riga per posizionare il testo sopra le immagini */
-
-}
-
-.immagini-sfondo-experience img {
-    max-width: 100vw;
-    height: auto;
-    display: block;
-    position: relative;
-   right: 2vw;
-   top: 32vw;
-    z-index: 1;
-    /* Aggiunge spaziatura tra le immagini, se necessario */
-
-}
-.container-experience .paragrafo-team1 {
-    margin-top: 2vh;
-}
-.container-experience p {
-    font-size: 0.9em;
-    padding-top: 5vh;
-}
-.card-section {
-    display: none;
-}.card-section-mobile {
-    
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-    box-sizing: border-box;
-}
-
-.container-clients h2 {
-    font-size: 2em;
-}
-
-.card-section-mobile img {
-    max-width: 300px;
-    max-height: 700px;
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 5vh;
-}
-.container-experience .copy-preclients {
-    margin-top: 40vh;
-}
-
-.container-clients p {
-    font-size: 0.9em; 
-    
-}
-.container-clients .copy-preclients  {
-    font-size: 0.9em;
-    padding-top: 8vh;
-}
-
-.sfondo-dx-1 {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.img-sfondo-dx-1 {
-    max-width: 100vw;
-    position: absolute;
-    height: auto;
-    z-index: 1;
-    right: 15vh;
-    top: 15vw
-
-
-}
-
-
-/* slider */ 
-.swiper-slide img {
-    width: 100%;
-    max-width: 400vw;
-    /* Per visualizzare solo due slide per schermata */
-}
+    <div class="image-wrapper-mobile">
+      
+      <img loading="lazy" srcset="
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=100   100w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=200   200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=400   400w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=800   800w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1200 1200w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=1600 1600w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&width=2000 2000w,
+                            https://cdn.builder.io/api/v1/image/assets/TEMP/042bff50-070b-4c22-b26e-48ff8448e0f7?apiKey=eb9e7ea2b857492b8e30c4074559af07&
+                          " class="img" />
+      <div class="image-overlay-mobile">
+        <div class="image-overlay-text-mobile">
+          <div class="name">ELON MUSK</div>
+          <div class="vertical-bar"></div>
+          <div class="occupation">GRAPHIC DESIGNER</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
 
 
-.slider-wrapper {
-    padding-left: 5vw;;
-    padding-right: 5vw;
-}
+        <div class="sfondo-dx">
+          <img
+            src="immagini/HISTORY3.png"
+            class="img-sfondo-dx"
+            loading="lazy"
+            alt=""
+          />
+        </div>
 
-.img-2,
-.img-3,
-.img-4,
-.img-5 {
-    max-width: 400vw;
-    width: 100%;
-}
+        <p class="paragrafo-team">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim vent mollit anim id est laborum. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
+          est laborum."
+        </p>
+        <div class="center-container">
+          <div class="rectangle">
+            <div class="middle"></div>
+            <div class="bottom-gray"></div>
+          </div>
+        </div>
+      </div>
 
-.immagini-sfondo-companies {
-    position: absolute;
-    height: 100px;
-}
+      <div class="container-experience" id="experience">
+        <h2>experience</h2>
+        <div class="immagini-sfondo-experience">
+          <img src="immagini/EXPERIENCE.png" loading="lazy" alt="" />
+        </div>
 
-.immagini-sfondo-companies img {
-    max-width: 300vw;
-    height: auto;
-    width: 90vw;   
-    top: 22vw;
-    z-index: 1;
-    position: absolute;
+        <p class="paragrafo-team1">
+          dolor sit amet, consectetur adipiscing elit. Nunc a lobortis felis.
+          Aliquam feugiat nec odio nec gravida. Ut Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
+          est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunte, imperdiet mauris eu,Donec placerat
+          scelerisque erat. Proin porttitor ex et enim vehicula sagittis.
+        </p>
 
+        <h3>Services</h3>
 
-}
+      <div class="card-section">
+        <div class="card-1-desktop"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
+        <div class="card-2-desktop"><img src="immagini/img11.jpg" alt="Servizio 2" /></div>
+        <div class="card-3-desktop"><img src="immagini/img11.jpg" alt="Servizio 3" /></div>
+        <div class="card-4-desktop"><img src="immagini/img11.jpg" alt="Servizio 4" /></div>
+      </div>
+        <div class="card-section-mobile">
+          <div class="card-1"><img src="immagini/img11.jpg" alt="Servizio 1" /></div>
+          <div class="card-2"><img src="immagini/img11.jpg" alt="Servizio 2" /></div>
+          <div class="card-3"><img src="immagini/img11.jpg" alt="Servizio 3" /></div>
+          <div class="card-4"><img src="immagini/img11.jpg" alt="Servizio 4" /></div>
+        </div>
+        <div class="after-services">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim vent mollit anim id est laborum Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
+            est laborum."
+          </p>
+        </div>
+      </div>
 
-.img-sfondo-dx-2 {
-    max-width: 300vw;
-    width: 90vw;
-    right: 23vw;
-    bottom: -41vw;
-}
-    /* contatti mobile */
-    .contact-form {
-        max-width: 100%;
-
-
-    }
-    .cont-desktop {
-        display: none;
-    }
-.cont-mobile {
-    display: block;
-}
-    .container-contacts p {
-        text-align: center;
-        color: #ededed;
-        font-size: 0.9em;
-        padding-bottom: 20px;
+      <div class="container-clients">
+        <h2> Clients  </h2>
+        <div class="sfondo-dx-1">
+          <img src="immagini/CLUBS1.png" class="img-sfondo-dx-1" alt="" />
+        </div>
+        <p class="copy-preclients">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim vent mollit anim id est laborum, Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
+          est laborum"
+        </p>
         
-        
-    }
+        <div class="slider-wrapper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
 
-    .container-contacts h2 {
-        font-size: 1.5em;
-    }
-    .container-contacts h3 {
-        padding-top: 0;
-        font-size: 1em;
-    }
-form {
-    padding-top: 0;
-}
-    .input-group input,
-    .input-group select,
-    .input-group textarea {
-        font-size: 14px;
-    }
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      
+                      src="immagini/FRONTE_LV_1.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
 
-    .input-group label {
-        font-size: 16px;
-    }
+                  <div class="card-back">
+                    <img
+                      
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      
+                      src="immagini/FRONTE_LV_1.png"
+                      class="img-2 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
 
-    /* footer mobile */
-        .footer {
-            font-family: 'CreatoDisplay-Light';
-            text-align: center;
-            padding: 5%;
-            font-size: 0.9em;
-            color: #fff;
-        }
+                  <div class="card-back">
+                    <img
+                      
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-2 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      
+                      src="immagini/FRONTE_LV_1.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
+
+                  <div class="card-back">
+                    <img
+                      
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img  src="immagini/FRONTE_LV_1.png" class="img-2 image-wrapper" alt="Image 2" />
+                  </div>
+              
+                  <div class="card-back">
+                    <img  src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-2 image-wrapper" alt="Image 2 - Back" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                  </div>
+              
+                  <div class="card-back">
+                    <img  src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-slider-buttons">
+              <div class="slider-buttons">
+                <div class="swiper-button-prev custom-prev-button"></div>
+                <div class="swiper-button-next custom-next-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="immagini-sfondo-companies">
+          <img src="immagini/COMPANIES.png" loading="lazy" alt="" />
+        </div>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim vent mollit anim id est laborum Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim vent mollit anim id
+          est laborum."
+        </p>
+        <div class="slider-wrapper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      loading="lazy"
+                      src="immagini/FRONTE_LV_1.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
+
+                  <div class="card-back">
+                    <img
+                      loading="lazy"
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      loading="lazy"
+                      src="immagini/FRONTE_LV_2.png"
+                      class="img-2 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
+
+                  <div class="card-back">
+                    <img
+                      loading="lazy"
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-2 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      loading="lazy"
+                      src="immagini/FRONTE_LV_3.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
+
+                  <div class="card-back">
+                    <img
+                      loading="lazy"
+                      src="immagini/RETRO_GENERIC_COMPANIES.png"
+                      class="img-3 image-wrapper"
+                      alt="Image 2 - Back"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card" onclick="flipCard(this)">
+                  <div class="card-front">
+                    <img
+                      loading="lazy"
+                      src="immagini/FRONTE_NOVAMONTELLO_3.png"
+                      class="img-2 image-wrapper"
+                      alt="Image 2"
+                    />
+                  </div>
+                          <div class="card-back">
+                      <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                    </div>
+                 
+                </div>
+              </div>
+              
+
+            <div class="swiper-slide">
+              <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                  <img loading="lazy" src="immagini/FRONTE_LV_1.png" class="img-3 image-wrapper" alt="Image 2" />
+                </div>
+            
+                <div class="card-back">
+                  <img loading="lazy" src="immagini/RETRO_GENERIC_COMPANIES.png" class="img-3 image-wrapper" alt="Image 2 - Back" />
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="container-slider-buttons">
+              <div class="slider-buttons">
+                <div
+                  class="swiper-button-prev custom-prev-button"
+                  id="btn">
+                </div>
+                <div class="swiper-button-next custom-next-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
-        .footer .row,
-        .footer .row1 {
-            text-align: center;
-        }
-    
-        .footer .row ul li {
-            display: inline-flex;
-            margin: 10px 0px;
-            text-align: center;
-            border: none;
-            font-size: 0.9em;
-            padding-right: 0;
-        }
+      <div class="container-contacts" id="contact">
+        <div class="sfondo-dx-2">
+          <img
+            src="immagini/COMPANIES-2.png"
+            class="img-sfondo-dx-2"
+            loading="lazy"
+            alt=""
+          />
+        </div>
 
-    
-        .footer .row a i {
-            margin: 0% 3%;
-        }
-.disp-mob {
-    display: none;
-}
+        <div class="contact-form">
+          <h2>CONTACTS</h2>
+          <div class="cont-desktop"> 
+          <p>@sws_agency | swsagency@info.it | +39 3935413415</p> </div>
+          <div class="cont-mobile">
+            <p>@sws_agency | swsagency@info.it <br>  +39 3935413415</p>
+          </div>
+          <h3>WORK WITH US!</h3>
+          <form>
+            <div class="form-columns">
+              <div class="input-group">
+                <input type="text" id="nome" placeholder="Nome" required />
+                <input
+                  type="text"
+                  id="cognome"
+                  placeholder="Cognome"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required />
+                <input
+                  type="tel"
+                  id="telefono"
+                  placeholder="Numero di Telefono"
+                  required
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Lavori per una società?</label>
+              <select id="lavoro">
+                <option value="---">---</option>
+                <option value="si">Si</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <textarea
+                id="messaggio"
+                placeholder="Messaggio"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="input-group1">
+              <label for="policy">Ho letto la <a href="privacy.html" target="_blank">policy </a></label>
+              <div class="checkbox-wrapper-23">
+                <input type="checkbox" id="check-23" />
+                <label for="check-23" style="--size: 20px">
+                  <svg viewBox="0,0,50,50">
+                    <path d="M5 30 L 20 45 L 45 5"></path>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="input-group">
+              <button type="submit" class="custom-button">INVIA</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
 
-    }
-
-    /* 
-
-    /* medium tablet portrait tablets,
-    portrait iPad,
-    e-readers (Nook/Kindle),
-    landscape 800x480 phones (Android) */
-
-    @media screen and (min-width: 820px) and (max-width: 961px) {
-.main-container {
-        gap: 10px;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-
-    .main-container img {
-        width: 100%;
-    }
-
-    .image-overlay {
-        width: 100%;
-    }
-        .center-container {
-            height: 30vh;
-        }
-        .immagini-sfondo-experience {
-            transform: translateY(2vh);
-        }
-        .img-sfondo-dx {
-            top: 2.5vh;
-        }
-        .img-sfondo-dx-1 {
-            top: -10vh;
-    }
-    .immagini-sfondo-companies {
-        transform: translateY(2vh)
-    }
-    .img-sfondo-dx-2 {
-        bottom: -40vw;
-        right: -9vw;
-        width: 80vw;
-    }
-}
-@media screen and (min-width: 641px) and (max-width: 800px) {
-    .main-container {
-        gap: 10px;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-
-    .main-container img {
-        width: 100%;
-    }
-
-    .image-overlay,
-    .image-overlay-text {
-        width: 100%;
-    }
-
-    .image-overlay-text {
-        display: block;
-        text-align: left;
-        transform: translate(2vw, 2vh);
-    }
-
-    .center-container {
-        height: 30vh;
-    }
-
-    .immagini-sfondo-experience {
-        transform: translate(-1.8%, 5%);
-    }
-
-    .img-sfondo-dx {
-        top: 3.5vh;
-    }
-
-    .img-sfondo-dx-1 {
-        top: -10vh;
-    }
-
-    .immagini-sfondo-companies {
-        transform: translateY(2vh);
-    }
-
-    .img-sfondo-dx-2 {
-        bottom: -40vw;
-        right: -9vw;
-        width: 80vw;
-    }
-}
-@media screen and (min-height:1024px) and (max-height: 1280px) and (max-width: 800px) {
-    .img-sfondo-dx-1 {
-        top: -8vh;
-    }
-}
-
-/* small tablets, kindle etc landscape phones */
-@media screen and (min-width: 481px) and (max-width:641px){
-    .immagini-sfondo-aboutus img {
-        width: 110vw;
-        transform: translate(-15%, -35vh);
-    }
-    .container-aboutus p {
-        margin-bottom: 0;
-    }
-    .main-container {
-            gap: 10px;
-            padding-left: 10vw;
-            padding-right: 10vw;
-            margin-top: 10vh;
-        }
-    
-        .main-container img {
-            width: 100%;
-        }
-    
-    
-        .center-container {
-            height: 30vh;
-        }
-    
-        
-        .immagini-sfondo-experience img {
-            width: 100vw;
-            transform: translate(-5vw, -17vh);
-        }
-    
-        .img-sfondo-dx {
-            top: 8.5vh;
-            width: 120vw;
-        }
-    
-        .img-sfondo-dx-1 {
-            top: -5vh;
-            width: 120vw;
-        }
-    
-        .immagini-sfondo-companies {
-            transform: translateY(2vh);
-        }
-        .container-aboutus .paragrafo-team {
-            margin: -1vh auto;
-        }
-        .container-clients .copy-preclients {
-            padding-bottom: 10vh;
-        }
-       .immagini-sfondo-companies img {
-        width: 110vw;
-        top: 5vh;
-       } 
-       .container-clients p {
-        padding-bottom: 6vh;
-       }
-       .container-clients h2 {
-        padding-bottom: 0;
-       }
-.img-sfondo-dx-2 {
-    width: 120vw;
-    right: -13vw;
-    bottom: -43vh;
-}
-
- .footer {
-     text-align: left;
-     padding: 5%;
-     font-size: 0.9em;
- }
-
- .footer .row,
- .footer .row1 {
-     text-align: left;
- }
-
- .footer .row ul li {
-     display: inline-flex;
-     margin: 10px 0px;
-     text-align: center;
-     border: none;
-     font-size: 0.9em;
-     
- }
-
-
-
- .footer .row a i {
-     margin: 0% 3%;
- }
-
-}
-
-
-/* responsive cookie & policy */
-@media  screen and (max-width:461px) {
-    .container-general-privacy  p {
-        padding-left: 10vw;
-        box-sizing: border-box;
-        overflow-x: hidden;
-    }
-    .img-sfondo-dx-privacy-2 img {
-        width: 130vw;
-        top: -35vh;
-        right: -44vw;
-    }
-    .container-general-privacy h1 {
-        font-size: 1.0em;
-    }
-         .container-general-privacy h2 {
-             font-size: 1.4em;
-         }
-         .first-paragraph {
-            margin-top: 3vh;
-                margin-bottom: 8vh;
-         }
-         .scalleta-paragraph {
-            margin-top: 8vh;
-         }
-         .third-paragraph {
-            margin-bottom: 8vh;
-         }
-         .fourth-paragraph {
-            margin-bottom: 8vh;
-         }
-         .fifth-paragraph {
-            margin-bottom: 8vh;
-
-         }
-
-                  .img-sfondo-dx-privacy img {
-                      width: 130vw;
-                      top: -31vh;
-                      right: -44vw;
-                  }
-
-}
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <ul>
+          
+          <li><a href="cookie.html">Cookie Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li class="li-without-border">
+            <a href="https://www.teamecommerce.com" target="_blank"
+              >Teamecommerce</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="row1">
+        C.F. - P.IVA 03948390160 • R.E.A. BG - 422426 • capitale sociale €
+        10.000 i. v. || Via Roma n.50/R, 24060 Credaro (BG)
+        <a href="mailto:info@teamecommerce.com">info@teamecommerce.com</a>
+      </div>
+      <div class="row">
+        Teamecommerce Copyright - All rights reserved || Developed By:
+        <a href="https://www.linkedin.com/in/francesco-lazzarotto-a09aa51ba/" target="_blank"
+          >Lazzarotto Francesco</a
+        >
+      </div>
+    </div>
+  </footer>
+</html>

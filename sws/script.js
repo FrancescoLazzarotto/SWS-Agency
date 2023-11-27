@@ -1,3 +1,5 @@
+
+
 // menu mobile e chiusura automatica del menu al click di una sezione //
 document.addEventListener('DOMContentLoaded', function () {
   var menuToggle = document.getElementById('mobile-menu-toggle');
@@ -83,6 +85,10 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
     // funzione flip card - fronte e retro
+    card.addEventListener("touchstart", function (event) {
+  event.preventDefault(); // Previeni il comportamento predefinito del touch
+  flipCard(card);
+});
     function flipCard(card) {
       card.classList.toggle("flipped");
     }
@@ -94,16 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
       flipCard(card);
     });
   });
-document.querySelectorAll(".card").forEach(function (card) {
-  card.addEventListener("click", function () {
-    flipCard(card);
-  });
 
-  // Aggiunto il touchstart per gestire il click su dispositivi mobili
-  card.addEventListener("touchstart", function () {
-    flipCard(card);
-  });
-});
 
     
     function mostraParagrafo(idParagrafo) {

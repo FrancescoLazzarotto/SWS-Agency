@@ -216,6 +216,7 @@ img {
     cursor: pointer;
     display: none;
     color: #fff;
+    
 }
 
 .mobile-menu {
@@ -890,6 +891,7 @@ h2 {
     transform-style: preserve-3d;
     transition: transform 0.5s;
     cursor: pointer;
+    
 }
 
 .card.flipped {
@@ -901,6 +903,7 @@ h2 {
     width: 100%;
         height: 100%;       
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
 }
 .card-back {
     width: 100%;
@@ -1804,7 +1807,7 @@ landscape iPhone */
           
          .toggle-container {
              display: block;
-             z-index: 1000;
+             z-index: 10000;
          }
 .image-container{
     display:none;
@@ -1953,63 +1956,77 @@ landscape iPhone */
     width: 100%;
     height: auto;
 }
-    /* experience mobile */
-.sfondo-dx {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
+
 .image-wrapper-mobile {
     position: relative;
     overflow: hidden;
+        display: flex;
+        flex-direction: column;
 }
-.image-wrapper-mobile::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 0, 0);
-    /* Inizialmente trasparente */
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: background-color 0.3s ease;
-    /* Transizione fluida del colore della tendina */
-}
-.image-wrapper-mobile:active::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 0, 0.8);
-    /* Colore della tendina verde */
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 
 .image-overlay-text-mobile {
     color: white;
     text-align: center;
+   
+    z-index: 100;
+    bottom: 0;
+    
+}
+.image-overlay-mobile {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 9%;
+
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 150.87, 96.56, 0.88) 100%);
+        opacity: 0;
+        transition: height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+        border-radius: 0 0 17px 17px;
+}
+
+.image-overlay-mobile.active {
+
+    opacity: 1;
+    
+    position: absolute;
+    
+
 }
 
 .vertical-bar {
     width: 2px;
-    height: 20px;
-    /* Altezza della barra a sinistra delle scritte */
+    height: 30px;
     background-color: white;
-    /* Colore della barra */
-    margin: 0 10px;
-    /* Margine tra la barra e il testo */ }
+    position: absolute;
+    
+    left: 6vw;}
+    .name {
+        position:absolute;
+        top: 45%;
+        left:8vw;
+        font-size: 0.7em;
+    }
 
+.occupation {
+    position: absolute;
+    top: 70%;
+    left: 6vw;
+    font-size: 0.3em;
+} 
+        /* experience mobile */
+        .sfondo-dx {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
 .img-sfondo-dx {
     position: absolute;
     max-width: 100vw;
@@ -2220,6 +2237,7 @@ form {
     .input-group label {
         font-size: 16px;
     }
+  
 
     /* footer mobile */
         .footer {
@@ -2352,6 +2370,13 @@ form {
 
 /* small tablets, kindle etc landscape phones */
 @media screen and (min-width: 481px) and (max-width:641px){
+    .menu-container {
+        max-width: 430px;
+    }
+    .menu-toggle-ig-desktop {
+        top: 6.9vh;
+        right: 2vw;
+    }
     .immagini-sfondo-aboutus img {
         width: 110vw;
         transform: translate(-15%, -35vh);
@@ -2487,4 +2512,9 @@ form {
                       right: -44vw;
                   }
 
+}
+@media screen and (min-height:568px) {
+    .occupation {
+        top: 65%;
+    }
 }

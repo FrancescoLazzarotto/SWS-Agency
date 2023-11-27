@@ -86,7 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // funzione flip card - fronte e retro
     function flipCard(card) {
-  card.classList.toggle("flipped");
+  var isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+  if (isTouchDevice) {
+    // Se si tratta di un dispositivo touch, aggiungi o rimuovi la classe "flipped" solo al clic
+    card.classList.toggle("flipped");
+  } else {
+    // Se non è un dispositivo touch, esegui il normale comportamento
+    card.classList.toggle("flipped");
+  }
 }
 
 document.querySelectorAll(".card").forEach(function (card) {

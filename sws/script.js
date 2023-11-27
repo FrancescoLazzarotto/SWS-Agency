@@ -108,11 +108,13 @@ document.querySelectorAll(".card").forEach(function (card) {
   });
 
   card.addEventListener("touchmove", function (event) {
-    event.preventDefault(); // Evita comportamenti predefiniti
+    event.preventDefault();
+    flipCard(card); // Evita comportamenti predefiniti
   });
 
   card.addEventListener("touchend", function (event) {
-    event.preventDefault(); // Evita comportamenti predefiniti
+    event.preventDefault();
+    flipCard(card); // Evita comportamenti predefiniti
   });
 });
     

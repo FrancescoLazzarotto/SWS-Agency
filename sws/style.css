@@ -888,7 +888,9 @@ h2 {
 }
 .card {
     perspective: 1000px;
+    -webkit-transform-style: preserve-3d !important;
     transform-style: preserve-3d;
+    -webkit-transition: transform 0.5s !important;
     transition: transform 0.5s;
     cursor: pointer;
     
@@ -898,6 +900,7 @@ h2 {
     -webkit-transform: rotateY(180deg) !important;
     transform: rotateY(180deg);
     will-change: transform;
+    -webkit-will-change: transform !important;
 }
 
 .card-front {
@@ -913,6 +916,7 @@ h2 {
     left: 0;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg) !important;
+    -webkit-will-change: transform !important;
     will-change: transform;
     -webkit-backface-visibility: hidden !important;
     backface-visibility: hidden;

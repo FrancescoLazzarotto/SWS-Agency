@@ -1,20 +1,27 @@
 // menu mobile e chiusura automatica del menu al click di una sezione //
-  document.addEventListener('DOMContentLoaded', function () {
-    var menuToggle = document.getElementById('mobile-menu-toggle');
-    var mobileMenu = document.querySelector('.mobile-menu');
-    var menuItems = document.querySelectorAll('.menu-list a');
+document.addEventListener('DOMContentLoaded', function () {
+  var menuToggle = document.getElementById('mobile-menu-toggle');
+  var mobileMenu = document.querySelector('.mobile-menu');
+  var menuItems = document.querySelectorAll('.menu-list a');
 
-    menuToggle.addEventListener('click', function () {
-      mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
-    });
+  menuToggle.addEventListener('click', function () {
+    if (mobileMenu.style.display === 'block') {
+      // Se il menu è aperto, chiudi
+      mobileMenu.style.display = 'none';
+    } else {
+      // Se il menu è chiuso, apri
+      mobileMenu.style.display = 'block';
+    }
+  });
 
-    // Aggiungi un gestore di eventi a ciascun elemento del menu per chiudere il menu al clic
-    menuItems.forEach(function (item) {
-      item.addEventListener('click', function () {
-        mobileMenu.style.display = 'none';
-      });
+  //  gestore di eventi a ciascun elemento del menu per chiudere il menu al clic
+  menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      mobileMenu.style.display = 'none';
     });
   });
+});
+
 
 
     // funzione cambio di proprietà css al menu con lo scorrimento // 
@@ -87,7 +94,16 @@
       flipCard(card);
     });
   });
+document.querySelectorAll(".card").forEach(function (card) {
+  card.addEventListener("click", function () {
+    flipCard(card);
+  });
 
+  // Aggiunto il touchstart per gestire il click su dispositivi mobili
+  card.addEventListener("touchstart", function () {
+    flipCard(card);
+  });
+});
 
     
     function mostraParagrafo(idParagrafo) {
@@ -132,3 +148,30 @@
       function toggleArrow(element) {
             element.classList.toggle("rotated");
         }
+
+// over della sezione team per mobile 
+ document.addEventListener("DOMContentLoaded", function () {
+    const imageOverlays = document.querySelectorAll(".image-overlay-mobile");
+
+    window.addEventListener("scroll", function () {
+      imageOverlays.forEach((overlay, index) => {
+        const rect = overlay.getBoundingClientRect();
+        const isVisible =
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+        if (isVisible) {
+          overlay.classList.add("active");
+        } 
+      });
+    });
+  });
+  
+  // script per cambiare il placeholder dell'input telefono su mobile 
+ document.addEventListener("DOMContentLoaded", function () {
+    var telefonoInput = document.getElementById("telefono");
+
+    if (window.innerWidth <= 599) {
+      telefonoInput.placeholder = "Telefono";
+    }
+  });

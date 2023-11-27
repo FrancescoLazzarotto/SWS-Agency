@@ -118,7 +118,17 @@ document.querySelectorAll(".card").forEach(function (card) {
   });
 });
     
+// flip su dispotivi iOS 
+  var flipping = new Flipping();
 
+  document.getElementById("myCard").addEventListener("click", function () {
+    flipping.read();
+    flipping.flip();
+  });
+   cardElement.addEventListener("touchstart", function () {
+    flipping.read();
+    flipping.flip();
+  });
 
     
     function mostraParagrafo(idParagrafo) {

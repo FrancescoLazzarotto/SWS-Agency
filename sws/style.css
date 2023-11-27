@@ -850,15 +850,12 @@ h2 {
 .swiper-button-next,
 .swiper-button-prev {
     position: relative;
-
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
     z-index: 10;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
     color: var(--swiper-navigation-color, var(--swiper-theme-color))
 }
 
@@ -902,7 +899,11 @@ h2 {
     will-change: transform;
     -webkit-will-change: transform !important;
 }
-
+.card-front,
+.card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 .card-front {
     width: 100%;
         height: 100%;       
@@ -2523,4 +2524,50 @@ form {
     .occupation {
         top: 65%;
     }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+.card {
+        perspective: 1000px;
+        -webkit-transform-style: preserve-3d !important;
+        transform-style: preserve-3d;
+        -webkit-transition: transform 0.5s !important;
+        transition: transform 0.5s;
+        cursor: pointer;
+
+    }
+
+    .card.flipped {
+        -webkit-transform: rotateY(180deg) !important;
+        transform: rotateY(180deg);
+        will-change: transform;
+        -webkit-will-change: transform !important;
+    }
+
+    .card-front,
+    .card-back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .card-front {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden !important;
+    }
+
+    .card-back {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg) !important;
+        -webkit-will-change: transform !important;
+        will-change: transform;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+
 }

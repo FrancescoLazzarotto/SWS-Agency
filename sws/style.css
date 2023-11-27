@@ -887,7 +887,7 @@ h2 {
     perspective: 1000px;
     -webkit-transform-style: preserve-3d !important;
     transform-style: preserve-3d;
-    -webkit-transition: transform 0.5s !important;
+    -webkit-transition: -webkit-transform 0.5s !important;
     transition: transform 0.5s;
     cursor: pointer;
     
@@ -2547,6 +2547,7 @@ form {
     .card-back {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        transform: rotateX(0deg);
     }
 
     .card-front {

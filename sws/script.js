@@ -85,21 +85,29 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
     // funzione flip card - fronte e retro
-    card.addEventListener("touchstart", function (event) {
-  event.preventDefault(); // Previeni il comportamento predefinito del touch
-  flipCard(card);
-});
     function flipCard(card) {
-      card.classList.toggle("flipped");
-    }
-     document.querySelectorAll(".card").forEach(function (card) {
-    card.addEventListener("click", function () {
-      flipCard(card);
-    });
-    card.addEventListener("touchstart", function () {
-      flipCard(card);
-    });
+  card.classList.toggle("flipped");
+}
+
+document.querySelectorAll(".card").forEach(function (card) {
+  card.addEventListener("click", function () {
+    flipCard(card);
   });
+
+  card.addEventListener("touchstart", function (event) {
+    event.preventDefault(); // Evita comportamenti predefiniti
+    flipCard(card);
+  });
+
+  card.addEventListener("touchmove", function (event) {
+    event.preventDefault(); // Evita comportamenti predefiniti
+  });
+
+  card.addEventListener("touchend", function (event) {
+    event.preventDefault(); // Evita comportamenti predefiniti
+  });
+});
+    
 
 
     

@@ -109,26 +109,16 @@ document.querySelectorAll(".card").forEach(function (card) {
 
   card.addEventListener("touchmove", function (event) {
     event.preventDefault();
-    flipCard(card); // Evita comportamenti predefiniti
+    flipCard(card) // Evita comportamenti predefiniti
   });
 
   card.addEventListener("touchend", function (event) {
     event.preventDefault();
-    flipCard(card); // Evita comportamenti predefiniti
+    flipCard(card) // Evita comportamenti predefiniti
   });
 });
-    
-// flip su dispotivi iOS 
-  var flipping = new Flipping();
+   
 
-  document.getElementById("myCard").addEventListener("click", function () {
-    flipping.read();
-    flipping.flip();
-  });
-   cardElement.addEventListener("touchstart", function () {
-    flipping.read();
-    flipping.flip();
-  });
 
     
     function mostraParagrafo(idParagrafo) {

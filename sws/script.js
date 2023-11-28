@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
           1024: { 
             slidesPerView: 4,
           },
-          540: {
+          481: {
             slidesPerView: 2,
           },
           768: { 
@@ -178,10 +178,15 @@ document.querySelectorAll(".card").forEach(function (card) {
         if (isVisible) {
           overlay.classList.add("active");
         } 
+        else {
+          overlay.classList.remove("active")
+        }
       });
     });
   });
   
+
+
   // script per cambiare il placeholder dell'input telefono su mobile 
  document.addEventListener("DOMContentLoaded", function () {
     var telefonoInput = document.getElementById("telefono");

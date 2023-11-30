@@ -1755,9 +1755,10 @@ input:focus {
   .immagini-sfondo-aboutus img {
     width: 90vw;
     position: relative;
+    max-width: 100%;
     height: auto;
     top: 130%;
-    right: -34vw;
+    right: -2vw;
     overflow-x: hidden;
   }
   * {
@@ -2198,7 +2199,7 @@ landscape iPhone  normal phones, medium*/
 position: relative;
     height: auto;
     top: 100%;
-    right: -34vw;
+    right: -2vw;
     overflow-x: hidden;
   }
   * {

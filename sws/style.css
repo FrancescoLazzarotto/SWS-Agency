@@ -79,7 +79,7 @@ body {
   background-color: rgba(15, 15, 15, 1);
   margin: 0;
   padding: 0;
-  font-family: "Creato Display Medium";
+  font-family: "Creato DisplayMedium";
   display: block;
   justify-content: center;
   align-items: flex-start;
@@ -103,7 +103,7 @@ p {
 }
 
 h2 {
-  font-family: "Creato Display-Medium", "Roboto Medium";
+  font-family: "Creato Display-Bold", "Roboto Medium" !important;
   font-style: normal !important;
 }
 
@@ -408,7 +408,7 @@ h2 {
 
 .container-aboutus h2 {
   color: #fff;
-  font-family: "Creato Display-Bold";
+  font-family: "Creato Display-Bold", "Roboto Medium";
   text-align: center;
   font-size: 70px;
   font-weight: bold;
@@ -581,7 +581,7 @@ h2 {
   padding: 0;
   margin-top: 20px;
   text-transform: uppercase;
-  font-family: "Creato Display-Bold";
+  font-family: "Creato Display-Bold","Roboto Medium";
   font-weight: 700;
   color: #ffffff;
 }
@@ -993,7 +993,7 @@ h2 {
   color: #fff;
   text-align: center;
   font-size: 70px;
-  font-family: "Creato Display-Bold";
+  font-family: "Creato Display-Bold", "Roboto Medium";
   padding-bottom: 10px;
   margin: 0;
   text-transform: uppercase;

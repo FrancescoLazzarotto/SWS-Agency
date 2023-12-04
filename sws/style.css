@@ -650,11 +650,12 @@ h2 {
 .card-section img {
   max-width: 100%;
   width: 40vw;
-  border-radius: 10px;
+  border-radius: 15px;
   display: block;
   margin: 0 auto;
-   border: 1px solid white;
+   border: 2px solid white;
     transition: transform 0.4s ease;
+    cursor: pointer;
 }
 .card-section img:hover {
   transform: scale(1.025); /* Ingrandisci l'immagine del 10% al passaggio del mouse */
@@ -1966,8 +1967,10 @@ transition: opacity 0.8s ease-in-out;
     max-width: 300px;
     max-height: 700px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 5vh;
+    border: 1px solid white;
+
   }
   .container-experience .copy-preclients {
     margin-top: 40vh;
@@ -2402,8 +2405,9 @@ position: relative;
     max-width: 300px;
     max-height: 700px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 8px;
     margin-bottom: 5vh;
+    border: 1px solid white;
   }
   .container-experience .copy-preclients {
     margin-top: 40vh;

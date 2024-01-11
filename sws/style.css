@@ -920,7 +920,7 @@ h2 {
 }
 
 .img-2 {
-  aspect-ratio: 0.81;
+  aspect-ratio: 0.78 ;
   object-fit: fill;
   object-position: center;
   width: 100%;
@@ -935,7 +935,7 @@ h2 {
 }
 
 .img-3 {
-  aspect-ratio: 0.81;
+  aspect-ratio: 0.78;
   object-fit: fill;
   object-position: center;
   width: 100%;

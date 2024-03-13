@@ -4,7 +4,7 @@
 <title>SWS Agency</title>
 <!-- meta tag -->
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0"/>
 <meta name="description" content="SWS Agency" />
 <meta name="keywords" content="parole chiave, SEO, ottimizzazione" />
 <meta name="author" content="Francesco Lazzarotto" />
@@ -15,8 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!-- stylesheet interni -->
-<link rel="stylesheet" href="normalize.css">
-<link rel="stylesheet" href="minifiedstyle.css " />
+<link rel="stylesheet" href="style.css " />
 <link rel="icon" href="immagini/sws.svg" type="image/x-icon" />
 <!-- stylesheet e chiamate api per stile -->
 <link href="https://db.onlinewebfonts.com/c/520a4a8159f8f7df16eec7ac6d5054e6?family=CreatoDisplay-Bold"
@@ -31,12 +30,13 @@
 <!--api google fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creato+Display:wght@300&display=swap" />
+<!-- da capire se i lsito utilizza o no questa chiamata
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creato+Display:wght@300&display=swap" /> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="path/to/flipping.min.css">
+
   </head>
   <script src="script.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -63,8 +63,9 @@
           </ul>
         </nav>
         <!-- container menu tablet e desktop  -->
-        <div class="menu-toggle-ig-desktop"> <a href="https://www.instagram.com/agency_sws/" target="_blank" class="link-hover"> <i
-              class="gg-instagram"></i> </a> </div>
+        <div class="menu-toggle-ig-desktop"> 
+          <a href="https://www.instagram.com/agency_sws/" target="_blank" class="link-hover" aria-label="Visita il nostro profilo instagram"> 
+            <i class="gg-instagram"></i> </a> </div>
         <nav class="menu-container" id="menu">
           <ul class="menu">
             <li>
@@ -117,6 +118,7 @@
         </p>
         <!-- container team -->
         <div class="main-container">
+          <!-- le immagini sono prese tramite una richiesta api al servizio builder.io -- widget di figma -->
           <div class="image-wrapper"> 
             <img
               loading="lazy"
@@ -768,7 +770,7 @@
                 />
               </div>
               <div class="input-group">
-                <input type="email" id="email" placeholder="Email" required />
+                <input type="email" id="email" placeholder="Email" autocomplete="email" required />
                 <input
                   type="tel"
                   id="telefono"
@@ -778,7 +780,7 @@
               </div>
             </div>
             <div class="input-group">
-              <label>Lavori per una società?</label>
+              <label for="lavoro">Lavori per una società?</label>
               <select id="lavoro">
                 <option value="---">---</option>
                 <option value="si">Si</option>
@@ -794,11 +796,11 @@
               ></textarea>
             </div>
             <div class="input-group1">
-              <label for="policy">Ho letto la <a href="privacy.html" target="_blank">policy </a></label>
+              <label for="policy">Ho letto la <a href="privacy.html" target="_blank" id="policy">policy </a></label>
 
               <!-- checkbox personalizzata -->
               <div class="checkbox-wrapper-23">
-                <input type="checkbox" id="check-23" />
+                <input type="checkbox" id="check-23"  />
                 <label for="check-23" style="--size: 20px">
                   <svg viewBox="0,0,50,50">
                     <path d="M5 30 L 20 45 L 45 5"></path>

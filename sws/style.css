@@ -1433,7 +1433,7 @@ le regole css */
 /* small desktop , big tablets */ 
 @media screen and (min-width:961px) and (max-width: 1270px) {
    .menu-toggle-ig-desktop {
-  top: 5%;
+  top: 5.5%;
 }
   .logo-linkedin {
     bottom: 50%;
@@ -1659,19 +1659,21 @@ transition: opacity 0.8s ease-in-out;
     position: absolute;
   }
 
-  
+  .logo-linkedin {
+    padding-bottom: 5%;
+  }
   .name {
     color: #ffffff;
   position: relative;
-  padding-top: 45%;
-  font-family: "Creato Display-Light" ;
-  font-size: 1.0em;
+  padding-top: 40%;
+  font-family: "Creato Display-Light", "Roboto";
+  font-size: 0.7em;
   }
 
   .occupation {
   position: relative;
   color: #ffffff;
-  font-size: 0.4em;
+  font-size: 5px;
   padding-top: 3%;
   font-weight: bold;
   font-family: "Creato Display-Bold";
@@ -2103,7 +2105,7 @@ position: relative;
     color: #ffffff;
   position: relative;
   padding-top: 45%;
-  font-family: "Creato Display-Light" ;
+  font-family: "Creato Display-Light",  "Roboto" ;
   font-size: 1.0em;
   }
 
@@ -3253,7 +3255,7 @@ bypassati da questa media query qua */
 }
 
 .container-general-privacy {
-  font-family: "Creato Display-Light";
+  font-family: "Creato Display-Light" , "Roboto" ;
   margin-top: 180px;
   padding-left: 10%;
   padding-right: 10%;
@@ -3274,7 +3276,7 @@ bypassati da questa media query qua */
 }
 
 .container-general-privacy p {
-  font-family: "Creato Display-Light";
+  font-family: "Creato Display-Light" , "Roboto";
 }
 
 .container-general-privacy h2 {
@@ -3327,7 +3329,7 @@ bypassati da questa media query qua */
   background-color: transparent;
   border: 0px solid transparent;
   border-top: 1px solid #009660;
-  font-family: "Creato Display-Light";
+  font-family: "Creato Display-Light" , "Roboto";
   font-size: 18px;
   padding-left: 20px;
   transition: background-color 0.3s ease;
@@ -3466,7 +3468,7 @@ bypassati da questa media query qua */
   background-color: transparent;
   border: 0px solid transparent;
   border-top: 1px solid rgb(0, 150.87, 96.56);
-  font-family: "Creato Display-Light";
+  font-family: "Creato Display-Light",  "Roboto";
   font-size: 18px;
   padding-left: 20px;
 }

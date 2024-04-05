@@ -523,6 +523,8 @@ opacity: 1;
   padding-top: 3%;
   font-weight: bold;
   font-family: "Creato Display-Bold";
+  -webkit-font-smoothing: antialiased; 
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 
@@ -1675,8 +1677,9 @@ transition: opacity 0.8s ease-in-out;
   color: #ffffff;
   font-size: 5px;
   padding-top: 3%;
-  font-weight: bold;
+  font-weight: lighter;
   font-family: "Creato Display-Bold";
+   
   
   }
   /* experience small mobile */

@@ -522,7 +522,7 @@ opacity: 1;
   font-size: 0.55vw;
   padding-top: 3%;
   font-weight: bold;
-  font-family: "Creato Display-Bold";
+  font-family: "Creato Display-Medium";
   -webkit-font-smoothing: antialiased; 
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
@@ -1370,17 +1370,7 @@ input:focus {
 /*media query, leggermente incasinati, ispezionare gli elementi è il miglior modo per trovare 
 le regole css */
 
-@media screen and (max-width: 340px) {
-  .occupation {
-    top: 70%;
-  }
-}
 
-@media screen and (min-height: 568px) {
-  .occupation {
-    top: 65%;
-  }
-}
 @media (min-width: 768px) {
   .container {
     display: none;

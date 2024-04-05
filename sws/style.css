@@ -1872,7 +1872,7 @@ transition: opacity 0.8s ease-in-out;
 
   /* footer small mobile */
   .footer {
-    font-family: "CreatoDisplay-Light";
+    font-family: "Creato Display-Light", "Roboto";
     text-align: center;
     padding: 5%;
     font-size: 0.9em;
@@ -2306,7 +2306,7 @@ position: relative;
 
   /* footer mobile */
   .footer {
-    font-family: "CreatoDisplay-Light";
+    font-family: "Creato Display-Light", "Roboto";
     text-align: center;
     padding: 5%;
     font-size: 0.9em;

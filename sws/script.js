@@ -173,7 +173,7 @@ document.querySelectorAll(".card").forEach(function (card) {
 
  // cookies and privacy  // all devices 
  // script per aprire il paragrafo 
-   document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var arrowButton = document.getElementById('arrowButton');
 
     arrowButton.addEventListener('click', function(event) {
@@ -182,14 +182,8 @@ document.querySelectorAll(".card").forEach(function (card) {
         mostraParagrafo(paragrafoId);
         toggleArrow(this);
     });
-
-    arrowButton.addEventListener('touchend', function(event) {
-        event.preventDefault(); // Evita eventuali azioni predefinite come lo zoom sulla pagina o la trascinatura della pagina
-        var paragrafoId = this.getAttribute('data-target');
-        mostraParagrafo(paragrafoId);
-        toggleArrow(this);
-    });
 });
+
 function mostraParagrafo(idParagrafo) {
     var paragrafoDaMostrare = document.getElementById(idParagrafo);
 
@@ -216,6 +210,7 @@ function nascondiParagrafi() {
 function toggleArrow(element) {
     element.classList.toggle("rotated");
 }
+
 
   // script freccia che riporta a inizio pagina 
 document.addEventListener("DOMContentLoaded", function() {

@@ -173,15 +173,18 @@ document.querySelectorAll(".card").forEach(function (card) {
 
  // cookies and privacy  // all devices 
  // script per aprire il paragrafo 
-    document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('arrowButton').addEventListener('click', function() {
+   document.addEventListener('DOMContentLoaded', function() {
+    var arrowButton = document.getElementById('arrowButton');
+
+    arrowButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita eventuali azioni predefinite come il reindirizzamento su un'altra pagina
         var paragrafoId = this.getAttribute('data-target');
         mostraParagrafo(paragrafoId);
         toggleArrow(this);
     });
 
-    document.getElementById('arrowButton').addEventListener('touchstart', function(event) {
-        event.preventDefault(); // Evita eventuali azioni predefinite come lo zoom sulla pagina
+    arrowButton.addEventListener('touchstart', function(event) {
+        event.preventDefault(); // Evita eventuali azioni predefinite come lo zoom sulla pagina o la trascinatura della pagina
         var paragrafoId = this.getAttribute('data-target');
         mostraParagrafo(paragrafoId);
         toggleArrow(this);

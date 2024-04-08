@@ -183,14 +183,13 @@ document.querySelectorAll(".card").forEach(function (card) {
         toggleArrow(this);
     });
 
-    arrowButton.addEventListener('touchstart', function(event) {
+    arrowButton.addEventListener('touchend', function(event) {
         event.preventDefault(); // Evita eventuali azioni predefinite come lo zoom sulla pagina o la trascinatura della pagina
         var paragrafoId = this.getAttribute('data-target');
         mostraParagrafo(paragrafoId);
         toggleArrow(this);
     });
 });
-
 function mostraParagrafo(idParagrafo) {
     var paragrafoDaMostrare = document.getElementById(idParagrafo);
 

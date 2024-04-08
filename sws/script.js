@@ -1,4 +1,3 @@
-
 // menu mobile e chiusura automatica del menu al click di una sezione // mobile  
 document.addEventListener('DOMContentLoaded', function () {
   var menuToggle = document.getElementById('mobile-menu-toggle');
@@ -23,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
     // funzione cambio di proprietà css al menu con lo scorrimento // //desktop-tablet
    window.addEventListener("scroll", function () {
       var menu = document.getElementById("menu");
@@ -38,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+
+
+
     // over della sezione team // mobile 
  document.addEventListener("DOMContentLoaded", function () {
     const imageOverlays = document.querySelectorAll(".image-overlay-mobile");
@@ -52,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isVisible) {
           overlay.classList.add("active");
         } 
-       
+
       });
     });
   });
+
 
   //script per il counter animato // all devices 
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(counter);
   });
 });
+
 
   // funzione scorrimento slider attraverso la libreria Swiper.js  // all devices
 
@@ -134,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
     });
-   
+
 
     // funzione flip card - fronte e retro // all devices
     function flipCard(card) {
@@ -169,47 +175,54 @@ document.querySelectorAll(".card").forEach(function (card) {
     flipCard(card);
   });
 });
-   
+
 
  // cookies and privacy  // all devices 
+
+
  // script per aprire il paragrafo 
-  document.addEventListener('DOMContentLoaded', function() {
-    var arrowButton = document.getElementById('arrowButton');
 
-    arrowButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita eventuali azioni predefinite come il reindirizzamento su un'altra pagina
-        var paragrafoId = this.getAttribute('data-target');
-        mostraParagrafo(paragrafoId);
-        toggleArrow(this);
-    });
-});
+    function mostraParagrafo(idParagrafo) {
+        // Trova il paragrafo cliccato
+        var paragrafoDaMostrare = document.getElementById(idParagrafo);
 
-function mostraParagrafo(idParagrafo) {
-    var paragrafoDaMostrare = document.getElementById(idParagrafo);
+        // Se il paragrafo è già attivo, nascondilo e rimuovi la classe 'active'
+        if (paragrafoDaMostrare.classList.contains('active')) {
+            paragrafoDaMostrare.classList.remove('active');
+        } else {
+            // Nascondi tutti i paragrafi e mostra il paragrafo cliccato
+            nascondiParagrafi();
 
-    if (paragrafoDaMostrare.classList.contains('active')) {
-        paragrafoDaMostrare.classList.remove('active');
-    } else {
-        nascondiParagrafi();
-
-        if (parseInt(window.getComputedStyle(paragrafoDaMostrare).maxHeight) === 0) {
-            paragrafoDaMostrare.classList.add('active');
+            // Verifica se l'altezza massima è diversa da 0
+            if (parseInt(window.getComputedStyle(paragrafoDaMostrare).maxHeight) === 0) {
+                paragrafoDaMostrare.classList.add('active');
+            }
         }
     }
-}
 
-function nascondiParagrafi() {
-    var paragrafi = document.querySelectorAll('.hidden');
-    paragrafi.forEach(function(paragrafo) {
-        if (paragrafo.classList.contains('active')) {
-            paragrafo.classList.remove('active');
+    // Funzione per nascondere tutti i paragrafi
+    function nascondiParagrafi() {
+        var paragrafi = document.querySelectorAll('.hidden');
+        paragrafi.forEach(function (paragrafo) {
+            if (paragrafo.classList.contains('active')) {
+                paragrafo.classList.remove('active');
+            }
+        });
+    }
+    // per tenere aperto il paragrafo attivo 
+    function nascondiParagrafiEccetto(idParagrafoAttivo) {
+        var paragrafi = document.querySelectorAll('.hidden');
+        paragrafi.forEach(function (paragrafo) {
+            if (paragrafo.id !== idParagrafoAttivo) {
+                paragrafo.classList.remove('active');
+            }
+        });
+    }
+      //funzione per ruotare la freccia al click sul paragrafo
+      function toggleArrow(element) {
+            element.classList.toggle("rotated");
         }
-    });
-}
 
-function toggleArrow(element) {
-    element.classList.toggle("rotated");
-}
 
 
   // script freccia che riporta a inizio pagina 
@@ -231,3 +244,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// freccia tornare su home page 
+document.addEventListener("DOMContentLoaded", function () {
+      var scrollToTopButton = document.getElementById("scroll-to-top-home");
+
+      // Aggiungi un gestore di eventi al clic sulla freccia
+      scrollToTopButton.addEventListener("click", function () {
+        // Scorri verso l'inizio della pagina
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  // script per cambiare il placeholder dell'input telefono su mobile 
+ document.addEventListener("DOMContentLoaded", function () {
+    var telefonoInput = document.getElementById("telefono");
+
+    if (window.innerWidth <= 599) {
+      telefonoInput.placeholder = "Telefono";
+    }
+  });

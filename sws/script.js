@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
   // funzione scorrimento slider attraverso la libreria Swiper.js  // all devices
 
    document.addEventListener("DOMContentLoaded", function () {
@@ -183,47 +184,56 @@ document.querySelectorAll(".card").forEach(function (card) {
 
  // script per aprire il paragrafo 
     
-    function mostraParagrafo(idParagrafo) {
-        // Trova il paragrafo cliccato
-        var paragrafoDaMostrare = document.getElementById(idParagrafo);
+      function mostraParagrafo(idParagrafo) {
+          // Trova il paragrafo cliccato
+          var paragrafoDaMostrare = document.getElementById(idParagrafo);
 
-        // Se il paragrafo è già attivo, nascondilo e rimuovi la classe 'active'
-        if (paragrafoDaMostrare.classList.contains('active')) {
-            paragrafoDaMostrare.classList.remove('active');
-        } else {
-            // Nascondi tutti i paragrafi e mostra il paragrafo cliccato
-            nascondiParagrafi();
+          // Se il paragrafo è già attivo, nascondilo e rimuovi la classe 'active'
+          if (paragrafoDaMostrare.classList.contains('active')) {
+              paragrafoDaMostrare.classList.remove('active');
+          } else {
+              // Nascondi tutti i paragrafi e mostra il paragrafo cliccato
+              nascondiParagrafi();
 
-            // Verifica se l'altezza massima è diversa da 0
-            if (parseInt(window.getComputedStyle(paragrafoDaMostrare).maxHeight) === 0) {
-                paragrafoDaMostrare.classList.add('active');
-            }
-        }
-    }
-  
-    // Funzione per nascondere tutti i paragrafi
-    function nascondiParagrafi() {
-        var paragrafi = document.querySelectorAll('.hidden');
-        paragrafi.forEach(function (paragrafo) {
-            if (paragrafo.classList.contains('active')) {
-                paragrafo.classList.remove('active');
-            }
-        });
-    }
-    // per tenere aperto il paragrafo attivo 
-    function nascondiParagrafiEccetto(idParagrafoAttivo) {
-        var paragrafi = document.querySelectorAll('.hidden');
-        paragrafi.forEach(function (paragrafo) {
-            if (paragrafo.id !== idParagrafoAttivo) {
-                paragrafo.classList.remove('active');
-            }
-        });
-    }
-      //funzione per ruotare la freccia al click sul paragrafo
-      function toggleArrow(element) {
-            element.classList.toggle("rotated");
-        }
+              // Verifica se l'altezza massima è diversa da 0
+              if (parseInt(window.getComputedStyle(paragrafoDaMostrare).maxHeight) === 0) {
+                  paragrafoDaMostrare.classList.add('active');
+              }
+          }
+      }
+    
+      // Funzione per nascondere tutti i paragrafi
+      function nascondiParagrafi() {
+          var paragrafi = document.querySelectorAll('.hidden');
+          paragrafi.forEach(function (paragrafo) {
+              if (paragrafo.classList.contains('active')) {
+                  paragrafo.classList.remove('active');
+              }
+          });
+      }
+      // per tenere aperto il paragrafo attivo 
+      function nascondiParagrafiEccetto(idParagrafoAttivo) {
+          var paragrafi = document.querySelectorAll('.hidden');
+          paragrafi.forEach(function (paragrafo) {
+              if (paragrafo.id !== idParagrafoAttivo) {
+                  paragrafo.classList.remove('active');
+              }
+          });
+      }
+        //funzione per ruotare la freccia al click sul paragrafo
+        function toggleArrow(element) {
+              element.classList.toggle("rotated");
+          }
 
+          //per farlo funzionare su mobile  
+        document.addEventListener('touchstart', function(event) {
+    var touchedElement = event.target;
+    if (touchedElement.classList.contains('arrow-button')) {
+        var paragrafoId = touchedElement.getAttribute('data-target');
+        mostraParagrafo(paragrafoId);
+        toggleArrow(touchedElement);
+    }
+});
 
 
   // script freccia che riporta a inizio pagina 
@@ -245,21 +255,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// freccia tornare su home page 
-document.addEventListener("DOMContentLoaded", function () {
-      var scrollToTopButton = document.getElementById("scroll-to-top-home");
-
-      // Aggiungi un gestore di eventi al clic sulla freccia
-      scrollToTopButton.addEventListener("click", function () {
-        // Scorri verso l'inizio della pagina
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    });
-  // script per cambiare il placeholder dell'input telefono su mobile 
- document.addEventListener("DOMContentLoaded", function () {
-    var telefonoInput = document.getElementById("telefono");
-
-    if (window.innerWidth <= 599) {
-      telefonoInput.placeholder = "Telefono";
-    }
-  });
